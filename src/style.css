@@ -2833,6 +2833,13 @@ select {
   min-width: 32px;
 }
 
+.feature-countdown {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
 @media (max-width: 520px) {
   .match-score-row {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -2847,5 +2854,9 @@ select {
   .match-score,
   .match-vs {
     font-size: clamp(18px, 4vw, 22px);
+  }
+
+  .feature-countdown {
+    font-size: 0.88rem;
   }
 }

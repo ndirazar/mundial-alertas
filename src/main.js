@@ -330,6 +330,7 @@ const state = {
   resultsLastRequestAt: 0,
   resultsRequestPromise: null,
   resultsRefreshTimer: null,
+  nextArgentinaCountdownTimer: null,
   notificationResult: "",
   serviceWorkerActive: false,
   alertsInitialized: false,
@@ -609,6 +610,7 @@ window.addEventListener("appinstalled", () => {
 
 registerServiceWorker();
 loadFixture();
+startArgentinaCountdown();
 setInterval(checkDueAlerts, 30 * 1000);
 
 async function loadFixture() {
@@ -1030,12 +1032,15 @@ function renderNextArgentinaCard() {
     expired: "Alerta vencida",
   };
 
+  const countdownLabel = getArgentinaCountdownLabel(match);
+
   elements.nextArgentinaCard.innerHTML = `
     <article class="feature-card-shell ${match.important ? "is-important" : ""}">
       <div class="feature-card-top">
         <div>
           <p class="feature-kicker">Próximo partido de Argentina</p>
           ${renderMatchTeamsRow("Argentina", rivalTeam, "vs")}
+          <p class="feature-countdown">${escapeHtml(countdownLabel)}</p>
         </div>
         <span class="feature-pill">${escapeHtml(match.groupLabel || "Fase eliminatoria")}</span>
       </div>
@@ -1053,16 +1058,19 @@ function renderNextArgentinaCard() {
 }
 
 function getNextArgentinaMatch() {
-  const now = Date.now();
-  return (
-    state.matches.find(
-      (match) =>
-        match.kickoff.getTime() >= now &&
-        (match.team1 === "Argentina" || match.team2 === "Argentina"),
-    ) ||
-    state.matches.find((match) => match.team1 === "Argentina" || match.team2 === "Argentina") ||
-    null
+  const argentinaMatches = state.matches.filter(
+    (match) => match.team1 === "Argentina" || match.team2 === "Argentina",
   );
+  if (!argentinaMatches.length) return null;
+
+  const now = Date.now();
+  const liveMatch = argentinaMatches.find((match) => isMatchLive(match, now));
+  if (liveMatch) return liveMatch;
+
+  const upcomingMatch = argentinaMatches.find((match) => match.kickoff.getTime() >= now);
+  if (upcomingMatch) return upcomingMatch;
+
+  return argentinaMatches.at(-1) || null;
 }
 
 function getMatchById(matchId) {
@@ -2576,6 +2584,48 @@ function formatTimeArgentina(date) {
   const hour = parts.find((part) => part.type === "hour").value;
   const minute = parts.find((part) => part.type === "minute").value;
   return `${hour}:${minute}`;
+}
+
+function isMatchLive(match, now = Date.now()) {
+  if (!match?.kickoff) return false;
+  if (match.status === "finished") return false;
+  if (match.status === "live") return true;
+  return now >= match.kickoff.getTime();
+}
+
+function getArgentinaCountdownLabel(match, now = Date.now()) {
+  if (!match?.kickoff) return "";
+  if (match.status === "finished") return "Finalizado";
+  if (isMatchLive(match, now)) return "🔴 EN VIVO";
+
+  const diffMs = Math.max(0, match.kickoff.getTime() - now);
+  const totalSeconds = Math.floor(diffMs / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  if (days >= 1) {
+    return `⏳ ${formatCountdownPart(days, "día", "días")} · ${formatCountdownPart(hours, "h", "h")} · ${formatCountdownPart(minutes, "min", "min")} · ${formatCountdownPart(seconds, "s", "s")}`;
+  }
+
+  if (hours >= 1) {
+    return `⏳ ${formatCountdownPart(hours, "h", "h")} · ${formatCountdownPart(minutes, "min", "min")} · ${formatCountdownPart(seconds, "s", "s")}`;
+  }
+
+  return `🔴 Comienza en ${formatCountdownPart(minutes, "min", "min")} · ${formatCountdownPart(seconds, "s", "s")}`;
+}
+
+function formatCountdownPart(value, singular, plural) {
+  const suffix = value === 1 ? singular : plural;
+  return `${value} ${suffix}`;
+}
+
+function startArgentinaCountdown() {
+  if (state.nextArgentinaCountdownTimer) return;
+  state.nextArgentinaCountdownTimer = window.setInterval(() => {
+    if (elements.nextArgentinaCard) renderNextArgentinaCard();
+  }, 1000);
 }
 
 function toArgentinaDateInputValue(date) {
