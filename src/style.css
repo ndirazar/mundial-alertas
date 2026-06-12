@@ -41,12 +41,6 @@ button:disabled {
   gap: 10px;
 }
 
-.install-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 .app-shell {
   width: min(1120px, calc(100% - 28px));
   margin: 0 auto;
@@ -83,6 +77,18 @@ h1 {
   letter-spacing: 0;
 }
 
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.hero-title-text {
+  min-width: 0;
+}
+
 .primary-button,
 .secondary-button,
 .alert-button {
@@ -100,13 +106,14 @@ h1 {
   justify-content: center;
   gap: 8px;
   width: auto;
-  min-width: 150px;
-  max-width: 220px;
-  padding: 12px 22px;
-  margin: 18px auto 0;
+  min-width: 124px;
+  max-width: 180px;
+  padding: 8px 14px;
+  margin: 0;
   border-radius: 14px;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 800;
+  line-height: 1;
 }
 
 .secondary-button {
@@ -555,13 +562,14 @@ button,
   justify-content: center;
   gap: 8px;
   width: auto;
-  min-width: 150px;
-  max-width: 220px;
-  padding: 12px 22px;
-  margin: 18px auto 0;
+  min-width: 124px;
+  max-width: 180px;
+  padding: 8px 14px;
+  margin: 0;
   border-radius: 14px;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 800;
+  line-height: 1;
 }
 
 .secondary-button {
@@ -668,13 +676,14 @@ button,
   justify-content: center;
   gap: 8px;
   width: auto;
-  min-width: 150px;
-  max-width: 220px;
-  padding: 12px 22px;
-  margin: 18px auto 0;
+  min-width: 124px;
+  max-width: 180px;
+  padding: 8px 14px;
+  margin: 0;
   border-radius: 14px;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 800;
+  line-height: 1;
 }
 
 .secondary-button {
@@ -1929,25 +1938,22 @@ select {
 
 
 @media (max-width: 760px) {
-  .header-actions {
-    width: auto;
-    justify-content: center;
-  }
-
-  .install-wrapper {
-    justify-content: center;
-  }
-
-  .install-button {
-    width: auto;
-  }
-
   .topbar {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 4px 2px 6px;
     text-align: center;
+  }
+
+  .hero-title {
+    gap: 8px;
+  }
+
+  .install-button {
+    min-width: 112px;
+    padding: 7px 12px;
+    font-size: 0.76rem;
   }
 
   .feature-card {

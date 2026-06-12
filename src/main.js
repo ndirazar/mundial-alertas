@@ -366,11 +366,11 @@ app.innerHTML = `
     <header class="topbar">
       <div class="hero-copy">
         <p class="eyebrow">Mundial 2026</p>
-        <h1>Mundial Alertas ⚽</h1>
-        <p class="subtitle">Partidos, horarios y alertas en hora de Argentina.</p>
-        <div class="install-wrapper">
+        <h1 class="hero-title">
+          <span class="hero-title-text">Mundial Alertas ⚽</span>
           <button class="secondary-button install-button" id="install-app" type="button" hidden>Instalar app</button>
-        </div>
+        </h1>
+        <p class="subtitle">Partidos, horarios y alertas en hora de Argentina.</p>
       </div>
     </header>
 
@@ -622,14 +622,15 @@ function handleAlertActionClick(event) {
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   state.deferredInstallPrompt = event;
-  elements.installApp.hidden = false;
+  updateInstallButtonVisibility();
 });
 
 window.addEventListener("appinstalled", () => {
   state.deferredInstallPrompt = null;
-  elements.installApp.hidden = true;
+  updateInstallButtonVisibility();
 });
 
+updateInstallButtonVisibility();
 registerServiceWorker();
 loadFixture();
 startArgentinaCountdown();
@@ -1184,12 +1185,25 @@ function renderMatchTeamsRow(homeTeam, awayTeam, centerText = "vs") {
   `;
 }
 
+function isAppInstalled() {
+  return (
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true
+  );
+}
+
+function updateInstallButtonVisibility() {
+  const installable = Boolean(state.deferredInstallPrompt);
+  const installed = isAppInstalled();
+  elements.installApp.hidden = !installable || installed;
+}
+
 function promptAppInstall() {
   if (!state.deferredInstallPrompt) return;
   state.deferredInstallPrompt.prompt();
   state.deferredInstallPrompt.userChoice.finally(() => {
     state.deferredInstallPrompt = null;
-    elements.installApp.hidden = true;
+    updateInstallButtonVisibility();
   });
 }
 
