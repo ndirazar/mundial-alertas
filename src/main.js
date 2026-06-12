@@ -359,6 +359,7 @@ const state = {
   serviceWorkerActive: false,
   alertsInitialized: false,
   deferredInstallPrompt: null,
+  installCompletionNotified: false,
 };
 
 writeJson(STORAGE_KEYS.importantTeams, state.importantTeams);
@@ -625,18 +626,22 @@ function handleAlertActionClick(event) {
 
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
+  if (isAppInstalled()) {
+    state.deferredInstallPrompt = null;
+    updateInstallButtonVisibility();
+    return;
+  }
   state.deferredInstallPrompt = event;
   updateInstallButtonVisibility();
 });
 
 window.addEventListener("appinstalled", () => {
-  state.deferredInstallPrompt = null;
-  writeJson(STORAGE_KEYS.pwaInstalled, true);
-  setInstallButtonIdle();
-  updateInstallButtonVisibility();
-  showToast("App instalada ✅ Abrila desde tu pantalla de inicio");
+  markAppInstalled({ notify: true });
 });
 
+const standaloneModeQuery = window.matchMedia("(display-mode: standalone)");
+standaloneModeQuery.addEventListener?.("change", updateInstallButtonVisibility);
+window.addEventListener("pageshow", updateInstallButtonVisibility);
 updateInstallButtonVisibility();
 registerServiceWorker();
 loadFixture();
@@ -1205,10 +1210,25 @@ function isAppInstalled() {
   return standalone || persisted;
 }
 
+function markAppInstalled({ notify = false } = {}) {
+  state.deferredInstallPrompt = null;
+  writeJson(STORAGE_KEYS.pwaInstalled, true);
+  setInstallButtonIdle();
+  updateInstallButtonVisibility();
+
+  if (notify && !state.installCompletionNotified) {
+    state.installCompletionNotified = true;
+    showToast("App instalada ✅");
+  }
+}
+
 function setInstallButtonBusy(isBusy) {
   if (!elements.installApp) return;
   elements.installApp.disabled = isBusy;
-  elements.installApp.textContent = isBusy ? "Instalando..." : "Instalar app";
+  elements.installApp.setAttribute("aria-busy", String(isBusy));
+  elements.installApp.innerHTML = isBusy
+    ? `<span class="install-spinner" aria-hidden="true"></span><span>Instalando...</span>`
+    : "Instalar app";
 }
 
 function setInstallButtonIdle() {
@@ -1223,6 +1243,11 @@ function updateInstallButtonVisibility() {
 }
 
 async function promptAppInstall() {
+  if (isAppInstalled()) {
+    markAppInstalled();
+    return;
+  }
+
   if (!state.deferredInstallPrompt) return;
 
   setInstallButtonBusy(true);
@@ -1231,7 +1256,10 @@ async function promptAppInstall() {
     state.deferredInstallPrompt.prompt();
     const choice = await state.deferredInstallPrompt.userChoice;
     state.deferredInstallPrompt = null;
-    if (choice?.outcome === "accepted") return;
+    if (choice?.outcome === "accepted") {
+      markAppInstalled({ notify: true });
+      return;
+    }
   } catch (error) {
     state.deferredInstallPrompt = null;
   } finally {

@@ -116,6 +116,27 @@ h1 {
   line-height: 1;
 }
 
+.install-button:disabled {
+  cursor: wait;
+  opacity: 0.82;
+}
+
+.install-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: install-spin 0.72s linear infinite;
+  flex: 0 0 auto;
+}
+
+@keyframes install-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .secondary-button {
   border: 1px solid #c8d4d1;
   background: #ffffff;
