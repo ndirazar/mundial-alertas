@@ -75,3 +75,4 @@ Vite mostrará una URL local, normalmente `http://localhost:5173`.
    ```
 
 Las notificaciones locales dependen del navegador. Funcionan mejor con la app abierta o instalada como PWA.
+# mundial-alertas
