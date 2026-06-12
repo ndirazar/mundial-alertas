@@ -368,9 +368,9 @@ app.innerHTML = `
         <p class="eyebrow">Mundial 2026</p>
         <h1>Mundial Alertas ⚽</h1>
         <p class="subtitle">Partidos, horarios y alertas en hora de Argentina.</p>
-      </div>
-      <div class="header-actions">
-        <button class="secondary-button install-button" id="install-app" type="button" hidden>Instalar app</button>
+        <div class="install-wrapper">
+          <button class="secondary-button install-button" id="install-app" type="button" hidden>Instalar app</button>
+        </div>
       </div>
     </header>
 
