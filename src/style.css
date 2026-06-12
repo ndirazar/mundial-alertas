@@ -2809,6 +2809,14 @@ select {
   flex: 0 0 auto;
 }
 
+.match-team .flag.is-image,
+.team-emoji.is-image {
+  width: 1.1em;
+  height: 0.8em;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
 .match-team .match-team-name,
 .match-team .name {
   max-width: 100%;

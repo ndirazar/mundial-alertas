@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36" role="img" aria-label="Scotland flag">
+  <rect width="60" height="36" fill="#0065bd"/>
+  <path d="M0 0h8L60 36v0h-8L0 8z" fill="#ffffff"/>
+  <path d="M52 0h8L0 36v0H0l52-36z" fill="#ffffff"/>
+</svg>

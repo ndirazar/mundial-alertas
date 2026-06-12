@@ -232,6 +232,8 @@ const TEAM_EMOJIS = {
   Australia: "🇦🇺",
   Austria: "🇦🇹",
   Belgium: "🇧🇪",
+  England: "🏴",
+  Scotland: "🏴",
   "Bosnia & Herzegovina": "🇧🇦",
   Brazil: "🇧🇷",
   Canada: "🇨🇦",
@@ -275,6 +277,11 @@ const TEAM_EMOJIS = {
   Uzbekistan: "🇺🇿",
 };
 
+const TEAM_FLAG_IMAGES = {
+  England: "/flags/england.svg",
+  Scotland: "/flags/scotland.svg",
+};
+
 const GROUND_TRANSLATIONS = {
   "Mexico City": "Ciudad de México",
   "Guadalajara (Zapopan)": "Guadalajara (Zapopan)",
@@ -295,6 +302,21 @@ const GROUND_TRANSLATIONS = {
   "Dallas (Arlington)": "Dallas (Arlington)",
   "Kansas City": "Kansas City",
 };
+
+function supportsRegionalFlagEmojis() {
+  if (typeof document === "undefined") return true;
+
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+  if (!context) return true;
+
+  context.font = '32px Arial';
+  const regionalA = context.measureText("🇦🇺").width;
+  const fallback = context.measureText("A").width;
+  return regionalA > fallback * 1.2;
+}
+
+const FLAG_EMOJI_SUPPORTED = supportsRegionalFlagEmojis();
 
 const app = document.querySelector("#app");
 
@@ -1114,18 +1136,33 @@ function formatCapacity(value) {
   return new Intl.NumberFormat(ARGENTINA_LOCALE).format(Number(value));
 }
 
-function renderTeamLabel(team) {
+function getTeamFlagMarkup(team, className = "flag") {
+  const localFlag = TEAM_FLAG_IMAGES[team];
+  if (localFlag) {
+    const alt = translateTeam(team);
+    return `<img class="${className} is-image" src="${localFlag}" alt="${escapeHtml(alt)}" />`;
+  }
+
   const emoji = TEAM_EMOJIS[team];
+  if (emoji) {
+    return `<span class="${className}" aria-hidden="true">${emoji}</span>`;
+  }
+
+  return "";
+}
+
+function renderTeamLabel(team) {
+  const flag = getTeamFlagMarkup(team, "team-emoji");
   const label = escapeHtml(translateTeam(team));
-  return emoji
-    ? `<span class="team-emoji" aria-hidden="true">${emoji}</span><span class="team-name">${label}</span>`
+  return flag
+    ? `${flag}<span class="team-name">${label}</span>`
     : `<span class="team-name">${label}</span>`;
 }
 
 function renderMatchTeamParts(team) {
-  const emoji = TEAM_EMOJIS[team] || "";
+  const flag = getTeamFlagMarkup(team, "flag");
   const label = escapeHtml(translateTeam(team));
-  return `<span class="flag" aria-hidden="true">${emoji}</span><span class="match-team-name name">${label}</span>`;
+  return `${flag}<span class="match-team-name name">${label}</span>`;
 }
 
 function renderMatchTeamsRow(homeTeam, awayTeam, centerText = "vs") {
