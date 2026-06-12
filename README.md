@@ -13,6 +13,8 @@ No usa Docker, no usa `docker-compose`, no crea backend y no requiere Elasticsea
 
 ```bash
 npm install
+cp .env.example .env
+# Completar VITE_BALLDONTLIE_API_KEY en .env
 npm run dev -- --host 0.0.0.0
 ```
 
@@ -34,6 +36,7 @@ Vite mostrará una URL local, normalmente `http://localhost:5173`.
 - Cards mobile con hora argentina, grupo/ronda, sede y badge Importante
 - Alertas locales 30 minutos antes usando Notification API
 - Persistencia en `localStorage` de equipos importantes, alertas y filtro Solo importantes
+- Convocados 2026 desde `src/data/squads-2026-app.json`, enriquecidos con ESPN y con BALLDONTLIE opcional
 
 ## Uso local desde el celular
 

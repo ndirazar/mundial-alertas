@@ -2,6 +2,7 @@ import "./style.css";
 import { TEAM_RANKING } from "./data/teamRanking.js";
 import { STADIUMS, STADIUMS_BY_GROUND } from "./data/stadiums.js";
 import { SQUADS } from "./data/squads.js";
+import SQUADS_2026 from "./data/squads-2026-app.json";
 
 const FIXTURE_URL =
   "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
@@ -12,6 +13,10 @@ const TEAMS_URL =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/teams?limit=100";
 const ROSTER_URL =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/teams";
+const BALLDONTLIE_API_URL = "https://api.balldontlie.io/fifa/worldcup/v1";
+const BALLDONTLIE_API_KEY = import.meta.env.VITE_BALLDONTLIE_API_KEY?.trim();
+const SQUAD_SEASON = 2026;
+const SQUAD_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 const RESULTS_REFRESH_INTERVAL_MS = 60 * 1000;
 const RESULTS_REQUEST_TTL_MS = 2 * 60 * 1000;
 const ARGENTINA_TIME_ZONE = "America/Argentina/Buenos_Aires";
@@ -40,9 +45,67 @@ const STORAGE_KEYS = {
   importantTeams: "mundial.importantTeams",
   alertLeadMinutes: "mundial.alertLeadMinutes",
   resultsCache: "mundial.resultsCache",
+  squadCache: "mundial.squadCache",
 };
 
 const ALERT_LEAD_OPTIONS = [5, 15, 30, 60, 120];
+
+const SQUAD_COACH_OVERRIDES = {
+  Germany: "Julian Nagelsmann",
+  "Saudi Arabia": "Georgios Donis",
+  Algeria: "Vladimir Petkovic",
+  Argentina: "Lionel Scaloni",
+  Australia: "Tony Popovic",
+  Austria: "Ralf Rangnick",
+  Belgium: "Rudi Garcia",
+  "Bosnia & Herzegovina": "Sergej Barbarez",
+  Brazil: "Carlo Ancelotti",
+  "Cape Verde": "Bubista",
+  Canada: "Jesse Marsch",
+  Qatar: "Julen Lopetegui",
+  Colombia: "Néstor Lorenzo",
+  "South Korea": "Hong Hyung-Bo",
+  "Ivory Coast": "Emerse Fae",
+  Croatia: "Zlatko Dalic",
+  "Curaçao": "Dick Advocaat",
+  Ecuador: "Sebastián Beccacece",
+  Egypt: "Hossam Hassan",
+  Scotland: "Steve Clarke",
+  Spain: "Luis de la Fuente",
+  USA: "Mauricio Pochettino",
+  France: "Didier Deschamps",
+  Ghana: "Carlos Queiroz",
+  Haiti: "Sébastien Migné",
+  England: "Thomas Tuchel",
+  Iraq: "Graham Arnold",
+  Iran: "Amir Ghalenoei",
+  Japan: "Hajime Moriyasu",
+  Jordan: "Jamal Sellami",
+  Morocco: "Mohamed Ouahbi",
+  Mexico: "Javier Aguirre",
+  Norway: "Stale Solbakken",
+  "New Zealand": "Darren Bazeley",
+  Netherlands: "Ronald Koeman",
+  Panama: "Thomas Christiansen",
+  Paraguay: "Gustavo Alfaro",
+  Portugal: "Roberto Martínez",
+  "Czech Republic": "Miroslav Koubek",
+  "DR Congo": "Sébastien Desabre",
+  Senegal: "Pape Thiaw",
+  "South Africa": "Hugo Broos",
+  Sweden: "Graham Potter",
+  Switzerland: "Murat Yakin",
+  Tunisia: "Sabri Lamouchi",
+  Turkey: "Vincenzo Montella",
+  Uruguay: "Marcelo Bielsa",
+  Uzbekistan: "Fabio Cannavaro",
+};
+
+const SQUAD_2026_TEAM_ALIASES = {
+  "Bosnia & Herzegovina": "Bosnia and Herzegovina",
+  "Czech Republic": "Czechia",
+  "Curaçao": "Curacao",
+};
 
 const SQUAD_TEAM_ALIASES = {
   Netherlands: "Países Bajos",
@@ -245,6 +308,8 @@ const state = {
   selectedTeamProfile: "",
   teamDirectory: new Map(),
   teamDirectoryPromise: null,
+  ballDontLieTeamDirectory: new Map(),
+  ballDontLieTeamDirectoryPromise: null,
   teamsLoading: false,
   squadLoading: false,
   selectedSquad: null,
@@ -583,7 +648,7 @@ async function fetchFixture() {
   }
 }
 
-async function fetchJson(url, timeoutMs = 0) {
+async function fetchJson(url, timeoutMs = 0, options = {}) {
   const controller = timeoutMs ? new AbortController() : null;
   const timeoutId = timeoutMs
     ? window.setTimeout(() => controller.abort(), timeoutMs)
@@ -595,6 +660,7 @@ async function fetchJson(url, timeoutMs = 0) {
     response = await fetch(url, {
       cache: "no-store",
       signal: controller?.signal,
+      ...options,
     });
   } finally {
     if (timeoutId) {
@@ -603,7 +669,7 @@ async function fetchJson(url, timeoutMs = 0) {
   }
 
   if (!response.ok) {
-    throw new Error(`No se pudieron cargar los partidos (${response.status})`);
+    throw new Error(`La solicitud falló (${response.status})`);
   }
 
   return response.json();
@@ -1563,50 +1629,157 @@ async function handleSquadSelectionClick(event) {
 async function openSquadModal(selectedTeam) {
   const teamName = String(selectedTeam?.name || selectedTeam || "").trim();
   const squadKey = SQUAD_TEAM_ALIASES[teamName] || teamName;
-  const localSquad = SQUADS[teamName] || SQUADS[squadKey];
-
-  // Temporary diagnostics requested for squad lookup.
-  console.log("selectedTeam:", selectedTeam);
-  console.log("squad encontrado:", localSquad);
+  const legacyLocalSquad = SQUADS[teamName] || SQUADS[squadKey];
+  const localSquad = getLocal2026Squad(teamName);
+  const cachedSquad = readCachedSquad(teamName);
 
   state.selectedTeamProfile = teamName;
-  state.selectedSquad = localSquad || null;
-  state.squadLoading = !localSquad;
+  state.selectedSquad = cachedSquad || localSquad || legacyLocalSquad || null;
+  state.squadLoading = !state.selectedSquad;
   elements.squadTitle.textContent = `Convocados · ${translateTeam(teamName)}`;
   elements.squadModal.hidden = false;
   renderSquadView();
   elements.closeSquad.focus();
 
-  if (localSquad) return;
-
-  const apiTeamId = TEAM_ESPN_IDS[teamName];
-  if (!apiTeamId) {
-    await loadTeamDirectory();
-  }
-  const fallbackApiTeam = state.teamDirectory.get(normalizeResultTeam(teamName));
-  const rosterTeamId = apiTeamId || fallbackApiTeam?.id;
-  if (!rosterTeamId) {
-    state.squadLoading = false;
-    renderSquadView();
-    return;
-  }
+  const espnSquadPromise = fetchEspnSquad(teamName).catch((error) => {
+    console.warn(`No se pudo cargar el fallback ESPN de ${teamName}.`, error);
+    return null;
+  });
 
   try {
-    const data = await fetchJson(`${ROSTER_URL}/${rosterTeamId}/roster`, 7000);
-    state.selectedSquad = normalizeSquad(data);
-    console.log("squad encontrado:", state.selectedSquad);
+    if (!BALLDONTLIE_API_KEY) {
+      throw new Error("Falta VITE_BALLDONTLIE_API_KEY");
+    }
+
+    const [ballDontLieSquad, espnSquad] = await Promise.all([
+      fetchBallDontLieSquad(teamName),
+      espnSquadPromise,
+    ]);
+    const supplementalSquad = localSquad
+      ? enrichSquad(localSquad, espnSquad)
+      : espnSquad || legacyLocalSquad;
+    const squad = enrichSquad(ballDontLieSquad, supplementalSquad);
+    writeCachedSquad(teamName, squad);
+    setSelectedSquad(teamName, squad);
+    return;
   } catch (error) {
-    console.warn(`No se pudieron cargar convocados de ${teamName}.`, error);
-  } finally {
-    state.squadLoading = false;
-    renderSquadView();
+    console.warn(`No se pudieron cargar convocados BALLDONTLIE de ${teamName}.`, error);
   }
+
+  const espnSquad = await espnSquadPromise;
+  const fallbackSquad = localSquad
+    ? enrichSquad(localSquad, espnSquad)
+    : espnSquad || legacyLocalSquad || cachedSquad;
+  if (fallbackSquad) writeCachedSquad(teamName, fallbackSquad);
+  setSelectedSquad(teamName, fallbackSquad || null);
+}
+
+function setSelectedSquad(teamName, squad) {
+  if (state.selectedTeamProfile !== teamName || elements.squadModal.hidden) return;
+  state.selectedSquad = applySquadCoachOverride(teamName, squad);
+  state.squadLoading = false;
+  renderSquadView();
+}
+
+async function fetchBallDontLieSquad(teamName) {
+  const team = await findBallDontLieTeam(teamName);
+  if (!team?.id) throw new Error("Selección no encontrada en BALLDONTLIE");
+
+  const query = new URLSearchParams({
+    "seasons[]": String(SQUAD_SEASON),
+    "team_ids[]": String(team.id),
+    per_page: "100",
+  });
+  const [rosterResponse, playersResponse] = await Promise.all([
+    fetchBallDontLieJson(`/rosters?${query}`),
+    fetchBallDontLieJson(`/players?${query}`),
+  ]);
+  const roster = Array.isArray(rosterResponse.data) ? rosterResponse.data : [];
+  const players = Array.isArray(playersResponse.data) ? playersResponse.data : [];
+  if (!roster.length) throw new Error(`Roster ${SQUAD_SEASON} vacío`);
+
+  return normalizeBallDontLieSquad(roster, players);
+}
+
+async function findBallDontLieTeam(teamName) {
+  if (!state.ballDontLieTeamDirectory.size) {
+    if (!state.ballDontLieTeamDirectoryPromise) {
+      state.ballDontLieTeamDirectoryPromise = fetchBallDontLieJson(
+        `/teams?seasons[]=${SQUAD_SEASON}`,
+      )
+        .then((response) => {
+          const teams = Array.isArray(response.data) ? response.data : [];
+          state.ballDontLieTeamDirectory = new Map(
+            teams.map((team) => [normalizeResultTeam(team.name), team]),
+          );
+        })
+        .finally(() => {
+          state.ballDontLieTeamDirectoryPromise = null;
+        });
+    }
+    await state.ballDontLieTeamDirectoryPromise;
+  }
+
+  return state.ballDontLieTeamDirectory.get(normalizeResultTeam(teamName));
+}
+
+function fetchBallDontLieJson(path) {
+  return fetchJson(`${BALLDONTLIE_API_URL}${path}`, 7000, {
+    headers: {
+      Authorization: BALLDONTLIE_API_KEY,
+    },
+  });
+}
+
+async function fetchEspnSquad(teamName) {
+  const apiTeamId = TEAM_ESPN_IDS[teamName];
+  if (!apiTeamId) await loadTeamDirectory();
+
+  const fallbackApiTeam = state.teamDirectory.get(normalizeResultTeam(teamName));
+  const rosterTeamId = apiTeamId || fallbackApiTeam?.id;
+  if (!rosterTeamId) return null;
+
+  const data = await fetchJson(`${ROSTER_URL}/${rosterTeamId}/roster`, 7000);
+  return normalizeSquad(data);
 }
 
 function closeSquadModal() {
   elements.squadModal.hidden = true;
+  state.selectedTeamProfile = "";
   state.squadLoading = false;
   state.selectedSquad = null;
+}
+
+function getLocal2026Squad(teamName) {
+  const dataKey = SQUAD_2026_TEAM_ALIASES[teamName] || teamName;
+  const data = SQUADS_2026[dataKey];
+  if (!data?.players?.length) return null;
+
+  const groups = createSquadGroups();
+  data.players.forEach((player) => {
+    const group = getSquadPositionGroup(player.position);
+    if (!group) return;
+    groups[group].push({
+      name: player.name || "Sin nombre",
+      number: player.number || "—",
+      club: player.club || "",
+    });
+  });
+  sortSquadGroups(groups);
+
+  return {
+    coach: data.coach || "No disponible",
+    groups,
+  };
+}
+
+function createSquadGroups() {
+  return {
+    goalkeepers: [],
+    defenders: [],
+    midfielders: [],
+    forwards: [],
+  };
 }
 
 function normalizeSquad(data) {
@@ -1616,12 +1789,7 @@ function normalizeSquad(data) {
     Midfielder: "midfielders",
     Forward: "forwards",
   };
-  const groups = {
-    goalkeepers: [],
-    defenders: [],
-    midfielders: [],
-    forwards: [],
-  };
+  const groups = createSquadGroups();
 
   (data.athletes || []).forEach((player) => {
     const group = positions[player.position?.name];
@@ -1633,15 +1801,138 @@ function normalizeSquad(data) {
     });
   });
 
-  Object.values(groups).forEach((players) => {
-    players.sort((a, b) => Number(a.number) - Number(b.number) || a.name.localeCompare(b.name, ARGENTINA_LOCALE));
-  });
+  sortSquadGroups(groups);
 
   const coach = data.coach?.[0];
   return {
-    coach: coach ? [coach.firstName, coach.lastName].filter(Boolean).join(" ") : "No disponible",
+    coach: coach ? [coach.firstName, coach.lastName].filter(Boolean).join(" ").trim() : "No disponible",
     groups,
   };
+}
+
+function normalizeBallDontLieSquad(roster, players) {
+  const playersById = new Map(players.map((player) => [String(player.id), player]));
+  const groups = createSquadGroups();
+
+  roster.forEach((entry) => {
+    const rosterPlayer = entry.player || {};
+    const player = {
+      ...rosterPlayer,
+      ...(playersById.get(String(rosterPlayer.id)) || {}),
+    };
+    const group = getSquadPositionGroup(entry.position || player.position);
+    if (!group) return;
+
+    groups[group].push({
+      name: player.name || player.short_name || "Sin nombre",
+      number: player.jersey_number ?? entry.jersey_number ?? "—",
+      club:
+        player.club?.name ||
+        player.club_name ||
+        entry.club?.name ||
+        entry.club_name ||
+        "",
+    });
+  });
+
+  sortSquadGroups(groups);
+  return {
+    coach: "No disponible",
+    groups,
+  };
+}
+
+function getSquadPositionGroup(position) {
+  const normalized = normalizeLookup(position);
+  if (["goalkeeper", "keeper", "gk", "g", "arquero"].includes(normalized)) return "goalkeepers";
+  if (["defender", "defence", "defense", "df", "d", "defensor"].includes(normalized)) return "defenders";
+  if (["midfielder", "midfield", "mf", "m", "mediocampista"].includes(normalized)) return "midfielders";
+  if (["forward", "striker", "attacker", "fw", "f", "delantero"].includes(normalized)) return "forwards";
+  return "";
+}
+
+function sortSquadGroups(groups) {
+  Object.values(groups).forEach((players) => {
+    players.sort(
+      (a, b) =>
+        (Number(a.number) || Number.MAX_SAFE_INTEGER) -
+          (Number(b.number) || Number.MAX_SAFE_INTEGER) ||
+        a.name.localeCompare(b.name, ARGENTINA_LOCALE),
+    );
+  });
+}
+
+function enrichSquad(primarySquad, supplementalSquad) {
+  if (!supplementalSquad) return primarySquad;
+
+  const supplementalPlayers = new Map(
+    Object.values(supplementalSquad.groups)
+      .flat()
+      .map((player) => [normalizeLookup(player.name), player]),
+  );
+  const groups = Object.fromEntries(
+    Object.entries(primarySquad.groups).map(([group, players]) => [
+      group,
+      players.map((player) => {
+        const supplementalPlayer = supplementalPlayers.get(normalizeLookup(player.name));
+        return {
+          ...player,
+          number:
+            player.number && player.number !== "—"
+              ? player.number
+              : supplementalPlayer?.number || "—",
+          club: player.club || supplementalPlayer?.club || "",
+        };
+      }),
+    ]),
+  );
+
+  return {
+    coach:
+      primarySquad.coach && primarySquad.coach !== "No disponible"
+        ? primarySquad.coach
+        : supplementalSquad.coach || "No disponible",
+    groups,
+  };
+}
+
+function getSquadCacheKey(teamName) {
+  return `${SQUAD_SEASON}:${normalizeLookup(teamName)}`;
+}
+
+function readCachedSquad(teamName) {
+  const cache = readJson(STORAGE_KEYS.squadCache, {});
+  const entry = cache[getSquadCacheKey(teamName)];
+  if (
+    !entry?.squad?.groups ||
+    Date.now() - Number(entry.cachedAt) > SQUAD_CACHE_TTL_MS
+  ) {
+    return null;
+  }
+  return applySquadCoachOverride(teamName, entry.squad);
+}
+
+function applySquadCoachOverride(teamName, squad) {
+  if (!squad) return squad;
+  return {
+    ...squad,
+    coach: SQUAD_COACH_OVERRIDES[teamName] || squad.coach || "No disponible",
+  };
+}
+
+function writeCachedSquad(teamName, squad) {
+  try {
+    const normalizedSquad = applySquadCoachOverride(teamName, squad);
+    const cache = readJson(STORAGE_KEYS.squadCache, {});
+    cache[getSquadCacheKey(teamName)] = {
+      season: SQUAD_SEASON,
+      cachedAt: Date.now(),
+      squad: normalizedSquad,
+    };
+    writeJson(STORAGE_KEYS.squadCache, cache);
+  } catch (error) {
+    console.warn("No se pudo guardar el caché de convocados.", error);
+  }
 }
 
 function renderSquadView() {

@@ -1,0 +1,7868 @@
+{
+  "Algeria": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Luca Zidane",
+        "number": "",
+        "position": "Arquero",
+        "club": "Granada"
+      },
+      {
+        "name": "Oussama Benbot",
+        "number": "",
+        "position": "Arquero",
+        "club": "Alger"
+      },
+      {
+        "name": "Melvin Mastil",
+        "number": "",
+        "position": "Arquero",
+        "club": "Stade Nyonnais"
+      },
+      {
+        "name": "Rafik Belghali",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hellas Verona"
+      },
+      {
+        "name": "Samir Chergui",
+        "number": "",
+        "position": "Defensor",
+        "club": "Paris FC"
+      },
+      {
+        "name": "Rayan Ait-Nouri",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Jaouen Hadjam",
+        "number": "",
+        "position": "Defensor",
+        "club": "BSC Young Boys"
+      },
+      {
+        "name": "Aissa Mandi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lille"
+      },
+      {
+        "name": "Ramy Bensebaini",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Zinedine Belaid",
+        "number": "",
+        "position": "Defensor",
+        "club": "Kabylie"
+      },
+      {
+        "name": "Mohamed Amine Tougaï",
+        "number": "",
+        "position": "Defensor",
+        "club": "Esperance de Tunis"
+      },
+      {
+        "name": "Achraf Abada",
+        "number": "",
+        "position": "Defensor",
+        "club": "USM Alger"
+      },
+      {
+        "name": "Nabil Bentaleb",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Lille"
+      },
+      {
+        "name": "Hicham Boudaoui",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "OGC Nice"
+      },
+      {
+        "name": "Houssem Aouar",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Ittihad"
+      },
+      {
+        "name": "Fares Chaibi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Eintracht Frankfurt"
+      },
+      {
+        "name": "Ibrahim Maza",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayer Leverkusen"
+      },
+      {
+        "name": "Yacine Titraoui",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Royal Charleroi"
+      },
+      {
+        "name": "Ramiz Zerrouki",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Twente"
+      },
+      {
+        "name": "Mohamed Amine Amoura",
+        "number": "",
+        "position": "Delantero",
+        "club": "VfL Wolfsburg"
+      },
+      {
+        "name": "Nadhir Benbouali",
+        "number": "",
+        "position": "Delantero",
+        "club": "ETO"
+      },
+      {
+        "name": "Adil Boulbina",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Duhail"
+      },
+      {
+        "name": "Fares Ghedjemis",
+        "number": "",
+        "position": "Delantero",
+        "club": "Frosinone"
+      },
+      {
+        "name": "Amine Gouiri",
+        "number": "",
+        "position": "Delantero",
+        "club": "Olympique Marseilla"
+      },
+      {
+        "name": "Anis Hadj Moussa",
+        "number": "",
+        "position": "Delantero",
+        "club": "Feyenoord"
+      },
+      {
+        "name": "Riyad Mahrez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Ahli"
+      }
+    ]
+  },
+  "Argentina": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Emiliano Martinez",
+        "number": "",
+        "position": "Arquero",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Geronimo Rulli",
+        "number": "",
+        "position": "Arquero",
+        "club": "Olympique de Marseille"
+      },
+      {
+        "name": "Juan Musso",
+        "number": "",
+        "position": "Arquero",
+        "club": "Atletico de Madrid"
+      },
+      {
+        "name": "Gonzalo Montiel",
+        "number": "",
+        "position": "Defensor",
+        "club": "River Plate"
+      },
+      {
+        "name": "Nahuel Molina",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atletico de Madrid"
+      },
+      {
+        "name": "Lisandro Martinez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Nicolas Otamendi",
+        "number": "",
+        "position": "Defensor",
+        "club": "SL Benfica"
+      },
+      {
+        "name": "Marcos Senesi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Cristian Romero",
+        "number": "",
+        "position": "Defensor",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Facundo Medina",
+        "number": "",
+        "position": "Defensor",
+        "club": "Olympique de Marseille"
+      },
+      {
+        "name": "Nicolas Tagliafico",
+        "number": "",
+        "position": "Defensor",
+        "club": "Olympique Lyonnais"
+      },
+      {
+        "name": "Leandro Paredes",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Boca Juniors"
+      },
+      {
+        "name": "Rodrigo De Paul",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Inter Miami"
+      },
+      {
+        "name": "Exequiel Palacios",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayer Leverkusen"
+      },
+      {
+        "name": "Enzo Fernandez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Alexis Mac Allister",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Giovani Lo Celso",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Betis"
+      },
+      {
+        "name": "Valentin Barco",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "RC Strasbourg"
+      },
+      {
+        "name": "Lionel Messi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Inter Miami"
+      },
+      {
+        "name": "Nicolas Paz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Como 1907"
+      },
+      {
+        "name": "Thiago Almada",
+        "number": "",
+        "position": "Delantero",
+        "club": "Atletico de Madrid"
+      },
+      {
+        "name": "Nicolas Gonzalez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Atletico de Madrid"
+      },
+      {
+        "name": "Giuliano Simeone",
+        "number": "",
+        "position": "Delantero",
+        "club": "Atletico de Madrid"
+      },
+      {
+        "name": "Lautaro Martínez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Internazionale"
+      },
+      {
+        "name": "Jose Manuel Lopez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Palmeiras"
+      },
+      {
+        "name": "Julian Alvarez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Atletico de Madrid"
+      }
+    ]
+  },
+  "Australia": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Ryan",
+        "number": "",
+        "position": "Arquero",
+        "club": "Levante"
+      },
+      {
+        "name": "Izzo",
+        "number": "",
+        "position": "Arquero",
+        "club": "Randers"
+      },
+      {
+        "name": "Beach",
+        "number": "",
+        "position": "Arquero",
+        "club": "Melbourne City"
+      },
+      {
+        "name": "Behich",
+        "number": "",
+        "position": "Defensor",
+        "club": "Melbourne City"
+      },
+      {
+        "name": "Bos",
+        "number": "",
+        "position": "Defensor",
+        "club": "Feynoord"
+      },
+      {
+        "name": "Burgess",
+        "number": "",
+        "position": "Defensor",
+        "club": "Swansea City"
+      },
+      {
+        "name": "Circati",
+        "number": "",
+        "position": "Defensor",
+        "club": "Parma"
+      },
+      {
+        "name": "Degenek",
+        "number": "",
+        "position": "Defensor",
+        "club": "APOEL"
+      },
+      {
+        "name": "Geria",
+        "number": "",
+        "position": "Defensor",
+        "club": "Albirex Niigata"
+      },
+      {
+        "name": "Herrington",
+        "number": "",
+        "position": "Defensor",
+        "club": "Colorado Rapids"
+      },
+      {
+        "name": "Italiano",
+        "number": "",
+        "position": "Defensor",
+        "club": "Grazer"
+      },
+      {
+        "name": "Souttar",
+        "number": "",
+        "position": "Defensor",
+        "club": "Leicester City"
+      },
+      {
+        "name": "Trewin",
+        "number": "",
+        "position": "Defensor",
+        "club": "New York City"
+      },
+      {
+        "name": "Devlin",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Heart of Midlothian"
+      },
+      {
+        "name": "Hrustic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Heracles Almelo"
+      },
+      {
+        "name": "Irvine",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "St Pauli"
+      },
+      {
+        "name": "Metcalfe",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "St Pauli"
+      },
+      {
+        "name": "Okon-Englster",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sydney"
+      },
+      {
+        "name": "O’Neill",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "New York City"
+      },
+      {
+        "name": "Irankunda",
+        "number": "",
+        "position": "Delantero",
+        "club": "Watford"
+      },
+      {
+        "name": "Leckie",
+        "number": "",
+        "position": "Delantero",
+        "club": "Melbourne City"
+      },
+      {
+        "name": "Mabil",
+        "number": "",
+        "position": "Delantero",
+        "club": "Castellon"
+      },
+      {
+        "name": "Toure",
+        "number": "",
+        "position": "Delantero",
+        "club": "Norwich City"
+      },
+      {
+        "name": "Velupilly",
+        "number": "",
+        "position": "Delantero",
+        "club": "Melbourne City"
+      },
+      {
+        "name": "Volpato",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sassuolo"
+      },
+      {
+        "name": "Yengi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Livingston/Machida Zelvia"
+      }
+    ]
+  },
+  "Austria": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Patrick Pentz",
+        "number": "",
+        "position": "Arquero",
+        "club": "Brondby IF"
+      },
+      {
+        "name": "Alexander Schlager",
+        "number": "",
+        "position": "Arquero",
+        "club": "RB Salzburg"
+      },
+      {
+        "name": "Florian Wiegele",
+        "number": "",
+        "position": "Arquero",
+        "club": "Viktoria Plzeň"
+      },
+      {
+        "name": "David Affengruber",
+        "number": "",
+        "position": "Defensor",
+        "club": "Elche"
+      },
+      {
+        "name": "David Alaba",
+        "number": "",
+        "position": "Defensor",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Kevin Danso",
+        "number": "",
+        "position": "Defensor",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Marco Friedl",
+        "number": "",
+        "position": "Defensor",
+        "club": "Werder Bremen"
+      },
+      {
+        "name": "Philipp Lienhart",
+        "number": "",
+        "position": "Defensor",
+        "club": "SC Freiburg"
+      },
+      {
+        "name": "Phillipp Mwene",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mainz 05"
+      },
+      {
+        "name": "Stefan Posch",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mainz 05"
+      },
+      {
+        "name": "Alexander Prass",
+        "number": "",
+        "position": "Defensor",
+        "club": "TSG Hoffenheim"
+      },
+      {
+        "name": "Michael Svoboda",
+        "number": "",
+        "position": "Defensor",
+        "club": "Venezia"
+      },
+      {
+        "name": "Christoph Baumgartner",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "RB Leipzig"
+      },
+      {
+        "name": "Carney Chukwuemeka",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Florian Grillitsch",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "SC Braga"
+      },
+      {
+        "name": "Konrad Laimer",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayern München"
+      },
+      {
+        "name": "Marcel Sabitzer",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Xaver Schlager",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "RB Leipzig"
+      },
+      {
+        "name": "Nicolas Seiwald",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "RB Leipzig"
+      },
+      {
+        "name": "Romano Schmid",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Werder Bremen"
+      },
+      {
+        "name": "Alessandro Schöpf",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Wolfsberger AC"
+      },
+      {
+        "name": "Paul Wanner",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Patrick Wimmer",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "VfL Wolfsburg"
+      },
+      {
+        "name": "Marko Arnautovic",
+        "number": "",
+        "position": "Delantero",
+        "club": "Crvena Zvezda"
+      },
+      {
+        "name": "Michael Gregoritsch",
+        "number": "",
+        "position": "Delantero",
+        "club": "Augsburg"
+      },
+      {
+        "name": "Sasa Kalajdzic",
+        "number": "",
+        "position": "Delantero",
+        "club": "LASK"
+      }
+    ]
+  },
+  "Belgium": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Thibaut Courtois",
+        "number": "",
+        "position": "Arquero",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Senne Lammens",
+        "number": "",
+        "position": "Arquero",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Mike Penders",
+        "number": "",
+        "position": "Arquero",
+        "club": "Strasbourg"
+      },
+      {
+        "name": "Timothy Castagne",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fulham"
+      },
+      {
+        "name": "Zeno Debast",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sporting CP"
+      },
+      {
+        "name": "Maxim De Cuyper",
+        "number": "",
+        "position": "Defensor",
+        "club": "Brighton"
+      },
+      {
+        "name": "Koni De Winter",
+        "number": "",
+        "position": "Defensor",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Brandon Mechele",
+        "number": "",
+        "position": "Defensor",
+        "club": "Club Brugge"
+      },
+      {
+        "name": "Thomas Meunier",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lille"
+      },
+      {
+        "name": "Nathan Ngoy",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lille"
+      },
+      {
+        "name": "Joaquin Seys",
+        "number": "",
+        "position": "Defensor",
+        "club": "Club Brugge"
+      },
+      {
+        "name": "Arthur Theate",
+        "number": "",
+        "position": "Defensor",
+        "club": "Eintracht Frankfurt"
+      },
+      {
+        "name": "Kevin De Bruyne",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Napoli"
+      },
+      {
+        "name": "Amadou Onana",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Nicolas Raskin",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Rangers"
+      },
+      {
+        "name": "Youri Tielemans",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Hans Vanaken",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Club Brugge"
+      },
+      {
+        "name": "Axel Witsel",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Girona"
+      },
+      {
+        "name": "Charles De Ketelaere",
+        "number": "",
+        "position": "Delantero",
+        "club": "Atalanta"
+      },
+      {
+        "name": "Jeremy Doku",
+        "number": "",
+        "position": "Delantero",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Matias Fernandez Pardo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Lille"
+      },
+      {
+        "name": "Romelu Lukaku",
+        "number": "",
+        "position": "Delantero",
+        "club": "Napoli"
+      },
+      {
+        "name": "Dodi Lukebakio",
+        "number": "",
+        "position": "Delantero",
+        "club": "Benfica"
+      },
+      {
+        "name": "Diego Moreira",
+        "number": "",
+        "position": "Delantero",
+        "club": "Strasbourg"
+      },
+      {
+        "name": "Alexis Saelemaekers",
+        "number": "",
+        "position": "Delantero",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Leandro Trossard",
+        "number": "",
+        "position": "Delantero",
+        "club": "Arsenal"
+      }
+    ]
+  },
+  "Bosnia and Herzegovina": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Nikola Vasilj",
+        "number": "",
+        "position": "Arquero",
+        "club": "FC St. Pauli"
+      },
+      {
+        "name": "Martin Zlomislic",
+        "number": "",
+        "position": "Arquero",
+        "club": "HNK Rijeka"
+      },
+      {
+        "name": "Osman Hadzikic",
+        "number": "",
+        "position": "Arquero",
+        "club": "Slaven Belupo"
+      },
+      {
+        "name": "Sead Kolasinac",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atalanta BC"
+      },
+      {
+        "name": "Amar Dedic",
+        "number": "",
+        "position": "Defensor",
+        "club": "SL Benfica"
+      },
+      {
+        "name": "Nihad Mujakic",
+        "number": "",
+        "position": "Defensor",
+        "club": "Gaziantep FK"
+      },
+      {
+        "name": "Nikola Katic",
+        "number": "",
+        "position": "Defensor",
+        "club": "Schalke 04"
+      },
+      {
+        "name": "Tarik Muharemovic",
+        "number": "",
+        "position": "Defensor",
+        "club": "US Sassuolo"
+      },
+      {
+        "name": "Stjepan Radeljic",
+        "number": "",
+        "position": "Defensor",
+        "club": "HNK Rijeka"
+      },
+      {
+        "name": "Dennis Hadzikadunic",
+        "number": "",
+        "position": "Defensor",
+        "club": "UC Sampdoria"
+      },
+      {
+        "name": "Nidal Celik",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lens"
+      },
+      {
+        "name": "Amir Hadziahmetovic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Hull City"
+      },
+      {
+        "name": "Ivan Sunjic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Pafos FC"
+      },
+      {
+        "name": "Ivan Basic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Astana"
+      },
+      {
+        "name": "Dzenis Burnic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Karlsruher SC"
+      },
+      {
+        "name": "Ermin Mahmic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Slovan Liberec"
+      },
+      {
+        "name": "Benjamin Tahirovic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Brondby IF"
+      },
+      {
+        "name": "Amar Memic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Viktoria Plzen"
+      },
+      {
+        "name": "Armin Gigovic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "BSC Young Boys"
+      },
+      {
+        "name": "Kerim Alajbegovic",
+        "number": "",
+        "position": "Delantero",
+        "club": "RB Salzburg"
+      },
+      {
+        "name": "Esmir Bajraktarevic",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Ermedin Demirović",
+        "number": "",
+        "position": "Delantero",
+        "club": "VfB Stuttgart"
+      },
+      {
+        "name": "Jovo Lukic",
+        "number": "",
+        "position": "Delantero",
+        "club": "FC Universitatea Cluj"
+      },
+      {
+        "name": "Samed Bazdar",
+        "number": "",
+        "position": "Delantero",
+        "club": "Jagiellonia Bialystok"
+      },
+      {
+        "name": "Haris Tabakovic",
+        "number": "",
+        "position": "Delantero",
+        "club": "Borussia Monchengladbach"
+      },
+      {
+        "name": "Edin Dzeko",
+        "number": "",
+        "position": "Delantero",
+        "club": "Schalke 04"
+      }
+    ]
+  },
+  "Brazil": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Alisson",
+        "number": "",
+        "position": "Arquero",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Ederson",
+        "number": "",
+        "position": "Arquero",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Weverton",
+        "number": "",
+        "position": "Arquero",
+        "club": "Gremio"
+      },
+      {
+        "name": "Wesley",
+        "number": "",
+        "position": "Defensor",
+        "club": "Roma"
+      },
+      {
+        "name": "Douglas Santos",
+        "number": "",
+        "position": "Defensor",
+        "club": "Zenit"
+      },
+      {
+        "name": "Alex Sandro",
+        "number": "",
+        "position": "Defensor",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Gabriel Magalhaes",
+        "number": "",
+        "position": "Defensor",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Marquinhos",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSG"
+      },
+      {
+        "name": "Danilo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Bremer",
+        "number": "",
+        "position": "Defensor",
+        "club": "Juventus"
+      },
+      {
+        "name": "Ibanez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Leo Pereira",
+        "number": "",
+        "position": "Defensor",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Bruno Guimaraes",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Newcastle"
+      },
+      {
+        "name": "Casemiro",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Danilo Santos",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Botafogo"
+      },
+      {
+        "name": "Fabinho",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Ittihad"
+      },
+      {
+        "name": "Lucas Paqueta",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Raphinha",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Neymar",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Santos"
+      },
+      {
+        "name": "Vinicius Junior",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Luiz Henrique",
+        "number": "",
+        "position": "Delantero",
+        "club": "Zenit"
+      },
+      {
+        "name": "Matheus Cunha",
+        "number": "",
+        "position": "Delantero",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Gabriel Martinelli",
+        "number": "",
+        "position": "Delantero",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Igor Thiago",
+        "number": "",
+        "position": "Delantero",
+        "club": "Brentford"
+      },
+      {
+        "name": "Endrick",
+        "number": "",
+        "position": "Delantero",
+        "club": "Lyon"
+      },
+      {
+        "name": "Rayan",
+        "number": "",
+        "position": "Delantero",
+        "club": "Bournemouth"
+      }
+    ]
+  },
+  "Canada": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Dayne St. Clair",
+        "number": "",
+        "position": "Arquero",
+        "club": "Inter Miami"
+      },
+      {
+        "name": "Maxime Crépeau",
+        "number": "",
+        "position": "Arquero",
+        "club": "Orlando City"
+      },
+      {
+        "name": "Owen Goodman",
+        "number": "",
+        "position": "Arquero",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Alistair Johnson",
+        "number": "",
+        "position": "Defensor",
+        "club": "Celtic"
+      },
+      {
+        "name": "Derek Cornelius",
+        "number": "",
+        "position": "Defensor",
+        "club": "Marseille"
+      },
+      {
+        "name": "Richie Laryea",
+        "number": "",
+        "position": "Defensor",
+        "club": "Toronto"
+      },
+      {
+        "name": "Niko Sigur",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hajduk Split"
+      },
+      {
+        "name": "Joel Waterman",
+        "number": "",
+        "position": "Defensor",
+        "club": "Chicago Fire"
+      },
+      {
+        "name": "Luc De Fougerolles",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fulham"
+      },
+      {
+        "name": "Moïse Bombito",
+        "number": "",
+        "position": "Defensor",
+        "club": "Nice"
+      },
+      {
+        "name": "Alphonso Davies",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Alfie Jones",
+        "number": "",
+        "position": "Defensor",
+        "club": "Middlesbrough"
+      },
+      {
+        "name": "Stephen Eustáquio",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Porto"
+      },
+      {
+        "name": "Ismael Kone",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sassuolo Calcio"
+      },
+      {
+        "name": "Tajon Buchanan",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Villarreal"
+      },
+      {
+        "name": "Mathieu Choiniere",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Los Angeles FC"
+      },
+      {
+        "name": "Ali Ahmed",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Norwich City"
+      },
+      {
+        "name": "Nathan Saliba",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Anderlecht"
+      },
+      {
+        "name": "Liam Miller",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Hull City"
+      },
+      {
+        "name": "Marcelo Flores",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Tigres UANL"
+      },
+      {
+        "name": "Jacob Shaffelburg",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Toronto"
+      },
+      {
+        "name": "Jonathan Osario",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Toronto"
+      },
+      {
+        "name": "Jonathan David",
+        "number": "",
+        "position": "Delantero",
+        "club": "Juventus"
+      },
+      {
+        "name": "Cyle Larin",
+        "number": "",
+        "position": "Delantero",
+        "club": "Southampton"
+      },
+      {
+        "name": "Tani Oluwaseyi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Villarreal"
+      },
+      {
+        "name": "Promise David",
+        "number": "",
+        "position": "Delantero",
+        "club": "Royale Union Saint-Gilloise"
+      }
+    ]
+  },
+  "Cape Verde": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Josimar Dias “Vozinha”",
+        "number": "",
+        "position": "Arquero",
+        "club": "Chaves"
+      },
+      {
+        "name": "Márcio da Rosa",
+        "number": "",
+        "position": "Arquero",
+        "club": "Montana"
+      },
+      {
+        "name": "Carlos Santos",
+        "number": "",
+        "position": "Arquero",
+        "club": "San Diego"
+      },
+      {
+        "name": "Steven Moreira",
+        "number": "",
+        "position": "Defensor",
+        "club": "Columbus Crew"
+      },
+      {
+        "name": "Wagner Pina",
+        "number": "",
+        "position": "Defensor",
+        "club": "Trabzonspor"
+      },
+      {
+        "name": "Joao Paulo Fernandes",
+        "number": "",
+        "position": "Defensor",
+        "club": "FCSB"
+      },
+      {
+        "name": "Sidny Lopes Cabral",
+        "number": "",
+        "position": "Defensor",
+        "club": "Benfica"
+      },
+      {
+        "name": "Logan Costa",
+        "number": "",
+        "position": "Defensor",
+        "club": "Villarreal"
+      },
+      {
+        "name": "Roberto Lopes “Pico”",
+        "number": "",
+        "position": "Defensor",
+        "club": "Shamrock Rovers"
+      },
+      {
+        "name": "Kelvin Pires",
+        "number": "",
+        "position": "Defensor",
+        "club": "SJK"
+      },
+      {
+        "name": "Ianique Tavares “Stopira”",
+        "number": "",
+        "position": "Defensor",
+        "club": "Torreense"
+      },
+      {
+        "name": "Edilson Borges “Diney”",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Bataeh"
+      },
+      {
+        "name": "Jamiro Monteiro",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PEC Zwolle"
+      },
+      {
+        "name": "Telmo Arcanjo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Vitoria de Guimarães"
+      },
+      {
+        "name": "Yannick Semedo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Farense"
+      },
+      {
+        "name": "Laros Duarte",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Puskas Akademia"
+      },
+      {
+        "name": "Deroy Duarte",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Ludogorets Razgrad"
+      },
+      {
+        "name": "Kevin Pina",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Krasnodar"
+      },
+      {
+        "name": "Ryan Mendes",
+        "number": "",
+        "position": "Delantero",
+        "club": "Iğdır"
+      },
+      {
+        "name": "Willy Semedo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Omonia"
+      },
+      {
+        "name": "Garry Rodrigues",
+        "number": "",
+        "position": "Delantero",
+        "club": "Apollon Limassol"
+      },
+      {
+        "name": "Jovane Cabral",
+        "number": "",
+        "position": "Delantero",
+        "club": "Estrela Amadora"
+      },
+      {
+        "name": "Nuno Da Costa",
+        "number": "",
+        "position": "Delantero",
+        "club": "İstanbul Basaksehir"
+      },
+      {
+        "name": "Dailon Livramento",
+        "number": "",
+        "position": "Delantero",
+        "club": "Casa Pia"
+      },
+      {
+        "name": "Gilson Benchimol",
+        "number": "",
+        "position": "Delantero",
+        "club": "Akron Tolyatti"
+      },
+      {
+        "name": "Helio Varela",
+        "number": "",
+        "position": "Delantero",
+        "club": "Maccabi Tel Aviv"
+      }
+    ]
+  },
+  "Colombia": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Camilo Vargas",
+        "number": "",
+        "position": "Arquero",
+        "club": "Atlas"
+      },
+      {
+        "name": "David Ospina",
+        "number": "",
+        "position": "Arquero",
+        "club": "Atletico Nacional"
+      },
+      {
+        "name": "Alvaro Montero",
+        "number": "",
+        "position": "Arquero",
+        "club": "Velez Sarsfield"
+      },
+      {
+        "name": "Johan Mojica",
+        "number": "",
+        "position": "Defensor",
+        "club": "RCD Mallorca"
+      },
+      {
+        "name": "Devier Machado",
+        "number": "",
+        "position": "Defensor",
+        "club": "Nantes"
+      },
+      {
+        "name": "Daniel Munoz",
+        "number": "",
+        "position": "Defensor",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Santiago Arias",
+        "number": "",
+        "position": "Defensor",
+        "club": "Esporte Clube Bahia"
+      },
+      {
+        "name": "Yerry Mina",
+        "number": "",
+        "position": "Defensor",
+        "club": "Cagliari"
+      },
+      {
+        "name": "Davinson Sanchez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Jhon Lucumi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bologna"
+      },
+      {
+        "name": "Willer Ditta",
+        "number": "",
+        "position": "Defensor",
+        "club": "Cruz Azul"
+      },
+      {
+        "name": "James Rodriguez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Minnesota United"
+      },
+      {
+        "name": "Jefferson Lerma",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Richard Rios",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Palmeiras/Benfica"
+      },
+      {
+        "name": "Juan Fernando Quintero",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Racing Club"
+      },
+      {
+        "name": "Jorge Carrascal",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Dinamo Moscow"
+      },
+      {
+        "name": "Kevin Castano",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Krasnodar"
+      },
+      {
+        "name": "Jaminton Campaz",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Rosario Central"
+      },
+      {
+        "name": "Luis Diaz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Carlos Andres Gomez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Campeonato Brasileiro"
+      },
+      {
+        "name": "Jhon Cordoba",
+        "number": "",
+        "position": "Delantero",
+        "club": "Krasnodar"
+      },
+      {
+        "name": "Juan Camilo Hernandez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Columbus"
+      },
+      {
+        "name": "Jhon Arias",
+        "number": "",
+        "position": "Delantero",
+        "club": "Wolverhampton Wanderers"
+      }
+    ]
+  },
+  "Croatia": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Dominik Livakovic",
+        "number": "",
+        "position": "Arquero",
+        "club": "Dinamo Zagreb"
+      },
+      {
+        "name": "Dominik Kotarski",
+        "number": "",
+        "position": "Arquero",
+        "club": "Copenhagen"
+      },
+      {
+        "name": "Ivor Pandur",
+        "number": "",
+        "position": "Arquero",
+        "club": "Hull City"
+      },
+      {
+        "name": "Josko Gvardiol",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Duje Caleta-Car",
+        "number": "",
+        "position": "Defensor",
+        "club": "Real Sociedad"
+      },
+      {
+        "name": "Josip Sutalo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Ajax"
+      },
+      {
+        "name": "Josip Stanisic",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Marin Pongracic",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fiorentina"
+      },
+      {
+        "name": "Martin Erlic",
+        "number": "",
+        "position": "Defensor",
+        "club": "Midtjylland"
+      },
+      {
+        "name": "Luka Vuskovic",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hamburg"
+      },
+      {
+        "name": "Luka Modric",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Mateo Kovacic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Mario Pasalic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atalanta"
+      },
+      {
+        "name": "Nikola Vlasic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Torino"
+      },
+      {
+        "name": "Luka Sucic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Sociedad"
+      },
+      {
+        "name": "Martin Baturina",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Como"
+      },
+      {
+        "name": "Kristijan Jakic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Augsburg"
+      },
+      {
+        "name": "Petar Sucic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Inter Milan"
+      },
+      {
+        "name": "Nikola Moro",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bologna"
+      },
+      {
+        "name": "Toni Fruk",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Rijeka"
+      },
+      {
+        "name": "Ivan Perisic",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Andrej Kramaric",
+        "number": "",
+        "position": "Delantero",
+        "club": "Hoffenheim"
+      },
+      {
+        "name": "Ante Budimir",
+        "number": "",
+        "position": "Delantero",
+        "club": "Osasuna"
+      },
+      {
+        "name": "Marco Pasalic",
+        "number": "",
+        "position": "Delantero",
+        "club": "Orlando City"
+      },
+      {
+        "name": "Petar Musa",
+        "number": "",
+        "position": "Delantero",
+        "club": "Dallas"
+      },
+      {
+        "name": "Igor Matanovic",
+        "number": "",
+        "position": "Delantero",
+        "club": "Freiburg"
+      }
+    ]
+  },
+  "Curacao": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Tyrick Bodak",
+        "number": "",
+        "position": "Arquero",
+        "club": "SC Telstar"
+      },
+      {
+        "name": "Trevor Doornbusch",
+        "number": "",
+        "position": "Arquero",
+        "club": "VVV-Venlo"
+      },
+      {
+        "name": "Eloy Room",
+        "number": "",
+        "position": "Arquero",
+        "club": "Miami FC"
+      },
+      {
+        "name": "Riechedly Bazoer",
+        "number": "",
+        "position": "Defensor",
+        "club": "Konyaspor"
+      },
+      {
+        "name": "Joshua Brenet",
+        "number": "",
+        "position": "Defensor",
+        "club": "Kayserispor"
+      },
+      {
+        "name": "Roshon Van Eijma",
+        "number": "",
+        "position": "Defensor",
+        "club": "RKC Waalwijk"
+      },
+      {
+        "name": "Sherel Floranus",
+        "number": "",
+        "position": "Defensor",
+        "club": "PEC Zwolle"
+      },
+      {
+        "name": "Deveron Fonville",
+        "number": "",
+        "position": "Defensor",
+        "club": "NEC Nijmegen"
+      },
+      {
+        "name": "Jurien Gaari",
+        "number": "",
+        "position": "Defensor",
+        "club": "Abha Club"
+      },
+      {
+        "name": "Armando Obispo",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Shurandy Sambo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sparta Rotterdam"
+      },
+      {
+        "name": "Juninho Bacuna",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Volendam"
+      },
+      {
+        "name": "Leandro Bacuna",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Igdir"
+      },
+      {
+        "name": "Livano Comenencia",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Zurich"
+      },
+      {
+        "name": "Kevin Felida",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Den Bosch"
+      },
+      {
+        "name": "Ar’Jany Martha",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Rotherham United"
+      },
+      {
+        "name": "Tyrese Noslin",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "SC Telstar"
+      },
+      {
+        "name": "Godfried Roemeratoe",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "RKC Waalwijk"
+      },
+      {
+        "name": "Jeremy Antonisse",
+        "number": "",
+        "position": "Delantero",
+        "club": "AE Kifisia"
+      },
+      {
+        "name": "Tahith Chong",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sheffield United"
+      },
+      {
+        "name": "Kenji Gorre",
+        "number": "",
+        "position": "Delantero",
+        "club": "Maccabi Haifa"
+      },
+      {
+        "name": "Sontje Hansen",
+        "number": "",
+        "position": "Delantero",
+        "club": "Middlesbrough"
+      },
+      {
+        "name": "Gervane Kastaneer",
+        "number": "",
+        "position": "Delantero",
+        "club": "Terengganu FC"
+      },
+      {
+        "name": "Brandley Kuwas",
+        "number": "",
+        "position": "Delantero",
+        "club": "FC Volendam"
+      },
+      {
+        "name": "Jürgen Locadia",
+        "number": "",
+        "position": "Delantero",
+        "club": "Miami FC"
+      },
+      {
+        "name": "Jearl Margaritha",
+        "number": "",
+        "position": "Delantero",
+        "club": "SK Beveren"
+      }
+    ]
+  },
+  "Czechia": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Lukas Hornicek",
+        "number": "",
+        "position": "Arquero",
+        "club": "Braga"
+      },
+      {
+        "name": "Matej Kovar",
+        "number": "",
+        "position": "Arquero",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Jindrich Stanek",
+        "number": "",
+        "position": "Arquero",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Vladimir Coufal",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hoffenheim"
+      },
+      {
+        "name": "David Doudera",
+        "number": "",
+        "position": "Defensor",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Tomas Holes",
+        "number": "",
+        "position": "Defensor",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Robin Hranac",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hoffenheim"
+      },
+      {
+        "name": "Stepan Chaloupek",
+        "number": "",
+        "position": "Defensor",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "David Jurasek",
+        "number": "",
+        "position": "Defensor",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Ladislav Krejci",
+        "number": "",
+        "position": "Defensor",
+        "club": "Wolverhampton"
+      },
+      {
+        "name": "Jaroslav Zeleny",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sparta Prague"
+      },
+      {
+        "name": "David Zima",
+        "number": "",
+        "position": "Defensor",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Lukas Cerv",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Viktoria Plzen"
+      },
+      {
+        "name": "Vladimir Darida",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Hradec Kralove"
+      },
+      {
+        "name": "Lukas Provod",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Michal Sadilek",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Hugo Sochurek",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sparta Prague"
+      },
+      {
+        "name": "Alexandr Sojka",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Viktoria Plzen"
+      },
+      {
+        "name": "Tomas Soucek",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "West Ham"
+      },
+      {
+        "name": "Pavel Sulc",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Olympique Lyonnais"
+      },
+      {
+        "name": "Denis Visinsky",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Viktoria Plzen"
+      },
+      {
+        "name": "Adam Hlozek",
+        "number": "",
+        "position": "Delantero",
+        "club": "Hoffenheim"
+      },
+      {
+        "name": "Tomas Chory",
+        "number": "",
+        "position": "Delantero",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Mojmir Chytil",
+        "number": "",
+        "position": "Delantero",
+        "club": "Slavia Prague"
+      },
+      {
+        "name": "Jan Kuchta",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sparta Prague"
+      },
+      {
+        "name": "Patrik Schick",
+        "number": "",
+        "position": "Delantero",
+        "club": "Bayer Leverkusen"
+      }
+    ]
+  },
+  "DR Congo": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Timothy Fayulu",
+        "number": "",
+        "position": "Arquero",
+        "club": "FC Noah"
+      },
+      {
+        "name": "Lionel Mpasi",
+        "number": "",
+        "position": "Arquero",
+        "club": "Le Havre"
+      },
+      {
+        "name": "Mike Epolo",
+        "number": "",
+        "position": "Arquero",
+        "club": "Standard Liege"
+      },
+      {
+        "name": "Aaron Wan-Bissaka",
+        "number": "",
+        "position": "Defensor",
+        "club": "West Ham United"
+      },
+      {
+        "name": "Gedeon Kalulu",
+        "number": "",
+        "position": "Defensor",
+        "club": "AEL Limassol"
+      },
+      {
+        "name": "Joris Kayembe",
+        "number": "",
+        "position": "Defensor",
+        "club": "Genk"
+      },
+      {
+        "name": "Arthur Masuaku",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lens"
+      },
+      {
+        "name": "Steve Kapuadi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Widzew Lodz"
+      },
+      {
+        "name": "Rocky Bushiri",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hibernian"
+      },
+      {
+        "name": "Axel Tuanzebe",
+        "number": "",
+        "position": "Defensor",
+        "club": "Burnley"
+      },
+      {
+        "name": "Chancel Mbemba",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lille"
+      },
+      {
+        "name": "Dylan Batubinsika",
+        "number": "",
+        "position": "Defensor",
+        "club": "Larissa"
+      },
+      {
+        "name": "Noah Sadiki",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sunderland"
+      },
+      {
+        "name": "Samuel Moutoussamy",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atromitos"
+      },
+      {
+        "name": "Edo Kayembe",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Watford"
+      },
+      {
+        "name": "Nathan Mukau",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Lille"
+      },
+      {
+        "name": "Charles Pickel",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Espanyol"
+      },
+      {
+        "name": "Ngal’ayel Mukau Mbuku",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Montpellier"
+      },
+      {
+        "name": "Brian Cipenga",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Castellón"
+      },
+      {
+        "name": "Théo Bongonda",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Spartak Moscow"
+      },
+      {
+        "name": "Gael Kakuta",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Larissa"
+      },
+      {
+        "name": "Meschack Elia",
+        "number": "",
+        "position": "Delantero",
+        "club": "Alanyaspor"
+      },
+      {
+        "name": "Fiston Mayele",
+        "number": "",
+        "position": "Delantero",
+        "club": "Pyramids"
+      },
+      {
+        "name": "Cedric Bakambu",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Betis"
+      },
+      {
+        "name": "Simon Banza",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Jazira"
+      },
+      {
+        "name": "Yoane Wissa",
+        "number": "",
+        "position": "Delantero",
+        "club": "Newcastle United"
+      }
+    ]
+  },
+  "Ecuador": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Hernan Galíndez",
+        "number": "",
+        "position": "Arquero",
+        "club": "Huracan"
+      },
+      {
+        "name": "Moises Ramirez",
+        "number": "",
+        "position": "Arquero",
+        "club": "AE Kifisias"
+      },
+      {
+        "name": "Gonzalo Valle",
+        "number": "",
+        "position": "Arquero",
+        "club": "LDU Quito"
+      },
+      {
+        "name": "Willian Pacho",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSG"
+      },
+      {
+        "name": "Piero Hincapie",
+        "number": "",
+        "position": "Defensor",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Joel Ordonez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Club Brugge"
+      },
+      {
+        "name": "Felix Torres",
+        "number": "",
+        "position": "Defensor",
+        "club": "Internacional"
+      },
+      {
+        "name": "Pervis Estupinan",
+        "number": "",
+        "position": "Defensor",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Angelo Preciado",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atletico Mineiro"
+      },
+      {
+        "name": "Jackson Porozo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Club Tijuana"
+      },
+      {
+        "name": "Moises Caicedo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Jordy Alcivar",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Independiente"
+      },
+      {
+        "name": "Denil Castillo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Midtjylland"
+      },
+      {
+        "name": "Alan Franco",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atletico Mineiro"
+      },
+      {
+        "name": "Pedro Vite",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Pumas UNAM"
+      },
+      {
+        "name": "Kendry Paez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "River Plate"
+      },
+      {
+        "name": "Yaimar Medina",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "KRC Genk"
+      },
+      {
+        "name": "Kevin Rodriguez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Union Saint-Gilloise"
+      },
+      {
+        "name": "Anthony Valencia",
+        "number": "",
+        "position": "Delantero",
+        "club": "Royal Antwerp"
+      },
+      {
+        "name": "Enner Valencia",
+        "number": "",
+        "position": "Delantero",
+        "club": "Pachuca"
+      },
+      {
+        "name": "Jordy Caicedo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Huracan"
+      },
+      {
+        "name": "Jeremy Arevalo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Stuttgart"
+      },
+      {
+        "name": "Gonzalo Plata",
+        "number": "",
+        "position": "Delantero",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Alan Minda",
+        "number": "",
+        "position": "Delantero",
+        "club": "Atletico Mineiro"
+      },
+      {
+        "name": "John Yeboah",
+        "number": "",
+        "position": "Delantero",
+        "club": "Venezia"
+      },
+      {
+        "name": "Nilson Angulo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sunderland"
+      }
+    ]
+  },
+  "England": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Jordan Pickford",
+        "number": "",
+        "position": "Arquero",
+        "club": "Everton"
+      },
+      {
+        "name": "Dean Henderson",
+        "number": "",
+        "position": "Arquero",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "James Trafford",
+        "number": "",
+        "position": "Arquero",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Reece James",
+        "number": "",
+        "position": "Defensor",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Tino Livramento",
+        "number": "",
+        "position": "Defensor",
+        "club": "Newcastle"
+      },
+      {
+        "name": "Marc Guehi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Ezri Konsa",
+        "number": "",
+        "position": "Defensor",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "John Stones",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Jarell Quansah",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayer Leverkusen"
+      },
+      {
+        "name": "Nico O’Reilly",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Dan Burn",
+        "number": "",
+        "position": "Defensor",
+        "club": "Newcastle"
+      },
+      {
+        "name": "Djed Spence",
+        "number": "",
+        "position": "Defensor",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Declan Rice",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Elliot Anderson",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Nottingham Forest"
+      },
+      {
+        "name": "Jude Bellingham",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Jordan Henderson",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Brentford"
+      },
+      {
+        "name": "Morgan Rogers",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Kobbie Mainoo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Eberechi Eze",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Harry Kane",
+        "number": "",
+        "position": "Delantero",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Ivan Toney",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Ollie Watkins",
+        "number": "",
+        "position": "Delantero",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Bukayo Saka",
+        "number": "",
+        "position": "Delantero",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Noni Madueke",
+        "number": "",
+        "position": "Delantero",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Marcus Rashford",
+        "number": "",
+        "position": "Delantero",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Anthony Gordon",
+        "number": "",
+        "position": "Delantero",
+        "club": "Newcastle"
+      }
+    ]
+  },
+  "Egypt": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Mohamed El Shenawy",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Mostafa Shobeir",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Mohamed Alaa",
+        "number": "",
+        "position": "Arquero",
+        "club": "El Gouna"
+      },
+      {
+        "name": "Mohamed Hani",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Tarek Alaa",
+        "number": "",
+        "position": "Defensor",
+        "club": "Zed"
+      },
+      {
+        "name": "Hamdy Fathy",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Wakrah"
+      },
+      {
+        "name": "Rami Rabia",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Ain"
+      },
+      {
+        "name": "Yasser Ibrahim",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Hossam Abdelmaguid",
+        "number": "",
+        "position": "Defensor",
+        "club": "Zamalek"
+      },
+      {
+        "name": "Mohamed Abdelmonem",
+        "number": "",
+        "position": "Defensor",
+        "club": "Nice"
+      },
+      {
+        "name": "Ahmed Fotouh",
+        "number": "",
+        "position": "Defensor",
+        "club": "Zamalek"
+      },
+      {
+        "name": "Karim Hafez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Pyramids"
+      },
+      {
+        "name": "Marwan Attia",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Mohanad Lasheen",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Pyramids"
+      },
+      {
+        "name": "Nabil Emad",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Najma"
+      },
+      {
+        "name": "Mahmoud Saber",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Zed"
+      },
+      {
+        "name": "Ahmed Zizo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Emam Ashour",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Mostafa Ziko",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Pyramids"
+      },
+      {
+        "name": "Mahmoud Trezeguet",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Ibrahim Adel",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Nordsjaelland"
+      },
+      {
+        "name": "Haissem Hassan",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Ovideo"
+      },
+      {
+        "name": "Mohamed Salah",
+        "number": "",
+        "position": "Delantero",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Omar Marmoush",
+        "number": "",
+        "position": "Delantero",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Aqtay Abdallah",
+        "number": "",
+        "position": "Delantero",
+        "club": "Enppi"
+      },
+      {
+        "name": "Hamza Abdelkarim",
+        "number": "",
+        "position": "Delantero",
+        "club": "Barcelona"
+      }
+    ]
+  },
+  "France": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Mike Maignan",
+        "number": "",
+        "position": "Arquero",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Brice Samba",
+        "number": "",
+        "position": "Arquero",
+        "club": "Rennes"
+      },
+      {
+        "name": "Robin Risser",
+        "number": "",
+        "position": "Arquero",
+        "club": "Lens"
+      },
+      {
+        "name": "Dayot Upamecano",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "William Saliba",
+        "number": "",
+        "position": "Defensor",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Lucas Digne",
+        "number": "",
+        "position": "Defensor",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Theo Hernandez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Lucas Hernandez",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSG"
+      },
+      {
+        "name": "Ibrahima Konate",
+        "number": "",
+        "position": "Defensor",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Jules Kounde",
+        "number": "",
+        "position": "Defensor",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Malo Gusto",
+        "number": "",
+        "position": "Defensor",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Maxence Lacroix",
+        "number": "",
+        "position": "Defensor",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "N’Golo Kante",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Adrien Rabiot",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Manu Kone",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Roma"
+      },
+      {
+        "name": "Aurelien Tchouameni",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Warren Zaire-Emery",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSG"
+      },
+      {
+        "name": "Maghnes Akliouche",
+        "number": "",
+        "position": "Delantero",
+        "club": "Monaco"
+      },
+      {
+        "name": "Kylian Mbappe",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Ousmane Dembele",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSG"
+      },
+      {
+        "name": "Michael Olise",
+        "number": "",
+        "position": "Delantero",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Desire Doue",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSG"
+      },
+      {
+        "name": "Bradley Barcola",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSG"
+      },
+      {
+        "name": "Rayan Cherki",
+        "number": "",
+        "position": "Delantero",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Marcus Thuram",
+        "number": "",
+        "position": "Delantero",
+        "club": "Inter Milan"
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "number": "",
+        "position": "Delantero",
+        "club": "Crystal Palace"
+      }
+    ]
+  },
+  "Germany": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Oliver Baumann",
+        "number": "",
+        "position": "Arquero",
+        "club": "Hoffenheim"
+      },
+      {
+        "name": "Manuel Neuer",
+        "number": "",
+        "position": "Arquero",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Alexander Nubel",
+        "number": "",
+        "position": "Arquero",
+        "club": "Monaco"
+      },
+      {
+        "name": "Waldemar Anton",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Nathaniel Brown",
+        "number": "",
+        "position": "Defensor",
+        "club": "Frankfurt"
+      },
+      {
+        "name": "Joshua Kimmich",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayern Munich, captain"
+      },
+      {
+        "name": "David Raum",
+        "number": "",
+        "position": "Defensor",
+        "club": "RB Leipzig"
+      },
+      {
+        "name": "Antonio Rudiger",
+        "number": "",
+        "position": "Defensor",
+        "club": "Real Madrid, vice-captain"
+      },
+      {
+        "name": "Nico Schlotterbeck",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Jonathan Tah",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Malick Thiaw",
+        "number": "",
+        "position": "Defensor",
+        "club": "Newcastle"
+      },
+      {
+        "name": "Nadiem Amiri",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Mainz"
+      },
+      {
+        "name": "Leon Goretzka",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Pascal Gross",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Brighton"
+      },
+      {
+        "name": "Jamie Leweling",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Stuttgart"
+      },
+      {
+        "name": "Lennart Karl",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Jamal Musiala",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Felix Nmecha",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Alexander Pavlovic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Angelo Stiller",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Stuttgart"
+      },
+      {
+        "name": "Florian Wirtz",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Maximilian Beier",
+        "number": "",
+        "position": "Delantero",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Kai Havertz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Leroy Sane",
+        "number": "",
+        "position": "Delantero",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Denis Undav",
+        "number": "",
+        "position": "Delantero",
+        "club": "Stuttgart"
+      },
+      {
+        "name": "Nick Woltemade",
+        "number": "",
+        "position": "Delantero",
+        "club": "Newcastle"
+      }
+    ]
+  },
+  "Ghana": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Benjamin Asare",
+        "number": "",
+        "position": "Arquero",
+        "club": "Accra Hearts of Oak"
+      },
+      {
+        "name": "Lawrence Ati-Zigi",
+        "number": "",
+        "position": "Arquero",
+        "club": "St. Gallen"
+      },
+      {
+        "name": "Joseph Anang",
+        "number": "",
+        "position": "Arquero",
+        "club": "St. Patrick’s Athletic"
+      },
+      {
+        "name": "Baba Abdul Rahman",
+        "number": "",
+        "position": "Defensor",
+        "club": "PAOK"
+      },
+      {
+        "name": "Derrick Luckassen",
+        "number": "",
+        "position": "Defensor",
+        "club": "Pafos"
+      },
+      {
+        "name": "Gideon Mensah",
+        "number": "",
+        "position": "Defensor",
+        "club": "Auxerre"
+      },
+      {
+        "name": "Marvin Senaya",
+        "number": "",
+        "position": "Defensor",
+        "club": "Auxerre"
+      },
+      {
+        "name": "Alidu Seidu",
+        "number": "",
+        "position": "Defensor",
+        "club": "Rennes"
+      },
+      {
+        "name": "Abdul Mumin",
+        "number": "",
+        "position": "Defensor",
+        "club": "Rayo Vallecano"
+      },
+      {
+        "name": "Jerome Opoku",
+        "number": "",
+        "position": "Defensor",
+        "club": "Istanbul Basaksehir"
+      },
+      {
+        "name": "Jonas Adjetey",
+        "number": "",
+        "position": "Defensor",
+        "club": "VfL Wolfsburg"
+      },
+      {
+        "name": "Kojo Oppong Peprah",
+        "number": "",
+        "position": "Defensor",
+        "club": "OGC Nice"
+      },
+      {
+        "name": "Thomas Partey",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Villarreal"
+      },
+      {
+        "name": "Kamaldeen Sulemana",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atalanta BC"
+      },
+      {
+        "name": "Kwasi Sibo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Oviedo"
+      },
+      {
+        "name": "Augustine Boakye",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Saint-Etienne"
+      },
+      {
+        "name": "Caleb Yirenkyi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Nordsjaelland"
+      },
+      {
+        "name": "Abdul Fatawu Issahaku",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Leicester City"
+      },
+      {
+        "name": "Elisha Owusu",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Auxerre"
+      },
+      {
+        "name": "Christopher Bonsu Baah",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Qadsiah"
+      },
+      {
+        "name": "Ernest Nuamah",
+        "number": "",
+        "position": "Delantero",
+        "club": "Lyon"
+      },
+      {
+        "name": "Antoine Semenyo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Brandon Thomas-Asante",
+        "number": "",
+        "position": "Delantero",
+        "club": "Coventry City"
+      },
+      {
+        "name": "Prince Kwabena Adu",
+        "number": "",
+        "position": "Delantero",
+        "club": "Viktoria Plzen"
+      },
+      {
+        "name": "Inaki Williams",
+        "number": "",
+        "position": "Delantero",
+        "club": "Athletic Club"
+      },
+      {
+        "name": "Jordan Ayew",
+        "number": "",
+        "position": "Delantero",
+        "club": "Leicester City"
+      }
+    ]
+  },
+  "Haiti": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Johnny Placide",
+        "number": "",
+        "position": "Arquero",
+        "club": "SC Bastia"
+      },
+      {
+        "name": "Alexandre Pierre",
+        "number": "",
+        "position": "Arquero",
+        "club": "FC Sochaux"
+      },
+      {
+        "name": "Josue Duverger",
+        "number": "",
+        "position": "Arquero",
+        "club": "FC Cosmos Koblenz"
+      },
+      {
+        "name": "Carlens Arcus",
+        "number": "",
+        "position": "Defensor",
+        "club": "Angers SCO"
+      },
+      {
+        "name": "Wilguens Paugain",
+        "number": "",
+        "position": "Defensor",
+        "club": "SV Zulte Waregem"
+      },
+      {
+        "name": "Duke Lacroix",
+        "number": "",
+        "position": "Defensor",
+        "club": "Colorado Springs"
+      },
+      {
+        "name": "Martin Experience",
+        "number": "",
+        "position": "Defensor",
+        "club": "AS Nancy-Lorraine"
+      },
+      {
+        "name": "Jean-Kevin Duverne",
+        "number": "",
+        "position": "Defensor",
+        "club": "KAA Gent"
+      },
+      {
+        "name": "Ricardo Ade",
+        "number": "",
+        "position": "Defensor",
+        "club": "LDU Quito"
+      },
+      {
+        "name": "Hannes Delcroix",
+        "number": "",
+        "position": "Defensor",
+        "club": "FC Lugano"
+      },
+      {
+        "name": "Keeto Thermoncy",
+        "number": "",
+        "position": "Defensor",
+        "club": "BSC Young Boys II"
+      },
+      {
+        "name": "Leverton Pierre",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Vizela"
+      },
+      {
+        "name": "Carl-Fred Sainthe",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "El Paso Locomotive FC"
+      },
+      {
+        "name": "Jean-Jacques Danley",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Philadelphia Union"
+      },
+      {
+        "name": "Jeanricner Bellegarde",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Wolverhampton"
+      },
+      {
+        "name": "Pierre Woodenski",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Violette AC"
+      },
+      {
+        "name": "Dominique Simon",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Tatran Presov"
+      },
+      {
+        "name": "Louicius Deedson",
+        "number": "",
+        "position": "Delantero",
+        "club": "FC Dallas"
+      },
+      {
+        "name": "Ruben Providence",
+        "number": "",
+        "position": "Delantero",
+        "club": "Almere City FC"
+      },
+      {
+        "name": "Josue Casimir",
+        "number": "",
+        "position": "Delantero",
+        "club": "AJ Auxerre"
+      },
+      {
+        "name": "Derrick Etienne",
+        "number": "",
+        "position": "Delantero",
+        "club": "Toronto FC"
+      },
+      {
+        "name": "Wilson Isidor",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sunderland AFC"
+      },
+      {
+        "name": "Duckens Nazon",
+        "number": "",
+        "position": "Delantero",
+        "club": "Esteghlal FC"
+      },
+      {
+        "name": "Frantzdy Pierrot",
+        "number": "",
+        "position": "Delantero",
+        "club": "Caykur Rizespor"
+      },
+      {
+        "name": "Yassin Fortune",
+        "number": "",
+        "position": "Delantero",
+        "club": "FC Vizela"
+      },
+      {
+        "name": "Lenny Joseph",
+        "number": "",
+        "position": "Delantero",
+        "club": "Ferencvaros TC"
+      }
+    ]
+  },
+  "Iran": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Alireza Beiranvand",
+        "number": "",
+        "position": "Arquero",
+        "club": "Tractor"
+      },
+      {
+        "name": "Seyed Hossein Hosseini",
+        "number": "",
+        "position": "Arquero",
+        "club": "Sepahan"
+      },
+      {
+        "name": "Payam Niazmand",
+        "number": "",
+        "position": "Arquero",
+        "club": "Persepolis"
+      },
+      {
+        "name": "Danial Eiri",
+        "number": "",
+        "position": "Defensor",
+        "club": "Malavan"
+      },
+      {
+        "name": "Ehsan Hajsafi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sepahan"
+      },
+      {
+        "name": "Saleh Hardani",
+        "number": "",
+        "position": "Defensor",
+        "club": "Esteghlal"
+      },
+      {
+        "name": "Hossein Kanaani",
+        "number": "",
+        "position": "Defensor",
+        "club": "Persepolis"
+      },
+      {
+        "name": "Shoja Khalilzadeh",
+        "number": "",
+        "position": "Defensor",
+        "club": "Tractor"
+      },
+      {
+        "name": "Milad Mohammadi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Persepolis"
+      },
+      {
+        "name": "Ali Nemati Omid Noorafkan",
+        "number": "",
+        "position": "Defensor",
+        "club": "Foolad"
+      },
+      {
+        "name": "Ramin Rezaeian",
+        "number": "",
+        "position": "Defensor",
+        "club": "Foolad"
+      },
+      {
+        "name": "Rouzbeh Cheshmi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Esteghlal"
+      },
+      {
+        "name": "Saeid Ezatolahi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Shabab Al-Ahli"
+      },
+      {
+        "name": "Mehdi Ghaedi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Nasr"
+      },
+      {
+        "name": "Saman Ghoddos",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Kalba"
+      },
+      {
+        "name": "Mohammad Ghorbani",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Wahda"
+      },
+      {
+        "name": "Alireza Jahanbakhsh",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Dender"
+      },
+      {
+        "name": "Mohammad Mohebi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Rostov"
+      },
+      {
+        "name": "Amir Mohammad Razzaghinia",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Esteghlal"
+      },
+      {
+        "name": "Mehdi Torabi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Tractor"
+      },
+      {
+        "name": "Aria Yousefi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sepahan"
+      },
+      {
+        "name": "Ali Alipour",
+        "number": "",
+        "position": "Delantero",
+        "club": "Persepolis"
+      },
+      {
+        "name": "Dennis Dargahi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Standard Liege"
+      },
+      {
+        "name": "Amirhossein Hosseinzadeh",
+        "number": "",
+        "position": "Delantero",
+        "club": "Tractor"
+      },
+      {
+        "name": "Mehdi Taremi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Olympiacos"
+      },
+      {
+        "name": "Shahriyar Moghanlou",
+        "number": "",
+        "position": "Delantero",
+        "club": "Kalba"
+      }
+    ]
+  },
+  "Iraq": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Fahad Talib",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al Talaba"
+      },
+      {
+        "name": "Jalal Hassan",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Zawraa"
+      },
+      {
+        "name": "Ahmed Basil",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Shorta"
+      },
+      {
+        "name": "Hussein Ali",
+        "number": "",
+        "position": "Defensor",
+        "club": "Pogon Szczecin"
+      },
+      {
+        "name": "Manaf Younis",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Shorta"
+      },
+      {
+        "name": "Zaid Tahseen",
+        "number": "",
+        "position": "Defensor",
+        "club": "Pakhtakor"
+      },
+      {
+        "name": "Rebin Sulaka",
+        "number": "",
+        "position": "Defensor",
+        "club": "Port"
+      },
+      {
+        "name": "Akam Hashem",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Zawraa"
+      },
+      {
+        "name": "Merchas Doski",
+        "number": "",
+        "position": "Defensor",
+        "club": "Viktoria Plzen"
+      },
+      {
+        "name": "Ahmed Yahya",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Shorta"
+      },
+      {
+        "name": "Zaid Ismail",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Talaba"
+      },
+      {
+        "name": "Frans Putros",
+        "number": "",
+        "position": "Defensor",
+        "club": "Persib Bandung"
+      },
+      {
+        "name": "Mustafa Saadoon",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Shorta"
+      },
+      {
+        "name": "Amir Al-Ammari",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Cracovia"
+      },
+      {
+        "name": "Kevin Yakob",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AGF"
+      },
+      {
+        "name": "Zidane Iqbal",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Utrecht"
+      },
+      {
+        "name": "Aimar Sher",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sarpsborg"
+      },
+      {
+        "name": "Ibrahim Bayesh",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Dhafra"
+      },
+      {
+        "name": "Ahmed Qasem",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Nashville SC"
+      },
+      {
+        "name": "Youssef Amyn",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AEK Larnaca"
+      },
+      {
+        "name": "Marko Farji",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Venezia"
+      },
+      {
+        "name": "Ali Jassim",
+        "number": "",
+        "position": "Delantero",
+        "club": "Como"
+      },
+      {
+        "name": "Ali Al-Hamadi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Ipswich Town"
+      },
+      {
+        "name": "Ali Youssef",
+        "number": "",
+        "position": "Delantero",
+        "club": "Apollon Limassol"
+      },
+      {
+        "name": "Aymen Hussein",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Karma"
+      },
+      {
+        "name": "Mohanad Ali",
+        "number": "",
+        "position": "Delantero",
+        "club": "Dibba"
+      }
+    ]
+  },
+  "Ivory Coast": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Yahia Fofana",
+        "number": "",
+        "position": "Arquero",
+        "club": "Caykur Rizespor"
+      },
+      {
+        "name": "Mohamed Koné",
+        "number": "",
+        "position": "Arquero",
+        "club": "Royal Charleroi SC"
+      },
+      {
+        "name": "Alban Lafont",
+        "number": "",
+        "position": "Arquero",
+        "club": "Panathinaikos F.C."
+      },
+      {
+        "name": "Emmanuel Agbadou",
+        "number": "",
+        "position": "Defensor",
+        "club": "Beşiktaş J.K."
+      },
+      {
+        "name": "Clement Akpa",
+        "number": "",
+        "position": "Defensor",
+        "club": "AJ Auxerre"
+      },
+      {
+        "name": "Ousmane Diomande",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sporting CP"
+      },
+      {
+        "name": "Guela Doue",
+        "number": "",
+        "position": "Defensor",
+        "club": "RC Strasbourg"
+      },
+      {
+        "name": "Ghislain Konan",
+        "number": "",
+        "position": "Defensor",
+        "club": "Gil Vicente"
+      },
+      {
+        "name": "Odilon Kossounou",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atalanta"
+      },
+      {
+        "name": "Evan Ndicka",
+        "number": "",
+        "position": "Defensor",
+        "club": "AS Roma"
+      },
+      {
+        "name": "Wilfried Singo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Galatasaray S.K."
+      },
+      {
+        "name": "Seko Fofana",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Porto"
+      },
+      {
+        "name": "Parfait Guiagon",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sporting Charleroi"
+      },
+      {
+        "name": "Christ Inao Oulaï",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Trabzonspor Kulubu"
+      },
+      {
+        "name": "Franck Kessie",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Ibrahim Sangaré",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Nottingham Forest F.C."
+      },
+      {
+        "name": "Jean-Mickael Seri",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "NK Maribor"
+      },
+      {
+        "name": "Simon Adingra",
+        "number": "",
+        "position": "Delantero",
+        "club": "AS Monaco"
+      },
+      {
+        "name": "Ange-Yoan Bonny",
+        "number": "",
+        "position": "Delantero",
+        "club": "Inter Milan"
+      },
+      {
+        "name": "Amad Diallo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Oumar Diakite",
+        "number": "",
+        "position": "Delantero",
+        "club": "Cercle Brugge KSV"
+      },
+      {
+        "name": "Yan Diomande",
+        "number": "",
+        "position": "Delantero",
+        "club": "RB Leipzig"
+      },
+      {
+        "name": "Evann Guessand",
+        "number": "",
+        "position": "Delantero",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Nicolas Pepe",
+        "number": "",
+        "position": "Delantero",
+        "club": "Villarreal CF"
+      },
+      {
+        "name": "Bazoumana Toure",
+        "number": "",
+        "position": "Delantero",
+        "club": "TSG Hoffenheim"
+      },
+      {
+        "name": "Elye Wahi",
+        "number": "",
+        "position": "Delantero",
+        "club": "OGC Nice"
+      }
+    ]
+  },
+  "Japan": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Hayakawa Tomoki",
+        "number": "",
+        "position": "Arquero",
+        "club": "Kashima Antlers"
+      },
+      {
+        "name": "Suzuki Zion",
+        "number": "",
+        "position": "Arquero",
+        "club": "Parma"
+      },
+      {
+        "name": "Osako Keisuke",
+        "number": "",
+        "position": "Arquero",
+        "club": "Sanfrecce Hiroshima"
+      },
+      {
+        "name": "Nagatomo Yuto",
+        "number": "",
+        "position": "Defensor",
+        "club": "FC Tokyo"
+      },
+      {
+        "name": "Taniguchi Shogo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sint-Truiden"
+      },
+      {
+        "name": "Tomiyasu Takehiro",
+        "number": "",
+        "position": "Defensor",
+        "club": "Ajax"
+      },
+      {
+        "name": "Itakura Ko",
+        "number": "",
+        "position": "Defensor",
+        "club": "Ajax"
+      },
+      {
+        "name": "Watanabe Tsuyoshi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Feyenoord"
+      },
+      {
+        "name": "Ito Hiroki",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Suzuki Junnosuke",
+        "number": "",
+        "position": "Defensor",
+        "club": "København"
+      },
+      {
+        "name": "Seko Ayumu",
+        "number": "",
+        "position": "Defensor",
+        "club": "Le Havre"
+      },
+      {
+        "name": "Sugawara Yukinari",
+        "number": "",
+        "position": "Defensor",
+        "club": "Werder Bremen"
+      },
+      {
+        "name": "Kamada Daichi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Sano Kaishu",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Mainz"
+      },
+      {
+        "name": "Tanaka Ao",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Leeds United"
+      },
+      {
+        "name": "Shuto Machino",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Borussia Monchengladbach"
+      },
+      {
+        "name": "Nakamura Keito",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Reims"
+      },
+      {
+        "name": "Doan Ritsu",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Eintracht Frankfurt"
+      },
+      {
+        "name": "Ito Junya",
+        "number": "",
+        "position": "Delantero",
+        "club": "Genk"
+      },
+      {
+        "name": "Kubo Takefusa",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Sociedad"
+      },
+      {
+        "name": "Suzuki Yuito",
+        "number": "",
+        "position": "Delantero",
+        "club": "Freiburg"
+      },
+      {
+        "name": "Ueda Ayase",
+        "number": "",
+        "position": "Delantero",
+        "club": "Feyenoord"
+      },
+      {
+        "name": "Ogawa Koki",
+        "number": "",
+        "position": "Delantero",
+        "club": "Nijmegen"
+      },
+      {
+        "name": "Maeda Daizen",
+        "number": "",
+        "position": "Delantero",
+        "club": "Celtic"
+      },
+      {
+        "name": "Shiogai Kento",
+        "number": "",
+        "position": "Delantero",
+        "club": "Wolfsburg"
+      },
+      {
+        "name": "Goto Keisuke",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sint-Truiden"
+      }
+    ]
+  },
+  "Jordan": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Yazid Abulaila",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Hussein"
+      },
+      {
+        "name": "Abdallah Al Fakhouri",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Wehdat"
+      },
+      {
+        "name": "Nour Bani Attiah",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Faisaly"
+      },
+      {
+        "name": "Mohammad Abualnadi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Selangor"
+      },
+      {
+        "name": "Husam Abu Dahab",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Samiya"
+      },
+      {
+        "name": "Mohammad Abu Hashish",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Karma"
+      },
+      {
+        "name": "Yazan Al Arab",
+        "number": "",
+        "position": "Defensor",
+        "club": "Seoul"
+      },
+      {
+        "name": "Abdallah Nasib",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Zawraa"
+      },
+      {
+        "name": "Saleem Obaid",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Hussein"
+      },
+      {
+        "name": "Ehsan Haddad",
+        "number": "",
+        "position": "Defensor",
+        "club": ""
+      },
+      {
+        "name": "Saed Al-Rosan",
+        "number": "",
+        "position": "Defensor",
+        "club": ""
+      },
+      {
+        "name": "Anas Banawi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Faisaly"
+      },
+      {
+        "name": "Mohannad Abu Taha",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Quwa Al-Jawiya"
+      },
+      {
+        "name": "Mohammad Al Dawoud",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Wehdat"
+      },
+      {
+        "name": "Nizar Al Rashdan",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Qatar SC"
+      },
+      {
+        "name": "Noor Al Rawabdeh",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Selangor"
+      },
+      {
+        "name": "Rajaei Ayed",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Hussein"
+      },
+      {
+        "name": "Amer Jamous",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Zawraa"
+      },
+      {
+        "name": "Ibrahim Sadeh",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Karma"
+      },
+      {
+        "name": "Mahmoud Al-Mardi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Hussein"
+      },
+      {
+        "name": "Mousa Al Tamari",
+        "number": "",
+        "position": "Delantero",
+        "club": "Rennes"
+      },
+      {
+        "name": "Odeh Al-Fakhouri",
+        "number": "",
+        "position": "Delantero",
+        "club": "Pyramids"
+      },
+      {
+        "name": "Mohammad Abu Zrayq",
+        "number": "",
+        "position": "Delantero",
+        "club": "Raja Casablanca"
+      },
+      {
+        "name": "Ali Azaizeh",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Shabab"
+      },
+      {
+        "name": "Ali Olwan",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Sailiya"
+      },
+      {
+        "name": "Ibrahim Sabra",
+        "number": "",
+        "position": "Delantero",
+        "club": "Lokomotiva Zagreb"
+      }
+    ]
+  },
+  "Mexico": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Raul Rangel",
+        "number": "",
+        "position": "Arquero",
+        "club": "Chivas"
+      },
+      {
+        "name": "Carlos Acevedo",
+        "number": "",
+        "position": "Arquero",
+        "club": "Santos Laguna"
+      },
+      {
+        "name": "Guillermo Ochoa",
+        "number": "",
+        "position": "Arquero",
+        "club": "AEL Limassol"
+      },
+      {
+        "name": "Israel Reyes",
+        "number": "",
+        "position": "Defensor",
+        "club": "Club America"
+      },
+      {
+        "name": "Jesus Gallardo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Toluca"
+      },
+      {
+        "name": "Jorge Sanchez",
+        "number": "",
+        "position": "Defensor",
+        "club": "PAOK"
+      },
+      {
+        "name": "César Montes",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lokomotiv Moscow"
+      },
+      {
+        "name": "Johan Vásquez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Genoa"
+      },
+      {
+        "name": "Mateo Chavez",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSV"
+      },
+      {
+        "name": "Erik Lira",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Cruz Azul"
+      },
+      {
+        "name": "Luis Romo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Chivas"
+      },
+      {
+        "name": "Obed Vargas",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atletico Madrid"
+      },
+      {
+        "name": "Brian Gutierrez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Chivas"
+      },
+      {
+        "name": "Orbelin Pineda",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AEK Athens"
+      },
+      {
+        "name": "Edson Alvarez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Gilberto Mora",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Club Tijuana"
+      },
+      {
+        "name": "Cesar Huerta",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Anderlecht"
+      },
+      {
+        "name": "Alvaro Fidalgo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Betis"
+      },
+      {
+        "name": "Luis Chavez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Dynamo Moscow"
+      },
+      {
+        "name": "Roberto Alvarado",
+        "number": "",
+        "position": "Delantero",
+        "club": "Chivas"
+      },
+      {
+        "name": "Alexis Vega",
+        "number": "",
+        "position": "Delantero",
+        "club": "Toluca"
+      },
+      {
+        "name": "Julian Quiñones",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Qadsiah"
+      },
+      {
+        "name": "Santiago Gimenez",
+        "number": "",
+        "position": "Delantero",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Guillermo Martinez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Pumas"
+      },
+      {
+        "name": "Armando Gonzalez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Chivas"
+      },
+      {
+        "name": "Raul Jimenez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Fulham"
+      }
+    ]
+  },
+  "Morocco": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Yassine Bounou",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al Hilal"
+      },
+      {
+        "name": "Munir El Kajoui",
+        "number": "",
+        "position": "Arquero",
+        "club": "RS Berkane"
+      },
+      {
+        "name": "Ahmed Reda Tagnaouti",
+        "number": "",
+        "position": "Arquero",
+        "club": "AS FAR"
+      },
+      {
+        "name": "Noussair Mazraoui",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Anass Salah-Eddine",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Youssef Belammari",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Ahly"
+      },
+      {
+        "name": "Marwane Saadane",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Fateh"
+      },
+      {
+        "name": "Chadi Riad",
+        "number": "",
+        "position": "Defensor",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Issa Diop",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fulham"
+      },
+      {
+        "name": "Redouane Halhal",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mechelen"
+      },
+      {
+        "name": "Achraf Hakimi",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSG"
+      },
+      {
+        "name": "Zakaria El Ouahdi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Genk"
+      },
+      {
+        "name": "Samir El Mourabet",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Strasbourg"
+      },
+      {
+        "name": "Ayyoub Bouaddi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Lille"
+      },
+      {
+        "name": "Neil El Aynaoui",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AS Roma"
+      },
+      {
+        "name": "Sofyan Amrabat",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Betis"
+      },
+      {
+        "name": "Azzedine Ounahi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Girone"
+      },
+      {
+        "name": "Bilal El Khannouss",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Stuttgart"
+      },
+      {
+        "name": "Ismael Saibari",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Amine Sbai",
+        "number": "",
+        "position": "Delantero",
+        "club": "Angers"
+      },
+      {
+        "name": "Chemsdine Talbi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sunderland"
+      },
+      {
+        "name": "Soufiane Rahimi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Ain"
+      },
+      {
+        "name": "Ayoub El Kaabi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Olympiacos"
+      },
+      {
+        "name": "Brahim Diaz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Yassine Gessime",
+        "number": "",
+        "position": "Delantero",
+        "club": "Strasbourg"
+      },
+      {
+        "name": "Ayoube Amaimouni",
+        "number": "",
+        "position": "Delantero",
+        "club": "Eintracht Frankfurt"
+      }
+    ]
+  },
+  "Netherlands": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Mark Flekken",
+        "number": "",
+        "position": "Arquero",
+        "club": "Bayer Leverkusen"
+      },
+      {
+        "name": "Robin Roefs",
+        "number": "",
+        "position": "Arquero",
+        "club": "Sunderland"
+      },
+      {
+        "name": "Bart Verbruggen",
+        "number": "",
+        "position": "Arquero",
+        "club": "Brighton & Hove Albion"
+      },
+      {
+        "name": "Nathan Ake",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Jorrel Hato",
+        "number": "",
+        "position": "Defensor",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Denzel Dumfries",
+        "number": "",
+        "position": "Defensor",
+        "club": "Inter Milan"
+      },
+      {
+        "name": "Lutsharel Geertruida",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sunderland"
+      },
+      {
+        "name": "John Paul van Hecke",
+        "number": "",
+        "position": "Defensor",
+        "club": "Brighton & Hove Albion"
+      },
+      {
+        "name": "Micky van de Ven",
+        "number": "",
+        "position": "Defensor",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Virgil van Dijk",
+        "number": "",
+        "position": "Defensor",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Frenkie de Jong",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Marten de Roon",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atalanta"
+      },
+      {
+        "name": "Ryan Gravenberch",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Teun Koopmeiners",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Juventus"
+      },
+      {
+        "name": "Noa Lang",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Guus Til",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSV Eindhoven"
+      },
+      {
+        "name": "Quinten Timber",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Marseille"
+      },
+      {
+        "name": "Mats Wieffer",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Brighton & Hove Albion"
+      },
+      {
+        "name": "Brian Brobbey",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sunderland"
+      },
+      {
+        "name": "Memphis Depay",
+        "number": "",
+        "position": "Delantero",
+        "club": "Corinthians"
+      },
+      {
+        "name": "Cody Gakpo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Justin Kluivert",
+        "number": "",
+        "position": "Delantero",
+        "club": "Bournemouth"
+      },
+      {
+        "name": "Donyell Malen",
+        "number": "",
+        "position": "Delantero",
+        "club": "AS Roma"
+      },
+      {
+        "name": "Crysencio Summerville",
+        "number": "",
+        "position": "Delantero",
+        "club": "West Ham"
+      },
+      {
+        "name": "Wout Weghorst",
+        "number": "",
+        "position": "Delantero",
+        "club": "Ajax"
+      }
+    ]
+  },
+  "New Zealand": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Max Crocombe",
+        "number": "",
+        "position": "Arquero",
+        "club": "Millwall FC"
+      },
+      {
+        "name": "Alex Paulsen",
+        "number": "",
+        "position": "Arquero",
+        "club": "Lechia Gdańsk"
+      },
+      {
+        "name": "Michael Woud",
+        "number": "",
+        "position": "Arquero",
+        "club": "Auckland FC"
+      },
+      {
+        "name": "Tim Payne",
+        "number": "",
+        "position": "Defensor",
+        "club": "Wellington Phoenix"
+      },
+      {
+        "name": "Francis De Vries",
+        "number": "",
+        "position": "Defensor",
+        "club": "Auckland FC"
+      },
+      {
+        "name": "Tyler Bindon",
+        "number": "",
+        "position": "Defensor",
+        "club": "Nottingham Forest"
+      },
+      {
+        "name": "Michael Boxall",
+        "number": "",
+        "position": "Defensor",
+        "club": "Minnesota United"
+      },
+      {
+        "name": "Liberato Cacace",
+        "number": "",
+        "position": "Defensor",
+        "club": "Wrexham AFC"
+      },
+      {
+        "name": "Nando Pijnaker",
+        "number": "",
+        "position": "Defensor",
+        "club": "Auckland FC"
+      },
+      {
+        "name": "Finn Surman",
+        "number": "",
+        "position": "Defensor",
+        "club": "Portland Timbers"
+      },
+      {
+        "name": "Callan Elliot",
+        "number": "",
+        "position": "Defensor",
+        "club": "Auckland FC"
+      },
+      {
+        "name": "Tommy Smith",
+        "number": "",
+        "position": "Defensor",
+        "club": "Braintree Town"
+      },
+      {
+        "name": "Joe Bell",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Viking FK"
+      },
+      {
+        "name": "Marko Stamenić",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Swansea City"
+      },
+      {
+        "name": "Alex Rufer",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Wellington Phoenix"
+      },
+      {
+        "name": "Ryan Thomas",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PEC Zwolle"
+      },
+      {
+        "name": "Lachlan Bayliss",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Newcastle Jets"
+      },
+      {
+        "name": "Matt Garbett",
+        "number": "",
+        "position": "Delantero",
+        "club": "Peterborough United"
+      },
+      {
+        "name": "Chris Wood",
+        "number": "",
+        "position": "Delantero",
+        "club": "Nottingham Forest"
+      },
+      {
+        "name": "Sarpreet Singh",
+        "number": "",
+        "position": "Delantero",
+        "club": "Wellington Phoenix"
+      },
+      {
+        "name": "Eli Just",
+        "number": "",
+        "position": "Delantero",
+        "club": "Motherwell FC"
+      },
+      {
+        "name": "Kosta Barbarouses",
+        "number": "",
+        "position": "Delantero",
+        "club": "Western Sydney Wanderers"
+      },
+      {
+        "name": "Ben Waine",
+        "number": "",
+        "position": "Delantero",
+        "club": "Port Vale"
+      },
+      {
+        "name": "Ben Old",
+        "number": "",
+        "position": "Delantero",
+        "club": "Saint-Étienne"
+      },
+      {
+        "name": "Callum McCowatt",
+        "number": "",
+        "position": "Delantero",
+        "club": "Silkeborg"
+      },
+      {
+        "name": "Jesse Randall",
+        "number": "",
+        "position": "Delantero",
+        "club": "Auckland FC"
+      }
+    ]
+  },
+  "Norway": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Orjan Nyland",
+        "number": "",
+        "position": "Arquero",
+        "club": "Sevilla"
+      },
+      {
+        "name": "Egil Selvik",
+        "number": "",
+        "position": "Arquero",
+        "club": "Watford"
+      },
+      {
+        "name": "Sander Tangvik",
+        "number": "",
+        "position": "Arquero",
+        "club": "HSV"
+      },
+      {
+        "name": "Julian Ryerson",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Kristoffer Ajer",
+        "number": "",
+        "position": "Defensor",
+        "club": "Brentford"
+      },
+      {
+        "name": "Leo Skiri Ostigard",
+        "number": "",
+        "position": "Defensor",
+        "club": "Genoa"
+      },
+      {
+        "name": "David Møller Wolfe",
+        "number": "",
+        "position": "Defensor",
+        "club": "Wolverhampton Wanderers"
+      },
+      {
+        "name": "Marcus Holmgren Pedersen",
+        "number": "",
+        "position": "Defensor",
+        "club": "Torino"
+      },
+      {
+        "name": "Torbjorn Heggem",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bologna"
+      },
+      {
+        "name": "Fredrik Bjorkan",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bodo/Glimt"
+      },
+      {
+        "name": "Henrik Falchener",
+        "number": "",
+        "position": "Defensor",
+        "club": "Viking"
+      },
+      {
+        "name": "Sondre Langas",
+        "number": "",
+        "position": "Defensor",
+        "club": "Derby County"
+      },
+      {
+        "name": "Martin Odegaard",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Sander Berge",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Fulham"
+      },
+      {
+        "name": "Patrick Berg",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bodo/Glimt"
+      },
+      {
+        "name": "Kristian Thorstvedt",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sassuolo"
+      },
+      {
+        "name": "Morten Thorsby",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Cremonese"
+      },
+      {
+        "name": "Thelo Aasgaard",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Rangers"
+      },
+      {
+        "name": "Andreas Schjelderup",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Benfica"
+      },
+      {
+        "name": "Jens Petter Hauge",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bodo/Glimt"
+      },
+      {
+        "name": "Fredrik Aursnes",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Benfica"
+      },
+      {
+        "name": "Erling Haaland",
+        "number": "",
+        "position": "Delantero",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Alexander Sorloth",
+        "number": "",
+        "position": "Delantero",
+        "club": "Atletico Madrid"
+      },
+      {
+        "name": "Jorgen Strand Larsen",
+        "number": "",
+        "position": "Delantero",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Oscar Bobb",
+        "number": "",
+        "position": "Delantero",
+        "club": "Fulham"
+      },
+      {
+        "name": "Antonio Nusa",
+        "number": "",
+        "position": "Delantero",
+        "club": "RB Leipzig"
+      }
+    ]
+  },
+  "Panama": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Orlando Mosquera",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Fayha FC"
+      },
+      {
+        "name": "Luis Mejia",
+        "number": "",
+        "position": "Arquero",
+        "club": "Club Nacional"
+      },
+      {
+        "name": "Cesar Samudio",
+        "number": "",
+        "position": "Arquero",
+        "club": "CD Marathon"
+      },
+      {
+        "name": "Cesar Blackman",
+        "number": "",
+        "position": "Defensor",
+        "club": "Slovan Bratislava"
+      },
+      {
+        "name": "Jorge Gutierrez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Deportivo La Guaira"
+      },
+      {
+        "name": "Amir Murillo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Besiktas"
+      },
+      {
+        "name": "Fidel Escobar",
+        "number": "",
+        "position": "Defensor",
+        "club": "Deportivo Saprissa"
+      },
+      {
+        "name": "Andres Andrade",
+        "number": "",
+        "position": "Defensor",
+        "club": "LASK"
+      },
+      {
+        "name": "Edgardo Farina",
+        "number": "",
+        "position": "Defensor",
+        "club": "FC Pari Nizhniy Novgorod"
+      },
+      {
+        "name": "Jose Cordoba",
+        "number": "",
+        "position": "Defensor",
+        "club": "Norwich City"
+      },
+      {
+        "name": "Eric Davis",
+        "number": "",
+        "position": "Defensor",
+        "club": "CD Plaza Amador"
+      },
+      {
+        "name": "Jiovani Ramos",
+        "number": "",
+        "position": "Defensor",
+        "club": "Academia Puerto Cabello"
+      },
+      {
+        "name": "Roderick Miller",
+        "number": "",
+        "position": "Defensor",
+        "club": "Turan Tovuz"
+      },
+      {
+        "name": "Anibal Godoy",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "San Diego FC"
+      },
+      {
+        "name": "Adalberto Carrasquilla",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "UNAM Pumas"
+      },
+      {
+        "name": "Carlos Harvey",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Minnesota United FC"
+      },
+      {
+        "name": "Cristian Martinez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Ironi Kiryat Shmona"
+      },
+      {
+        "name": "Jose Luis Rodriguez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Juarez"
+      },
+      {
+        "name": "Cesar Yanis",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "CD Cobresal"
+      },
+      {
+        "name": "Yoel Barcenas",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Mazatlan FC"
+      },
+      {
+        "name": "Alberto Quintero",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "CD Plaza Amador"
+      },
+      {
+        "name": "Azarias Londono",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "CD Universidad Catolica"
+      },
+      {
+        "name": "Ismael Diaz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Club Leon FC"
+      },
+      {
+        "name": "Cecilio Waterman",
+        "number": "",
+        "position": "Delantero",
+        "club": "Universidad de Concepcion"
+      },
+      {
+        "name": "Jose Fajardo",
+        "number": "",
+        "position": "Delantero",
+        "club": "CD Universidad Catolica"
+      },
+      {
+        "name": "Tomas Rodriguez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Deportivo Saprissa"
+      }
+    ]
+  },
+  "Paraguay": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Gatito Fernandez",
+        "number": "",
+        "position": "Arquero",
+        "club": "Cerro Porteno"
+      },
+      {
+        "name": "Orlando Gill",
+        "number": "",
+        "position": "Arquero",
+        "club": "San Lorenzo"
+      },
+      {
+        "name": "Gaston Olveira",
+        "number": "",
+        "position": "Arquero",
+        "club": "Olimpia"
+      },
+      {
+        "name": "Gustavo Gomez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Palmeiras"
+      },
+      {
+        "name": "Junior Alonso",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atletico Mineiro"
+      },
+      {
+        "name": "Fabian Balbuena",
+        "number": "",
+        "position": "Defensor",
+        "club": "Gremio"
+      },
+      {
+        "name": "Omar Alderete",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sunderland"
+      },
+      {
+        "name": "Juan Jose Caceres",
+        "number": "",
+        "position": "Defensor",
+        "club": "Dynamo Moscow"
+      },
+      {
+        "name": "Gustavo Velazquez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Cerro Porteno"
+      },
+      {
+        "name": "Jose Canale",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lanus"
+      },
+      {
+        "name": "Alexandro Maidana",
+        "number": "",
+        "position": "Defensor",
+        "club": "Talleres"
+      },
+      {
+        "name": "Miguel Almiron",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atlanta United"
+      },
+      {
+        "name": "Kaku",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Ain"
+      },
+      {
+        "name": "Andres Cubas",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Vancouver Whitecaps"
+      },
+      {
+        "name": "Ramon Sosa",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Palmeiras"
+      },
+      {
+        "name": "Diego Gomez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Brighton"
+      },
+      {
+        "name": "Damian Bobadilla",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sao Paulo"
+      },
+      {
+        "name": "Braian Ojeda",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Orlando City"
+      },
+      {
+        "name": "Matias Galarza",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atlanta United"
+      },
+      {
+        "name": "Mauricio",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Palmeiras"
+      },
+      {
+        "name": "Antonio Sanabria",
+        "number": "",
+        "position": "Delantero",
+        "club": "Cremonese"
+      },
+      {
+        "name": "Julio Enciso",
+        "number": "",
+        "position": "Delantero",
+        "club": "Strasbourg"
+      },
+      {
+        "name": "Gabriel Avalos",
+        "number": "",
+        "position": "Delantero",
+        "club": "Independiente"
+      },
+      {
+        "name": "Alex Arce",
+        "number": "",
+        "position": "Delantero",
+        "club": "Independiente Rivadavia"
+      },
+      {
+        "name": "Isidro Pitta",
+        "number": "",
+        "position": "Delantero",
+        "club": "Red Bull Bragantino"
+      },
+      {
+        "name": "Gustavo Caballero",
+        "number": "",
+        "position": "Delantero",
+        "club": "Portsmouth"
+      }
+    ]
+  },
+  "Portugal": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Diogo Costa",
+        "number": "",
+        "position": "Arquero",
+        "club": "FC Porto"
+      },
+      {
+        "name": "Jose Sa",
+        "number": "",
+        "position": "Arquero",
+        "club": "Wolverhampton Wanderers"
+      },
+      {
+        "name": "Rui Silva",
+        "number": "",
+        "position": "Arquero",
+        "club": "Sporting"
+      },
+      {
+        "name": "Diogo Dalot",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Matheus Nunes",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Nelson Semedo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Joao Cancelo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Nuno Mendes",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSG"
+      },
+      {
+        "name": "Goncalo Inacio",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sporting CP"
+      },
+      {
+        "name": "Renato Veiga",
+        "number": "",
+        "position": "Defensor",
+        "club": "Villarreal"
+      },
+      {
+        "name": "Ruben Dias",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Tomas Araujo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Benfica"
+      },
+      {
+        "name": "Ruben Neves",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Hilal"
+      },
+      {
+        "name": "Samuel Costa",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Mallorca"
+      },
+      {
+        "name": "Joao Neves",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSG"
+      },
+      {
+        "name": "Vitinha",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSG"
+      },
+      {
+        "name": "Bruno Fernandes",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Bernardo Silva",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Joao Felix",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Nassr"
+      },
+      {
+        "name": "Francisco Trincao",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sporting CP"
+      },
+      {
+        "name": "Francisco Conceicao",
+        "number": "",
+        "position": "Delantero",
+        "club": "Juventus"
+      },
+      {
+        "name": "Pedro Neto",
+        "number": "",
+        "position": "Delantero",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Rafael Leao",
+        "number": "",
+        "position": "Delantero",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Goncalo Guedes",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Sociedad"
+      },
+      {
+        "name": "Goncalo Ramos",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSG"
+      },
+      {
+        "name": "Cristiano Ronaldo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Nassr"
+      }
+    ]
+  },
+  "Qatar": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Salah Zakaria",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Duhail"
+      },
+      {
+        "name": "Mahmoud Abunada",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al Rayyan"
+      },
+      {
+        "name": "Meshaal Barsham",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Sadd"
+      },
+      {
+        "name": "Hashmi Hussein",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Arabi"
+      },
+      {
+        "name": "Ayoub Alawi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Gharafa"
+      },
+      {
+        "name": "Boualem Khoukhi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Sadd"
+      },
+      {
+        "name": "Pedro Miguel",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Sadd"
+      },
+      {
+        "name": "Issa Laaye",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al Arabi"
+      },
+      {
+        "name": "Lucas Mendes",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Wakrah"
+      },
+      {
+        "name": "Sultan Al-Brake",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Duhail"
+      },
+      {
+        "name": "Homam Al-Amin",
+        "number": "",
+        "position": "Defensor",
+        "club": "Cultural Leonesa"
+      },
+      {
+        "name": "Mohammed Al-Manai",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Shamal"
+      },
+      {
+        "name": "Jassem Jaber",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Arabi"
+      },
+      {
+        "name": "Karim Boudiaf",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Duhail"
+      },
+      {
+        "name": "Ahmed Fathi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Arabi"
+      },
+      {
+        "name": "Abdulaziz Hatem",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Rayyan"
+      },
+      {
+        "name": "Assim Madibo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Wakrah"
+      },
+      {
+        "name": "Tahseen Mohammed",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Duhail"
+      },
+      {
+        "name": "Edmilson Junior",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Duhail"
+      },
+      {
+        "name": "Almoez Ali",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Duhail"
+      },
+      {
+        "name": "Akram Afif",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Sadd"
+      },
+      {
+        "name": "Mohammed Muntari",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Gharafa"
+      },
+      {
+        "name": "Youssef Abdulrazzaq",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Wakrah"
+      },
+      {
+        "name": "Ahmed Alaa",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Rayyan"
+      },
+      {
+        "name": "Hassan Al-Haydos",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Sadd"
+      },
+      {
+        "name": "Ahmed Al-Janahi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al Gharafa"
+      }
+    ]
+  },
+  "Saudi Arabia": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Nawaf Al Aqidi",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Nassr"
+      },
+      {
+        "name": "Mohamed Al Owais",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Ula"
+      },
+      {
+        "name": "Ahmed Alkassar",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Qadsiah"
+      },
+      {
+        "name": "Saud Abdulhamid",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lens"
+      },
+      {
+        "name": "Jehad Thakri",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Qadsiah"
+      },
+      {
+        "name": "Abdulelah Al Amri",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Nassr"
+      },
+      {
+        "name": "Hassan Tambakti",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Ali Lajami",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Hassan Kadesh",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Ittihad"
+      },
+      {
+        "name": "Moteb Al Harbi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Nawaf Boushal",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Nassr"
+      },
+      {
+        "name": "Ali Majrashi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Mohammed Abu Alshamat",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Qadsiah"
+      },
+      {
+        "name": "Ziyad Al Johani",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Nasser Al Dawsari",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Mohamed Kanno",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Abdullah Al Khaibari",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Nassr"
+      },
+      {
+        "name": "Alaa Al Hejji",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Neom"
+      },
+      {
+        "name": "Musab Al Juwayr",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Qadsiah"
+      },
+      {
+        "name": "Sultan Mandash",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Ayman Yahya",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Nassr"
+      },
+      {
+        "name": "Khalid Al Ghannam",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al-Ettifaq"
+      },
+      {
+        "name": "Salem Al Dawsari",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "Abdullah Al Hamdan",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Nassr"
+      },
+      {
+        "name": "Feras Al Brikan",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Saleh Al Shehri",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Ittihad"
+      }
+    ]
+  },
+  "Scotland": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Craig Gordon",
+        "number": "",
+        "position": "Arquero",
+        "club": "Hearts"
+      },
+      {
+        "name": "Angus Gunn",
+        "number": "",
+        "position": "Arquero",
+        "club": "Nottingham Forest"
+      },
+      {
+        "name": "Liam Kelly",
+        "number": "",
+        "position": "Arquero",
+        "club": "Rangers"
+      },
+      {
+        "name": "Grant Hanley",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hibernian"
+      },
+      {
+        "name": "Jack Hendry",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Ettifaq"
+      },
+      {
+        "name": "Aaron Hickey",
+        "number": "",
+        "position": "Defensor",
+        "club": "Brentford"
+      },
+      {
+        "name": "Dom Hyam",
+        "number": "",
+        "position": "Defensor",
+        "club": "Wrexham"
+      },
+      {
+        "name": "Scott McKenna",
+        "number": "",
+        "position": "Defensor",
+        "club": "Dinamo Zagreb"
+      },
+      {
+        "name": "Nathan Patterson",
+        "number": "",
+        "position": "Defensor",
+        "club": "Everton"
+      },
+      {
+        "name": "Anthony Ralston",
+        "number": "",
+        "position": "Defensor",
+        "club": "Celtic"
+      },
+      {
+        "name": "Andy Robertson",
+        "number": "",
+        "position": "Defensor",
+        "club": "Liverpool"
+      },
+      {
+        "name": "John Souttar",
+        "number": "",
+        "position": "Defensor",
+        "club": "Rangers"
+      },
+      {
+        "name": "Kieran Tierney",
+        "number": "",
+        "position": "Defensor",
+        "club": "Celtic"
+      },
+      {
+        "name": "Ryan Christie",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bournemouth"
+      },
+      {
+        "name": "Findlay Curtis",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Kilmarnock"
+      },
+      {
+        "name": "Lewis Ferguson",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bologna"
+      },
+      {
+        "name": "Ben Gannon-Doak",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bournemouth"
+      },
+      {
+        "name": "Jack Fletcher",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester United"
+      },
+      {
+        "name": "John McGinn",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Kenny McLean",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Norwich City"
+      },
+      {
+        "name": "Scott McTominay",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Napoli"
+      },
+      {
+        "name": "Che Adams",
+        "number": "",
+        "position": "Delantero",
+        "club": "Torino"
+      },
+      {
+        "name": "Lyndon Dykes",
+        "number": "",
+        "position": "Delantero",
+        "club": "Charlton Athletic"
+      },
+      {
+        "name": "George Hirst",
+        "number": "",
+        "position": "Delantero",
+        "club": "Ipswich Town"
+      },
+      {
+        "name": "Lawrence Shankland",
+        "number": "",
+        "position": "Delantero",
+        "club": "Hearts"
+      },
+      {
+        "name": "Ross Stewart",
+        "number": "",
+        "position": "Delantero",
+        "club": "Southampton"
+      }
+    ]
+  },
+  "Senegal": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Edouard Mendy",
+        "number": "",
+        "position": "Arquero",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Mory Diaw",
+        "number": "",
+        "position": "Arquero",
+        "club": "Le Havre AC"
+      },
+      {
+        "name": "Yehvann Diouf",
+        "number": "",
+        "position": "Arquero",
+        "club": "OGC Nice"
+      },
+      {
+        "name": "Krepin Diatta",
+        "number": "",
+        "position": "Defensor",
+        "club": "AS Monaco"
+      },
+      {
+        "name": "Antoine Mendy",
+        "number": "",
+        "position": "Defensor",
+        "club": "OGC Nice"
+      },
+      {
+        "name": "Kalidou Koulibaly",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Hilal"
+      },
+      {
+        "name": "El Hadji Malick Diouf",
+        "number": "",
+        "position": "Defensor",
+        "club": "West Ham United"
+      },
+      {
+        "name": "Mamadou Sarr",
+        "number": "",
+        "position": "Defensor",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Moussa Niakhate",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lyon"
+      },
+      {
+        "name": "Moustapha Mbow",
+        "number": "",
+        "position": "Defensor",
+        "club": "Paris FC"
+      },
+      {
+        "name": "Abdoulaye Seck",
+        "number": "",
+        "position": "Defensor",
+        "club": "Maccabi Haifa"
+      },
+      {
+        "name": "Ismail Jakobs",
+        "number": "",
+        "position": "Defensor",
+        "club": "Galatasaray SK"
+      },
+      {
+        "name": "Ilay Camara",
+        "number": "",
+        "position": "Defensor",
+        "club": "Anderlecht"
+      },
+      {
+        "name": "Idrissa Gana Gueye",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Everton"
+      },
+      {
+        "name": "Pape Gueye",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Villarreal CF"
+      },
+      {
+        "name": "Lamine Camara",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AS Monaco"
+      },
+      {
+        "name": "Habib Diarra",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sunderland"
+      },
+      {
+        "name": "Pathe Ciss",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Rayo Vallecano"
+      },
+      {
+        "name": "Pape Matar Sarr",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Bara Sapoko Ndiaye",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Sadio Mane",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Nassr"
+      },
+      {
+        "name": "Ismaïla Sarr",
+        "number": "",
+        "position": "Delantero",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Iliman Ndiaye",
+        "number": "",
+        "position": "Delantero",
+        "club": "Everton"
+      },
+      {
+        "name": "Assane Diao",
+        "number": "",
+        "position": "Delantero",
+        "club": "Como"
+      },
+      {
+        "name": "Ibrahim Mbaye",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSG"
+      },
+      {
+        "name": "Nicolas Jackson",
+        "number": "",
+        "position": "Delantero",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Bamba Dieng",
+        "number": "",
+        "position": "Delantero",
+        "club": "Lorient"
+      },
+      {
+        "name": "Cherif Ndiaye",
+        "number": "",
+        "position": "Delantero",
+        "club": "Samsunspor"
+      }
+    ]
+  },
+  "South Africa": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Ronwen Williams",
+        "number": "",
+        "position": "Arquero",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Ricardo Goss",
+        "number": "",
+        "position": "Arquero",
+        "club": "Siwelele FC"
+      },
+      {
+        "name": "Sipho Chaine",
+        "number": "",
+        "position": "Arquero",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Khuliso Mudau",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Olwethu Makhanya",
+        "number": "",
+        "position": "Defensor",
+        "club": "Philadelphia Union"
+      },
+      {
+        "name": "Bradley Cross",
+        "number": "",
+        "position": "Defensor",
+        "club": "Kaizer Chiefs"
+      },
+      {
+        "name": "Thabang Matuludi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Polokwane City"
+      },
+      {
+        "name": "Nkosinathi Sibisi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Aubrey Modiba",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Khulumani Ndamane",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Ime Okon",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hannover 96"
+      },
+      {
+        "name": "Samukele Kabini",
+        "number": "",
+        "position": "Defensor",
+        "club": "Molde FK"
+      },
+      {
+        "name": "Mbekezeli Mbokazi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Chicago Fire"
+      },
+      {
+        "name": "Teboho Mokoena",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Jayden Adams",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Thalente Mbatha",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Kamogelo Sebelebele",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Sphephelo Sithole",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "CD Tondela"
+      },
+      {
+        "name": "Oswin Appollis",
+        "number": "",
+        "position": "Delantero",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Tshepang Moremi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Evidence Makgopa",
+        "number": "",
+        "position": "Delantero",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Lyle Foster",
+        "number": "",
+        "position": "Delantero",
+        "club": "Burnley"
+      },
+      {
+        "name": "Iqraam Rayners",
+        "number": "",
+        "position": "Delantero",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Relebohile Mofokeng",
+        "number": "",
+        "position": "Delantero",
+        "club": "Orlando Pirates"
+      },
+      {
+        "name": "Themba Zwane",
+        "number": "",
+        "position": "Delantero",
+        "club": "Mamelodi Sundowns"
+      },
+      {
+        "name": "Thapelo Maseko",
+        "number": "",
+        "position": "Delantero",
+        "club": "AEL Limassol"
+      }
+    ]
+  },
+  "South Korea": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Song Bumkeun",
+        "number": "",
+        "position": "Arquero",
+        "club": "Jeonbuk"
+      },
+      {
+        "name": "Jo Hyeonwoo",
+        "number": "",
+        "position": "Arquero",
+        "club": "Ulsan"
+      },
+      {
+        "name": "Kim Seung-gyu",
+        "number": "",
+        "position": "Arquero",
+        "club": "FC Tokyo"
+      },
+      {
+        "name": "Jens Castrop",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Monchengladbach"
+      },
+      {
+        "name": "Lee Hanbeom",
+        "number": "",
+        "position": "Defensor",
+        "club": "Midtjylland"
+      },
+      {
+        "name": "Park Jinseob",
+        "number": "",
+        "position": "Defensor",
+        "club": "Zhejiang FC"
+      },
+      {
+        "name": "Lee Kihyuk",
+        "number": "",
+        "position": "Defensor",
+        "club": "Gangwon"
+      },
+      {
+        "name": "Kim Minjae",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayern Munich"
+      },
+      {
+        "name": "Kim Moonhwan",
+        "number": "",
+        "position": "Defensor",
+        "club": "Daejeon"
+      },
+      {
+        "name": "Kim Taehyeon",
+        "number": "",
+        "position": "Defensor",
+        "club": "Kashima Antlers"
+      },
+      {
+        "name": "Lee Taeseok",
+        "number": "",
+        "position": "Defensor",
+        "club": "Austria Wien"
+      },
+      {
+        "name": "Seol Youngwoo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Crvena Zvezda"
+      },
+      {
+        "name": "Cho Yumin",
+        "number": "",
+        "position": "Defensor",
+        "club": "Sharjah"
+      },
+      {
+        "name": "Lee Donggyeong",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Ulsan"
+      },
+      {
+        "name": "Hwang Heechan",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Wolves"
+      },
+      {
+        "name": "Yang Hyunjun",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Celtic"
+      },
+      {
+        "name": "Hwang Inbeom",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Feyenoord"
+      },
+      {
+        "name": "Lee Jaesung",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FSV Mainz"
+      },
+      {
+        "name": "Kim Jingyu",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Jeonbuk"
+      },
+      {
+        "name": "Eom Jisung",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Swansea"
+      },
+      {
+        "name": "Bae Junho",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Stoke"
+      },
+      {
+        "name": "Lee Kangin",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSG"
+      },
+      {
+        "name": "Paik Seungho",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Birmingham"
+      },
+      {
+        "name": "Cho Guesung",
+        "number": "",
+        "position": "Delantero",
+        "club": "Midtjylland"
+      },
+      {
+        "name": "Son Heungmin",
+        "number": "",
+        "position": "Delantero",
+        "club": "LAFC"
+      },
+      {
+        "name": "Oh Hyeongyu",
+        "number": "",
+        "position": "Delantero",
+        "club": "Besiktas"
+      }
+    ]
+  },
+  "Spain": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Unai Simon",
+        "number": "",
+        "position": "Arquero",
+        "club": "Athletic Bilbao"
+      },
+      {
+        "name": "David Raya",
+        "number": "",
+        "position": "Arquero",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Joan Garcia",
+        "number": "",
+        "position": "Arquero",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Marc Cucurella",
+        "number": "",
+        "position": "Defensor",
+        "club": "Chelsea"
+      },
+      {
+        "name": "Alejandro Grimaldo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Bayer Leverkusen"
+      },
+      {
+        "name": "Pau Cubarsi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Aymeric Laporte",
+        "number": "",
+        "position": "Defensor",
+        "club": "Athletic Bilbao"
+      },
+      {
+        "name": "Marc Pubill",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atletico Madrid"
+      },
+      {
+        "name": "Eric Garcia",
+        "number": "",
+        "position": "Defensor",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Marcos Llorente",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atletico Madrid"
+      },
+      {
+        "name": "Pedro Porro",
+        "number": "",
+        "position": "Defensor",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Pedri",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Fabian Ruiz",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "PSG"
+      },
+      {
+        "name": "Martin Zubimendi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Gavi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Rodri",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Alex Baena",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Atletico Madrid"
+      },
+      {
+        "name": "Mikel Merino",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Spain"
+      },
+      {
+        "name": "Mikel Oyarzabal",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Sociedad"
+      },
+      {
+        "name": "Dani Olmo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Nico Williams",
+        "number": "",
+        "position": "Delantero",
+        "club": "Athletic Bilbao"
+      },
+      {
+        "name": "Yeremy Pino",
+        "number": "",
+        "position": "Delantero",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Ferran Torres",
+        "number": "",
+        "position": "Delantero",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Borja Iglesias",
+        "number": "",
+        "position": "Delantero",
+        "club": "Celta de Vigo"
+      },
+      {
+        "name": "Victor Munoz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Osasuna"
+      },
+      {
+        "name": "Lamine Yamal",
+        "number": "",
+        "position": "Delantero",
+        "club": "Barcelona"
+      }
+    ]
+  },
+  "Sweden": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Viktor Johansson",
+        "number": "",
+        "position": "Arquero",
+        "club": "Stoke City"
+      },
+      {
+        "name": "Kristoffer Nordfeldt",
+        "number": "",
+        "position": "Arquero",
+        "club": "AIK Fotball AB"
+      },
+      {
+        "name": "Jacob Widell Zetterstrom",
+        "number": "",
+        "position": "Arquero",
+        "club": "Derby County"
+      },
+      {
+        "name": "Hjalmar Ekdal",
+        "number": "",
+        "position": "Defensor",
+        "club": "Burnley"
+      },
+      {
+        "name": "Gabriel Gudmundsson",
+        "number": "",
+        "position": "Defensor",
+        "club": "Leeds United"
+      },
+      {
+        "name": "Isak Hien",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atalanta"
+      },
+      {
+        "name": "Emil Holm",
+        "number": "",
+        "position": "Defensor",
+        "club": "Juventus"
+      },
+      {
+        "name": "Gustaf Lagerbielke",
+        "number": "",
+        "position": "Defensor",
+        "club": "SC Braga"
+      },
+      {
+        "name": "Victor Lindelof",
+        "number": "",
+        "position": "Defensor",
+        "club": "Aston Villa"
+      },
+      {
+        "name": "Eric Smith",
+        "number": "",
+        "position": "Defensor",
+        "club": "St Pauli"
+      },
+      {
+        "name": "Carl Starfelt",
+        "number": "",
+        "position": "Defensor",
+        "club": "Celta de Vigo"
+      },
+      {
+        "name": "Elliot Stroud",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mjallby"
+      },
+      {
+        "name": "Daniel Svensson",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Jesper Kalstrom",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Udinese"
+      },
+      {
+        "name": "Yasin Ayari",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Brighton"
+      },
+      {
+        "name": "Mattias Svanberg",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Wolfsburg"
+      },
+      {
+        "name": "Lucas Bergvall",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Besfort Zeneli",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Saint-Gilloise"
+      },
+      {
+        "name": "Taha Ali",
+        "number": "",
+        "position": "Delantero",
+        "club": "Malmo"
+      },
+      {
+        "name": "Alexander Bernhardsson",
+        "number": "",
+        "position": "Delantero",
+        "club": "Holstein Kiel"
+      },
+      {
+        "name": "Anthony Elanga",
+        "number": "",
+        "position": "Delantero",
+        "club": "Newcastle"
+      },
+      {
+        "name": "Viktor Gyokeres",
+        "number": "",
+        "position": "Delantero",
+        "club": "Arsenal"
+      },
+      {
+        "name": "Alexander Isak",
+        "number": "",
+        "position": "Delantero",
+        "club": "Liverpool"
+      },
+      {
+        "name": "Gustaf Nilsson",
+        "number": "",
+        "position": "Delantero",
+        "club": "Club Brugge"
+      },
+      {
+        "name": "Benjamin Nygren",
+        "number": "",
+        "position": "Delantero",
+        "club": "Celtic"
+      },
+      {
+        "name": "Ken Sema",
+        "number": "",
+        "position": "Delantero",
+        "club": "Pafos"
+      }
+    ]
+  },
+  "Switzerland": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Marvin Keller",
+        "number": "",
+        "position": "Arquero",
+        "club": "BSC Young Boys"
+      },
+      {
+        "name": "Gregor Kobel",
+        "number": "",
+        "position": "Arquero",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Yvon Mvogo",
+        "number": "",
+        "position": "Arquero",
+        "club": "Lorient"
+      },
+      {
+        "name": "Manuel Akanji",
+        "number": "",
+        "position": "Defensor",
+        "club": "Internazionale"
+      },
+      {
+        "name": "Aurele Amenda",
+        "number": "",
+        "position": "Defensor",
+        "club": "Eintracht Frankfurt"
+      },
+      {
+        "name": "Eray Comert",
+        "number": "",
+        "position": "Defensor",
+        "club": "Valencia"
+      },
+      {
+        "name": "Nico Elvedi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Mönchengladbach"
+      },
+      {
+        "name": "Luca Jaquez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Stuttgart"
+      },
+      {
+        "name": "Miro Muheim",
+        "number": "",
+        "position": "Defensor",
+        "club": "Hamburger SV"
+      },
+      {
+        "name": "Ricardo Rodríguez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Real Betis"
+      },
+      {
+        "name": "Silvan Widmer",
+        "number": "",
+        "position": "Defensor",
+        "club": "Mainz 05"
+      },
+      {
+        "name": "Michel Aebischer",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Pisa"
+      },
+      {
+        "name": "Remo Freuler",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bologna"
+      },
+      {
+        "name": "Ardon Jashari",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Fabian Rieder",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Augsburg"
+      },
+      {
+        "name": "Djibril Sow",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Sevilla"
+      },
+      {
+        "name": "Granit Xhaka",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sunderland"
+      },
+      {
+        "name": "Denis Zakaria",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Monaco"
+      },
+      {
+        "name": "Zeki Amdouni",
+        "number": "",
+        "position": "Delantero",
+        "club": "Burnley"
+      },
+      {
+        "name": "Breel Embolo",
+        "number": "",
+        "position": "Delantero",
+        "club": "Stade Rennais"
+      },
+      {
+        "name": "Dan Ndoye",
+        "number": "",
+        "position": "Delantero",
+        "club": "Nottingham Forest"
+      },
+      {
+        "name": "Noah Okafor",
+        "number": "",
+        "position": "Delantero",
+        "club": "Leeds United"
+      },
+      {
+        "name": "Ruben Vargas",
+        "number": "",
+        "position": "Delantero",
+        "club": "Sevilla"
+      },
+      {
+        "name": "Christian Fassnacht",
+        "number": "",
+        "position": "Delantero",
+        "club": "BSC Young Boys"
+      },
+      {
+        "name": "Cedric Itten",
+        "number": "",
+        "position": "Delantero",
+        "club": "Fortuna Dusseldorf"
+      },
+      {
+        "name": "Johan Manzambi",
+        "number": "",
+        "position": "Delantero",
+        "club": "SC Freiburg"
+      }
+    ]
+  },
+  "Tunisia": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Sabri Ben Hessen",
+        "number": "",
+        "position": "Arquero",
+        "club": "Etoile Sahel"
+      },
+      {
+        "name": "Abdelmouhib Chamakh",
+        "number": "",
+        "position": "Arquero",
+        "club": "Club Africain"
+      },
+      {
+        "name": "Aymen Dahman",
+        "number": "",
+        "position": "Arquero",
+        "club": "CS Sfaxien"
+      },
+      {
+        "name": "Ali Abdi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Nice"
+      },
+      {
+        "name": "Adem Arous",
+        "number": "",
+        "position": "Defensor",
+        "club": "Kasimpasa"
+      },
+      {
+        "name": "Mohamed Amine Ben Hamida",
+        "number": "",
+        "position": "Defensor",
+        "club": "Esperance"
+      },
+      {
+        "name": "Dylan Bronn",
+        "number": "",
+        "position": "Defensor",
+        "club": "Servette Geneva"
+      },
+      {
+        "name": "Raed Chikhaoui",
+        "number": "",
+        "position": "Defensor",
+        "club": "US Monastir"
+      },
+      {
+        "name": "Moutaz Neffati",
+        "number": "",
+        "position": "Defensor",
+        "club": "Norrkoping"
+      },
+      {
+        "name": "Omar Rekik",
+        "number": "",
+        "position": "Defensor",
+        "club": "NK Maribor"
+      },
+      {
+        "name": "Montassar Talbi",
+        "number": "",
+        "position": "Defensor",
+        "club": "Lorient"
+      },
+      {
+        "name": "Yan Valery",
+        "number": "",
+        "position": "Defensor",
+        "club": "Young Boys Berne"
+      },
+      {
+        "name": "Mortadha Ben Ouanes",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Kasimpasa"
+      },
+      {
+        "name": "Anis Ben Slimane",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Norwich City"
+      },
+      {
+        "name": "Ismael Gharbi",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "FC Augsburg"
+      },
+      {
+        "name": "Rani Khedira",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Union Berlin"
+      },
+      {
+        "name": "Mohamed Hadj Mahmoud",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Lugano"
+      },
+      {
+        "name": "Hannibal Mejbri",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Burnley"
+      },
+      {
+        "name": "Ellyes Skhiri",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Eintracht Frankfurt"
+      },
+      {
+        "name": "Elias Achouri",
+        "number": "",
+        "position": "Delantero",
+        "club": "FC Copenhagen"
+      },
+      {
+        "name": "Khalil Ayari",
+        "number": "",
+        "position": "Delantero",
+        "club": "Paris St Germain"
+      },
+      {
+        "name": "Firas Chaouat",
+        "number": "",
+        "position": "Delantero",
+        "club": "Club Africain"
+      },
+      {
+        "name": "Rayan Elloumi",
+        "number": "",
+        "position": "Delantero",
+        "club": "Vancouver Whitecaps"
+      },
+      {
+        "name": "Hazem Mastouri",
+        "number": "",
+        "position": "Delantero",
+        "club": "Dynamo Makhachkala"
+      },
+      {
+        "name": "Elias Saad",
+        "number": "",
+        "position": "Delantero",
+        "club": "Hannover 96"
+      },
+      {
+        "name": "Sebastian Tounekti",
+        "number": "",
+        "position": "Delantero",
+        "club": "Celtic"
+      }
+    ]
+  },
+  "Turkiye": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Altay Bayindir",
+        "number": "",
+        "position": "Arquero",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Mert Gunok",
+        "number": "",
+        "position": "Arquero",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Ugurcan Cakır",
+        "number": "",
+        "position": "Arquero",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Abdulkerim Bardakcı",
+        "number": "",
+        "position": "Defensor",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Caglar Soyuncu",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Eren Elmalı",
+        "number": "",
+        "position": "Defensor",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Ferdi Kadioglu",
+        "number": "",
+        "position": "Defensor",
+        "club": "Brighton & Hove Albion"
+      },
+      {
+        "name": "Merih Demiral",
+        "number": "",
+        "position": "Defensor",
+        "club": "Al-Ahli"
+      },
+      {
+        "name": "Mert Muldur",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Ozan Kabak",
+        "number": "",
+        "position": "Defensor",
+        "club": "TSG 1899 Hoffenheim"
+      },
+      {
+        "name": "Samet Akaydin",
+        "number": "",
+        "position": "Defensor",
+        "club": "Caykur Rizespor"
+      },
+      {
+        "name": "Zeki Celik",
+        "number": "",
+        "position": "Defensor",
+        "club": "AS Roma"
+      },
+      {
+        "name": "Hakan Calhanoglu",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Internazionale"
+      },
+      {
+        "name": "Ismail Yuksek",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Kaan Ayhan",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Orkun Kokcu",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Besiktas."
+      },
+      {
+        "name": "Salih Ozcan",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Borussia Dortmund"
+      },
+      {
+        "name": "Arda Guler",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Barış Alper Yilmaz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Galatasaray"
+      },
+      {
+        "name": "Can Uzun",
+        "number": "",
+        "position": "Delantero",
+        "club": "Eintracht Frankfurt"
+      },
+      {
+        "name": "Deniz Gul",
+        "number": "",
+        "position": "Delantero",
+        "club": "FC Porto"
+      },
+      {
+        "name": "Irfan Can Kahveci",
+        "number": "",
+        "position": "Delantero",
+        "club": "Kasımpasa"
+      },
+      {
+        "name": "Kenan Yildiz",
+        "number": "",
+        "position": "Delantero",
+        "club": "Juventus"
+      },
+      {
+        "name": "Kerem Akturkoglu",
+        "number": "",
+        "position": "Delantero",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Oguz Aydin",
+        "number": "",
+        "position": "Delantero",
+        "club": "Fenerbahce"
+      },
+      {
+        "name": "Yunus Akgun",
+        "number": "",
+        "position": "Delantero",
+        "club": "Galatasaray"
+      }
+    ]
+  },
+  "Uruguay": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Sergio Rochet",
+        "number": "",
+        "position": "Arquero",
+        "club": "Internacional"
+      },
+      {
+        "name": "Fernando Muslera",
+        "number": "",
+        "position": "Arquero",
+        "club": "Estudiantes"
+      },
+      {
+        "name": "Santiago Mele",
+        "number": "",
+        "position": "Arquero",
+        "club": "Monterrey"
+      },
+      {
+        "name": "Guillermo Varela",
+        "number": "",
+        "position": "Defensor",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Ronald Araujo",
+        "number": "",
+        "position": "Defensor",
+        "club": "Barcelona"
+      },
+      {
+        "name": "Jose Maria Gimenez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Atletico de Madrid"
+      },
+      {
+        "name": "Santiago Bueno",
+        "number": "",
+        "position": "Defensor",
+        "club": "Wolves"
+      },
+      {
+        "name": "Sebastian Caceres",
+        "number": "",
+        "position": "Defensor",
+        "club": "CF America"
+      },
+      {
+        "name": "Mathias Olivera",
+        "number": "",
+        "position": "Defensor",
+        "club": "Napoli"
+      },
+      {
+        "name": "Joaquin Piquerez",
+        "number": "",
+        "position": "Defensor",
+        "club": "Palmeiras"
+      },
+      {
+        "name": "Matias Vina",
+        "number": "",
+        "position": "Defensor",
+        "club": "River Plate"
+      },
+      {
+        "name": "Manuel Ugarte",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Manchester United"
+      },
+      {
+        "name": "Emiliano Martinez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Palmeiras"
+      },
+      {
+        "name": "Rodrigo Bentancur",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Tottenham Hotspur"
+      },
+      {
+        "name": "Federico Valverde",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Madrid"
+      },
+      {
+        "name": "Agustin Canobbio",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Fluminense"
+      },
+      {
+        "name": "Juan Manuel Sanabria",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Real Salt Lake City"
+      },
+      {
+        "name": "Giorgan de Arrascaeta",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Nicolas de la Cruz",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Flamengo"
+      },
+      {
+        "name": "Rodrigo Zalazar",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Braga"
+      },
+      {
+        "name": "Facundo Pellistri",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Panathinaikos"
+      },
+      {
+        "name": "Maximiliano Araujo",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Sporting"
+      },
+      {
+        "name": "Brian Rodriguez",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "CF America"
+      },
+      {
+        "name": "Rodrigo Aguirre",
+        "number": "",
+        "position": "Delantero",
+        "club": "Tigres"
+      },
+      {
+        "name": "Federico Vinas",
+        "number": "",
+        "position": "Delantero",
+        "club": "Real Oviedo"
+      },
+      {
+        "name": "Darwin Nunez",
+        "number": "",
+        "position": "Delantero",
+        "club": "Al-Hilal"
+      }
+    ]
+  },
+  "USA": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Chris Brady",
+        "number": "",
+        "position": "Arquero",
+        "club": "Chicago Fire"
+      },
+      {
+        "name": "Matt Freese",
+        "number": "",
+        "position": "Arquero",
+        "club": "New York City FC"
+      },
+      {
+        "name": "Matt Turner",
+        "number": "",
+        "position": "Arquero",
+        "club": "New England Revolution"
+      },
+      {
+        "name": "Max Arfsten",
+        "number": "",
+        "position": "Defensor",
+        "club": "Columbus Crew"
+      },
+      {
+        "name": "Sergino Dest",
+        "number": "",
+        "position": "Defensor",
+        "club": "PSV"
+      },
+      {
+        "name": "Alex Freeman",
+        "number": "",
+        "position": "Defensor",
+        "club": "Villarreal"
+      },
+      {
+        "name": "Mark McKenzie",
+        "number": "",
+        "position": "Defensor",
+        "club": "Toulouse"
+      },
+      {
+        "name": "Tim Ream",
+        "number": "",
+        "position": "Defensor",
+        "club": "Charlotte FC"
+      },
+      {
+        "name": "Chris Richards",
+        "number": "",
+        "position": "Defensor",
+        "club": "Crystal Palace"
+      },
+      {
+        "name": "Antonee Robinson",
+        "number": "",
+        "position": "Defensor",
+        "club": "Fulham"
+      },
+      {
+        "name": "Miles Robinson",
+        "number": "",
+        "position": "Defensor",
+        "club": "FC Cincinnati"
+      },
+      {
+        "name": "Joe Scally",
+        "number": "",
+        "position": "Defensor",
+        "club": "Borussia Monchengladbach"
+      },
+      {
+        "name": "Auston Trusty",
+        "number": "",
+        "position": "Defensor",
+        "club": "Celtic"
+      },
+      {
+        "name": "Brenden Aaronson",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Leeds United"
+      },
+      {
+        "name": "Tyler Adams",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AFC Bournemouth"
+      },
+      {
+        "name": "Sebastian Berhalter",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Vancouver Whitecaps"
+      },
+      {
+        "name": "Weston McKennie",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Juventus"
+      },
+      {
+        "name": "Christian Pulisic",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "AC Milan"
+      },
+      {
+        "name": "Gio Reyna",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Borussia Monchengladbach"
+      },
+      {
+        "name": "Cristian Roldan",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Seattle Sounders"
+      },
+      {
+        "name": "Malik Tillman",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bayer Leverkusen"
+      },
+      {
+        "name": "Tim Weah",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Marseille"
+      },
+      {
+        "name": "Alejandro Zendejas",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Club America"
+      },
+      {
+        "name": "Folarin Balogun",
+        "number": "",
+        "position": "Delantero",
+        "club": "AS Monaco"
+      },
+      {
+        "name": "Ricardo Pepi",
+        "number": "",
+        "position": "Delantero",
+        "club": "PSV"
+      },
+      {
+        "name": "Haji Wright",
+        "number": "",
+        "position": "Delantero",
+        "club": "Coventry City"
+      }
+    ]
+  },
+  "Uzbekistan": {
+    "coach": "",
+    "source": "NBC Sports / FIFA confirmed squads",
+    "sourceUrl": "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
+    "updatedAt": "2026-06-11T16:04:00-04:00",
+    "players": [
+      {
+        "name": "Utkir Yusupov",
+        "number": "",
+        "position": "Arquero",
+        "club": "Navbahor"
+      },
+      {
+        "name": "Abduvohid Nematov",
+        "number": "",
+        "position": "Arquero",
+        "club": "Nasaf"
+      },
+      {
+        "name": "Botirali Ergashev",
+        "number": "",
+        "position": "Arquero",
+        "club": "Neftchi"
+      },
+      {
+        "name": "Rustam Ashurmatov",
+        "number": "",
+        "position": "Defensor",
+        "club": "Esteghlal"
+      },
+      {
+        "name": "Farrukh Sayfiev",
+        "number": "",
+        "position": "Defensor",
+        "club": "Neftchi"
+      },
+      {
+        "name": "Khojiakbar Alijonov",
+        "number": "",
+        "position": "Defensor",
+        "club": "Pakhtakor"
+      },
+      {
+        "name": "Sherzod Nasrullaev",
+        "number": "",
+        "position": "Defensor",
+        "club": "Nasaf"
+      },
+      {
+        "name": "Umar Eshmurodov",
+        "number": "",
+        "position": "Defensor",
+        "club": "Nasaf"
+      },
+      {
+        "name": "Abdukodir Khusanov",
+        "number": "",
+        "position": "Defensor",
+        "club": "Manchester City"
+      },
+      {
+        "name": "Abdulla Abdullaev",
+        "number": "",
+        "position": "Defensor",
+        "club": "Dibba"
+      },
+      {
+        "name": "Bekhruz Karimov",
+        "number": "",
+        "position": "Defensor",
+        "club": "Surkhon"
+      },
+      {
+        "name": "Jakhongir Urozov",
+        "number": "",
+        "position": "Defensor",
+        "club": "Dinamo Samarqand"
+      },
+      {
+        "name": "Avazbek Ulmasaliev",
+        "number": "",
+        "position": "Defensor",
+        "club": "AGMK"
+      },
+      {
+        "name": "Otabek Shukurov",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Baniyas"
+      },
+      {
+        "name": "Jaloliddin Masharipov",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Esteghlal"
+      },
+      {
+        "name": "Odiljon Hamrobekov",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Tractor"
+      },
+      {
+        "name": "Oston Urunov",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Persepolis"
+      },
+      {
+        "name": "Jamshid Iskanderov",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Neftchi"
+      },
+      {
+        "name": "Dostonbek Khamdamov",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Pakhtakor"
+      },
+      {
+        "name": "Abbosbek Fayzullaev",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Istanbul Basaksehir"
+      },
+      {
+        "name": "Akmal Mozgovoy",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Pakhtakor"
+      },
+      {
+        "name": "Azizjon Ganiev",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Al Bataeh"
+      },
+      {
+        "name": "Sherzod Esanov",
+        "number": "",
+        "position": "Mediocampista",
+        "club": "Bukhara"
+      },
+      {
+        "name": "Eldor Shomurodov",
+        "number": "",
+        "position": "Delantero",
+        "club": "Istanbul Basaksehir, on loan from Roma"
+      },
+      {
+        "name": "Igor Sergeev",
+        "number": "",
+        "position": "Delantero",
+        "club": "Persepolis"
+      },
+      {
+        "name": "Azizbek Amonov",
+        "number": "",
+        "position": "Delantero",
+        "club": "Bukhara"
+      }
+    ]
+  }
+}
