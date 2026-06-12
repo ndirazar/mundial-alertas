@@ -1951,9 +1951,13 @@ select {
   }
 
   .install-button {
-    min-width: 112px;
-    padding: 7px 12px;
-    font-size: 0.76rem;
+    width: max-content;
+    min-width: 0;
+    height: 36px;
+    padding: 0 14px;
+    font-size: 14px;
+    border-radius: 999px;
+    flex: 0 0 auto;
   }
 
   .feature-card {
