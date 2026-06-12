@@ -359,6 +359,7 @@ const state = {
   serviceWorkerActive: false,
   alertsInitialized: false,
   deferredInstallPrompt: null,
+  installButtonFallbackVisible: false,
   installCompletionNotified: false,
 };
 
@@ -1210,8 +1211,29 @@ function isAppInstalled() {
   return standalone || persisted;
 }
 
+function isIosDevice() {
+  return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+}
+
+function isMobileDevice() {
+  return (
+    isIosDevice() ||
+    /android/i.test(window.navigator.userAgent) ||
+    window.matchMedia("(pointer: coarse)").matches
+  );
+}
+
+function getInstallFallbackMessage() {
+  if (isIosDevice()) {
+    return "En iPhone: Compartir → Agregar a inicio";
+  }
+
+  return "En Android: menú ⋮ → Agregar a pantalla de inicio";
+}
+
 function markAppInstalled({ notify = false } = {}) {
   state.deferredInstallPrompt = null;
+  state.installButtonFallbackVisible = false;
   writeJson(STORAGE_KEYS.pwaInstalled, true);
   setInstallButtonIdle();
   updateInstallButtonVisibility();
@@ -1236,9 +1258,10 @@ function setInstallButtonIdle() {
 }
 
 function updateInstallButtonVisibility() {
-  const installable = Boolean(state.deferredInstallPrompt);
   const installed = isAppInstalled();
-  elements.installApp.hidden = !installable || installed;
+  const installable = Boolean(state.deferredInstallPrompt);
+  const fallbackAvailable = state.installButtonFallbackVisible || isMobileDevice();
+  elements.installApp.hidden = installed || (!installable && !fallbackAvailable);
   if (!elements.installApp.hidden) setInstallButtonIdle();
 }
 
@@ -1248,7 +1271,13 @@ async function promptAppInstall() {
     return;
   }
 
-  if (!state.deferredInstallPrompt) return;
+  if (!state.deferredInstallPrompt) {
+    state.installButtonFallbackVisible = true;
+    setInstallButtonIdle();
+    updateInstallButtonVisibility();
+    showToast(getInstallFallbackMessage());
+    return;
+  }
 
   setInstallButtonBusy(true);
 
@@ -1260,8 +1289,12 @@ async function promptAppInstall() {
       markAppInstalled({ notify: true });
       return;
     }
+
+    state.installButtonFallbackVisible = true;
   } catch (error) {
     state.deferredInstallPrompt = null;
+    state.installButtonFallbackVisible = true;
+    showToast(getInstallFallbackMessage());
   } finally {
     if (!isAppInstalled()) {
       setInstallButtonIdle();
