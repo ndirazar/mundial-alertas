@@ -355,12 +355,12 @@ const state = {
   resultsRefreshTimer: null,
   nextArgentinaCountdownTimer: null,
   toastTimer: null,
+  installingApp: false,
   notificationResult: "",
   serviceWorkerActive: false,
   alertsInitialized: false,
   deferredInstallPrompt: null,
   installButtonFallbackVisible: false,
-  installAcceptedPending: false,
   installCompletionNotified: false,
   installCompletionTimer: null,
   lastInstallActivationAt: 0,
@@ -1205,10 +1205,13 @@ function isAppInstalled() {
   const standalone =
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
-  const persisted = readBoolean(STORAGE_KEYS.pwaInstalled, false);
+  const persisted =
+    readBoolean(STORAGE_KEYS.pwaInstalled, false) ||
+    localStorage.getItem("pwa-installed") === "true";
 
   if (standalone && !persisted) {
     writeJson(STORAGE_KEYS.pwaInstalled, true);
+    localStorage.setItem("pwa-installed", "true");
   }
 
   return standalone || persisted;
@@ -1235,14 +1238,7 @@ function getInstallFallbackMessage() {
 }
 
 function markAppInstalled({ notify = false } = {}) {
-  state.deferredInstallPrompt = null;
-  state.installButtonFallbackVisible = false;
-  state.installAcceptedPending = false;
-  window.clearTimeout(state.installCompletionTimer);
-  state.installCompletionTimer = null;
-  writeJson(STORAGE_KEYS.pwaInstalled, true);
-  setInstallButtonIdle();
-  updateInstallButtonVisibility();
+  completeAppInstall();
 
   if (notify && !state.installCompletionNotified) {
     state.installCompletionNotified = true;
@@ -1250,17 +1246,29 @@ function markAppInstalled({ notify = false } = {}) {
   }
 }
 
-function setInstallButtonBusy(isBusy) {
+function setInstalling(isInstalling, label = "Instalando...") {
   if (!elements.installApp) return;
-  elements.installApp.disabled = isBusy;
-  elements.installApp.setAttribute("aria-busy", String(isBusy));
-  elements.installApp.innerHTML = isBusy
-    ? `<span class="install-spinner" aria-hidden="true"></span><span>Instalando...</span>`
+  state.installingApp = isInstalling;
+  elements.installApp.disabled = isInstalling;
+  elements.installApp.setAttribute("aria-busy", String(isInstalling));
+  elements.installApp.innerHTML = isInstalling
+    ? `<span class="install-spinner" aria-hidden="true"></span><span>${label}</span>`
     : "Instalar app";
 }
 
 function setInstallButtonIdle() {
-  setInstallButtonBusy(false);
+  setInstalling(false);
+}
+
+function completeAppInstall() {
+  state.deferredInstallPrompt = null;
+  state.installButtonFallbackVisible = false;
+  window.clearTimeout(state.installCompletionTimer);
+  state.installCompletionTimer = null;
+  writeJson(STORAGE_KEYS.pwaInstalled, true);
+  localStorage.setItem("pwa-installed", "true");
+  setInstalling(false);
+  updateInstallButtonVisibility();
 }
 
 function updateInstallButtonVisibility() {
@@ -1268,7 +1276,7 @@ function updateInstallButtonVisibility() {
   const installable = Boolean(state.deferredInstallPrompt);
   const fallbackAvailable = state.installButtonFallbackVisible || isMobileDevice();
   elements.installApp.hidden = installed || (!installable && !fallbackAvailable);
-  if (!elements.installApp.hidden && !state.installAcceptedPending) setInstallButtonIdle();
+  if (!elements.installApp.hidden && !state.installingApp) setInstallButtonIdle();
 }
 
 function handleInstallButtonActivation(event) {
@@ -1294,16 +1302,14 @@ async function promptAppInstall() {
     return;
   }
 
-  setInstallButtonBusy(true);
+  setInstalling(true, "Instalando...");
 
   try {
     state.deferredInstallPrompt.prompt();
     const choice = await state.deferredInstallPrompt.userChoice;
     state.deferredInstallPrompt = null;
     if (choice?.outcome === "accepted") {
-      state.installAcceptedPending = true;
-      setInstallButtonBusy(true);
-      showToast("Finalizando instalación...");
+      setInstalling(true, "Finalizando instalación...");
       state.installCompletionTimer = window.setTimeout(() => {
         markAppInstalled({ notify: true });
       }, 8000);
@@ -1313,11 +1319,16 @@ async function promptAppInstall() {
     state.installButtonFallbackVisible = true;
   } catch (error) {
     state.deferredInstallPrompt = null;
-    state.installAcceptedPending = false;
     state.installButtonFallbackVisible = true;
     showToast(getInstallFallbackMessage());
   } finally {
-    if (!state.installAcceptedPending && !isAppInstalled()) {
+    const installed = isAppInstalled();
+    if (installed) {
+      completeAppInstall();
+      return;
+    }
+
+    if (!state.installCompletionTimer) {
       setInstallButtonIdle();
       updateInstallButtonVisibility();
     }
