@@ -1,8 +1,11 @@
 import "./style.css";
+import { normalizeEspnEventPayload } from "./matchInsights.js";
+import { getBroadcastInfo } from "./data/broadcasts.js";
 import { TEAM_RANKING } from "./data/teamRanking.js";
 import { STADIUMS, STADIUMS_BY_GROUND } from "./data/stadiums.js";
 import { SQUADS } from "./data/squads.js";
 import SQUADS_2026 from "./data/squads-2026-app.json";
+import { getMatchPrediction } from "./utils/predictions.js";
 
 const FIXTURE_URL =
   "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
@@ -40,16 +43,12 @@ const IMPORTANT_TEAMS_DEFAULT = [
 ];
 
 const STORAGE_KEYS = {
-  alerts: "mundial.alerts",
   importantOnly: "mundial.importantOnly",
   importantTeams: "mundial.importantTeams",
-  alertLeadMinutes: "mundial.alertLeadMinutes",
   resultsCache: "mundial.resultsCache",
   squadCache: "mundial.squadCache",
   pwaInstalled: "mundial.pwaInstalled",
 };
-
-const ALERT_LEAD_OPTIONS = [5, 15, 30, 60, 120];
 
 const SQUAD_COACH_OVERRIDES = {
   Germany: "Julian Nagelsmann",
@@ -318,7 +317,6 @@ function supportsRegionalFlagEmojis() {
 }
 
 const FLAG_EMOJI_SUPPORTED = supportsRegionalFlagEmojis();
-
 const app = document.querySelector("#app");
 
 const state = {
@@ -343,8 +341,6 @@ const state = {
       ...IMPORTANT_TEAMS_DEFAULT,
     ]),
   ],
-  alerts: migrateStoredAlerts(readJson(STORAGE_KEYS.alerts, {})),
-  alertLeadMinutes: normalizeAlertLeadMinutes(readJson(STORAGE_KEYS.alertLeadMinutes, 30)),
   lastUpdated: "",
   resultsLoading: false,
   resultsError: "",
@@ -356,9 +352,6 @@ const state = {
   nextArgentinaCountdownTimer: null,
   toastTimer: null,
   installingApp: false,
-  notificationResult: "",
-  serviceWorkerActive: false,
-  alertsInitialized: false,
   deferredInstallPrompt: null,
   installButtonFallbackVisible: false,
   installCompletionNotified: false,
@@ -374,17 +367,18 @@ app.innerHTML = `
       <div class="hero-copy">
         <p class="eyebrow">Mundial 2026</p>
         <h1 class="hero-title">
-          <span class="hero-title-text">Mundial Alertas ⚽</span>
-          <button class="secondary-button install-button" id="install-app" type="button" hidden>Instalar app</button>
+          <span class="hero-title-text">Mundial 2026 ⚽</span>
         </h1>
-        <p class="subtitle">Partidos, horarios y alertas en hora de Argentina.</p>
+        <p class="subtitle">Partidos, horarios y datos del Mundial en hora de Argentina.</p>
+      </div>
+      <div class="header-actions">
+        <button class="secondary-button install-button" id="install-app" type="button" hidden>Instalar app</button>
       </div>
     </header>
 
     <section class="feature-card" id="next-argentina-card" aria-label="Próximo partido de Argentina"></section>
 
     <nav class="main-menu" aria-label="Secciones del Mundial">
-      <button class="menu-button" id="open-notifications" type="button">Conf. Notificaciones</button>
       <button class="menu-button" id="open-teams" type="button">Selecciones</button>
       <button class="menu-button" id="open-groups" type="button">Grupos</button>
       <button class="menu-button" id="open-results" type="button">Resultados</button>
@@ -429,7 +423,7 @@ app.innerHTML = `
   <div class="app-toast" id="app-toast" hidden role="status" aria-live="polite"></div>
 
   <div class="section-modal" id="section-modal" hidden>
-    <div class="notification-modal-backdrop" data-close-section></div>
+    <div class="modal-backdrop" data-close-section></div>
     <section class="section-panel" role="dialog" aria-modal="true" aria-labelledby="section-title">
       <div class="panel-heading">
         <h2 id="section-title"></h2>
@@ -440,7 +434,7 @@ app.innerHTML = `
   </div>
 
   <div class="teams-modal" id="teams-modal" hidden>
-    <div class="notification-modal-backdrop" data-close-teams></div>
+    <div class="modal-backdrop" data-close-teams></div>
     <section class="teams-panel" role="dialog" aria-modal="true" aria-labelledby="teams-title">
       <div class="panel-heading">
         <h2 id="teams-title">Selecciones</h2>
@@ -451,39 +445,13 @@ app.innerHTML = `
   </div>
 
   <div class="squad-modal" id="squad-modal" hidden>
-    <div class="notification-modal-backdrop" data-close-squad></div>
+    <div class="modal-backdrop" data-close-squad></div>
     <section class="squad-panel" role="dialog" aria-modal="true" aria-labelledby="squad-title">
       <div class="panel-heading">
         <h2 id="squad-title">Convocados</h2>
         <button class="close-button" id="close-squad" type="button" aria-label="Cerrar">×</button>
       </div>
       <div class="squad-content" id="squad-content"></div>
-    </section>
-  </div>
-
-  <div class="notification-modal" id="notification-modal" hidden>
-    <div class="notification-modal-backdrop" data-close-notifications></div>
-    <section class="notification-panel" role="dialog" aria-modal="true" aria-labelledby="notification-title">
-      <div class="panel-heading">
-        <div>
-          <p class="panel-kicker">Configuración</p>
-          <h2 id="notification-title">Estado de notificaciones</h2>
-        </div>
-        <button class="close-button" id="close-notifications" type="button" aria-label="Cerrar">×</button>
-      </div>
-      <div class="notification-status" id="notification-status"></div>
-      <p class="notification-result" id="notification-result" aria-live="polite"></p>
-      <label class="field notification-lead-field">
-        <span>Avisarme antes del partido</span>
-        <select id="alert-lead-select"></select>
-      </label>
-      <div class="notification-actions">
-        <button class="primary-button" id="enable-notifications" type="button">Activar notificaciones</button>
-        <button class="secondary-button" id="test-notification" type="button">Probar notificación</button>
-        <button class="secondary-button" id="alert-important" type="button">Alertar partidos importantes</button>
-        <button class="secondary-button" id="alert-argentina" type="button">Alertar partidos de Argentina</button>
-        <button class="danger-button" id="cancel-all-alerts" type="button">Cancelar todas</button>
-      </div>
     </section>
   </div>
 `;
@@ -507,10 +475,6 @@ const elements = {
   sectionTitle: document.querySelector("#section-title"),
   sectionContent: document.querySelector("#section-content"),
   closeSection: document.querySelector("#close-section"),
-  openNotifications: document.querySelector("#open-notifications"),
-  closeNotifications: document.querySelector("#close-notifications"),
-  notificationModal: document.querySelector("#notification-modal"),
-  enableNotifications: document.querySelector("#enable-notifications"),
   dateFilter: document.querySelector("#date-filter"),
   todayButton: document.querySelector("#today-button"),
   nextButton: document.querySelector("#next-button"),
@@ -521,13 +485,6 @@ const elements = {
   updatedText: document.querySelector("#updated-text"),
   summary: document.querySelector("#summary"),
   matches: document.querySelector("#matches"),
-  notificationStatus: document.querySelector("#notification-status"),
-  notificationResult: document.querySelector("#notification-result"),
-  alertLeadSelect: document.querySelector("#alert-lead-select"),
-  testNotification: document.querySelector("#test-notification"),
-  alertImportant: document.querySelector("#alert-important"),
-  alertArgentina: document.querySelector("#alert-argentina"),
-  cancelAllAlerts: document.querySelector("#cancel-all-alerts"),
 };
 
 elements.openGroups.addEventListener("click", () => openSectionModal("groups"));
@@ -549,20 +506,9 @@ elements.closeSquad.addEventListener("click", closeSquadModal);
 elements.squadModal.addEventListener("click", (event) => {
   if (event.target.hasAttribute("data-close-squad")) closeSquadModal();
 });
-elements.openNotifications.addEventListener("click", openNotificationsModal);
-elements.closeNotifications.addEventListener("click", closeNotificationsModal);
-elements.notificationModal.addEventListener("click", (event) => {
-  if (event.target.hasAttribute("data-close-notifications")) closeNotificationsModal();
-});
 elements.installApp.addEventListener("click", handleInstallButtonActivation);
-elements.alertLeadSelect.addEventListener("change", (event) => {
-  state.alertLeadMinutes = normalizeAlertLeadMinutes(event.target.value);
-  writeJson(STORAGE_KEYS.alertLeadMinutes, state.alertLeadMinutes);
-  render();
-});
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
-  if (!elements.notificationModal.hidden) closeNotificationsModal();
   if (!elements.squadModal.hidden) {
     closeSquadModal();
     return;
@@ -570,16 +516,6 @@ document.addEventListener("keydown", (event) => {
   if (!elements.teamsModal.hidden) closeTeamsModal();
   if (!elements.sectionModal.hidden) closeSectionModal();
 });
-elements.enableNotifications.addEventListener("click", requestNotifications);
-elements.testNotification.addEventListener("click", testNotification);
-elements.alertImportant.addEventListener("click", () => createBulkAlerts((match) => match.important, "partidos importantes"));
-elements.alertArgentina.addEventListener("click", () =>
-  createBulkAlerts(
-    (match) => match.team1 === "Argentina" || match.team2 === "Argentina",
-    "partidos de Argentina",
-  ),
-);
-elements.cancelAllAlerts.addEventListener("click", cancelAllAlerts);
 elements.dateFilter.addEventListener("change", (event) => {
   state.selectedDate = event.target.value;
   render();
@@ -608,25 +544,10 @@ elements.clearTeam.addEventListener("click", () => {
   elements.teamSearch.value = "";
   render();
 });
-elements.matches.addEventListener("click", handleAlertActionClick);
 elements.matches.addEventListener("click", handleMatchCardClick);
 elements.matches.addEventListener("keydown", handleMatchCardKeydown);
-elements.nextArgentinaCard.addEventListener("click", handleAlertActionClick);
-elements.sectionContent.addEventListener("click", handleAlertActionClick);
 elements.sectionContent.addEventListener("error", handleStadiumImageError, true);
 elements.teamsContent.addEventListener("click", handleSquadSelectionClick);
-renderAlertLeadOptions();
-
-function handleAlertActionClick(event) {
-  const alertButton = event.target.closest("[data-alert-action]");
-  if (!alertButton) return;
-
-  if (alertButton.dataset.alertAction === "cancel") {
-    cancelAlert(alertButton.dataset.matchId);
-    return;
-  }
-  activateAlert(alertButton.dataset.matchId);
-}
 
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
@@ -650,7 +571,6 @@ updateInstallButtonVisibility();
 registerServiceWorker();
 loadFixture();
 startArgentinaCountdown();
-setInterval(checkDueAlerts, 30 * 1000);
 
 async function loadFixture() {
   state.loading = true;
@@ -675,7 +595,6 @@ async function loadFixture() {
   } finally {
     state.loading = false;
     elements.dateFilter.value = state.selectedDate;
-    schedulePersistedAlerts();
     render();
   }
 }
@@ -753,6 +672,10 @@ function normalizeMatch(match, index) {
     important: isImportantMatch(team1, team2, round, group),
     result,
     status: extractFixtureStatus(match, result, kickoff),
+    scorers: [],
+    statistics: null,
+    timeline: [],
+    playerOfMatch: null,
   };
 }
 
@@ -923,7 +846,6 @@ function render() {
   elements.importantFilter.checked = state.importantOnly;
   elements.dateFilter.value = state.selectedDate;
   elements.clearTeam.hidden = !state.selectedTeam;
-  elements.alertLeadSelect.value = String(state.alertLeadMinutes);
 
   const filteredMatches = getFilteredMatches();
 
@@ -939,7 +861,6 @@ function render() {
       : `${filteredMatches.length} de ${state.matches.length} partidos`
     : "";
   renderNextArgentinaCard();
-  renderNotificationPanel();
 
   elements.matches.innerHTML = "";
 
@@ -975,23 +896,10 @@ function renderMatchCard(match) {
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `Ver detalle de ${translateTeam(match.team1)} vs ${translateTeam(match.team2)}`);
 
-  const alert = getAlertForMatch(match.id);
   const result = match.result;
-  const alertExpired = match.kickoff.getTime() - 30 * 60 * 1000 <= Date.now();
-  const alertStatus = alert?.status || (alertExpired ? "expired" : "none");
   const phaseLabel = match.groupLabel || "Fase eliminatoria";
   const meta = [phaseLabel, match.roundLabel].filter(Boolean).join(" · ");
-
-  const statusLabels = {
-    scheduled: "Alerta activa",
-    fired: "Alerta enviada",
-    expired: "Alerta vencida",
-  };
-
-  const alertDesktopLabel = alertStatus === "scheduled" ? "Cancelar alerta" : getAlertButtonLabel(alertExpired);
-  const alertMobileLabel = alertStatus === "scheduled"
-    ? "✅ Activa"
-    : `🔔 ${formatLeadMinutes(state.alertLeadMinutes)}`;
+  const isLiveMatch = isMatchLive(match);
 
   card.innerHTML = `
     <div class="match-card-header">
@@ -1001,31 +909,21 @@ function renderMatchCard(match) {
       </div>
       <div class="card-badges">
         ${match.important ? `<span class="badge">Importante</span>` : ""}
-        ${
-          alertStatus !== "none"
-            ? `<span class="alert-badge is-${alertStatus}">${statusLabels[alertStatus]}</span>`
-            : ""
-        }
       </div>
     </div>
+    ${isLiveMatch ? `<span class="live-badge">En vivo</span>` : ""}
     ${renderMatchTeamsRow(match.team1, match.team2, result ? `${result.team1Goals} - ${result.team2Goals}` : "vs")}
     <div class="match-info">
       <span class="match-time">${match.time} ARG</span>
       <span>${escapeHtml(meta)}</span>
       ${match.stadiumLabel ? `<span class="match-city">${escapeHtml(match.stadiumLabel)}</span>` : ""}
     </div>
-    ${
-      alertStatus === "scheduled"
-        ? `<button class="alert-button cancel-alert-button" type="button" data-alert-action="cancel" data-match-id="${match.id}"><span class="alert-label alert-label-desktop">${escapeHtml(alertDesktopLabel)}</span><span class="alert-label alert-label-mobile">${escapeHtml(alertMobileLabel)}</span></button>`
-        : `<button class="alert-button" type="button" data-alert-action="create" data-match-id="${match.id}" ${alertExpired ? "disabled" : ""}><span class="alert-label alert-label-desktop">${escapeHtml(alertDesktopLabel)}</span><span class="alert-label alert-label-mobile">${escapeHtml(alertMobileLabel)}</span></button>`
-    }
   `;
 
   return card;
 }
 
 function handleMatchCardClick(event) {
-  if (event.target.closest("[data-alert-action]")) return;
   const card = event.target.closest(".match-card");
   if (!card?.dataset.matchId) return;
   openSectionModal("match-detail", card.dataset.matchId);
@@ -1061,16 +959,7 @@ function renderNextArgentinaCard() {
     return;
   }
 
-  const alert = getAlertForMatch(match.id);
-  const alertExpired = match.kickoff.getTime() - 30 * 60 * 1000 <= Date.now();
-  const alertStatus = alert?.status || (alertExpired ? "expired" : "none");
   const rivalTeam = match.team1 === "Argentina" ? match.team2 : match.team1;
-  const statusLabels = {
-    scheduled: "Alerta activa",
-    fired: "Alerta enviada",
-    expired: "Alerta vencida",
-  };
-
   const countdownLabel = getArgentinaCountdownLabel(match);
 
   elements.nextArgentinaCard.innerHTML = `
@@ -1088,9 +977,7 @@ function renderNextArgentinaCard() {
           <strong>${formatDate(match.kickoff)}</strong>
           <span>${match.time} ARG</span>
         </div>
-        <button class="alert-button ${alertStatus === "scheduled" ? "cancel-alert-button" : ""}" type="button" data-alert-action="${alertStatus === "scheduled" ? "cancel" : "create"}" data-match-id="${match.id}" ${alertStatus !== "scheduled" && alertExpired ? "disabled" : ""}>${alertStatus === "scheduled" ? "Cancelar alerta" : getAlertButtonLabel(alertExpired)}</button>
       </div>
-      ${alertStatus !== "none" ? `<p class="feature-status">${statusLabels[alertStatus]}</p>` : ""}
     </article>
   `;
 
@@ -1652,7 +1539,6 @@ function applyResultsData(data) {
     state.matches = matches;
   }
   populateTeamSelector();
-  schedulePersistedAlerts();
 }
 
 function mergeEspnResults(events) {
@@ -1684,6 +1570,10 @@ function mergeEspnResults(events) {
         competitor.team.displayName,
       ]),
     );
+    const insights = normalizeEspnEventPayload(
+      competition,
+      Object.fromEntries(teamNamesById),
+    );
     const scorers = (competition.details || [])
       .filter((detail) => detail.scoringPlay)
       .map((detail) => ({
@@ -1704,6 +1594,9 @@ function mergeEspnResults(events) {
         homeScore: hasScore ? homeScore : null,
         awayScore: hasScore ? awayScore : null,
         scorers,
+        statistics: insights.statistics,
+        timeline: insights.timeline,
+        playerOfMatch: insights.playerOfMatch,
       },
     );
   });
@@ -1728,9 +1621,61 @@ function mergeEspnResults(events) {
           ? "team1"
           : "team2",
     }));
-    return { ...match, status: update.status, result, scorers };
+    const statistics = alignStatisticsToMatch(update.statistics, match, team1IsHome);
+    const timeline = (update.timeline || []).map((event) => ({
+      ...event,
+      side:
+        normalizeResultTeam(event.team) === normalizeResultTeam(match.team1)
+          ? "team1"
+          : normalizeResultTeam(event.team) === normalizeResultTeam(match.team2)
+            ? "team2"
+            : "",
+    }));
+    const playerOfMatch = update.playerOfMatch
+      ? {
+          ...update.playerOfMatch,
+          side:
+            normalizeResultTeam(update.playerOfMatch.team) === normalizeResultTeam(match.team1)
+              ? "team1"
+              : normalizeResultTeam(update.playerOfMatch.team) === normalizeResultTeam(match.team2)
+                ? "team2"
+                : "",
+        }
+      : null;
+    return {
+      ...match,
+      status: update.status,
+      result,
+      scorers,
+      statistics,
+      timeline,
+      playerOfMatch,
+    };
   });
   if (!matched) throw new Error("No se pudieron asociar los resultados al fixture.");
+}
+
+function alignStatisticsToMatch(statistics, match, team1IsHome) {
+  if (!statistics?.rows?.length) return null;
+
+  const rows = team1IsHome
+    ? statistics.rows
+    : statistics.rows.map((row) => ({
+        ...row,
+        team1Value: row.team2Value,
+        team2Value: row.team1Value,
+        team1Width: row.team2Width,
+        team2Width: row.team1Width,
+        team1Share: row.team2Share,
+        team2Share: row.team1Share,
+      }));
+
+  return {
+    ...statistics,
+    team1: match.team1,
+    team2: match.team2,
+    rows,
+  };
 }
 
 function getResultMatchKey(team1, team2) {
@@ -2208,6 +2153,195 @@ function renderScorerList(scorers) {
     .join("");
 }
 
+function renderPredictionCard(match) {
+  const prediction = getMatchPrediction(match, { matches: state.matches });
+  if (!prediction) return "";
+
+  const entries = [
+    { label: translateTeam(match.team1), value: prediction.homeWin },
+    { label: "Empate", value: prediction.draw },
+    { label: translateTeam(match.team2), value: prediction.awayWin },
+  ];
+  const confidence = getPredictionConfidenceLabel(prediction.confidence);
+
+  return `
+    <section class="premium-section prediction-card" aria-label="Predicción IA">
+      <div class="premium-section-heading">
+        <span>🤖 Predicción IA</span>
+        <strong>${escapeHtml(prediction.predictedScore.label)}</strong>
+      </div>
+      <div class="prediction-bars">
+        ${entries.map((entry) => `
+          <div class="prediction-row">
+            <div>
+              <span>${escapeHtml(entry.label)}</span>
+              <strong>${entry.value}%</strong>
+            </div>
+            <span class="prediction-track" aria-hidden="true">
+              <span style="width: ${entry.value}%"></span>
+            </span>
+          </div>
+        `).join("")}
+      </div>
+      <div class="prediction-confidence is-${escapeHtml(prediction.confidence)}">
+        <span>${escapeHtml(confidence.icon)}</span>
+        <strong>Confianza ${escapeHtml(confidence.label)}</strong>
+      </div>
+      <div class="prediction-reasons">
+        <span>Fuente: ${prediction.source === "api" ? "API externa" : "modelo local"}</span>
+        <span>Actualizado: ${formatPredictionDate(prediction.updatedAt)}</span>
+      </div>
+      <p class="prediction-disclaimer">${escapeHtml(prediction.explanation)}</p>
+    </section>
+  `;
+}
+
+function getPredictionConfidenceLabel(confidence) {
+  const labels = {
+    high: { icon: "🟢", label: "Alta" },
+    medium: { icon: "🟡", label: "Media" },
+    low: { icon: "🔴", label: "Baja" },
+  };
+  return labels[confidence] || labels.low;
+}
+
+function formatPredictionDate(value) {
+  if (!value) return "sin fecha";
+  const date = new Date(/^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T12:00:00` : value);
+  if (!Number.isFinite(date.getTime())) return escapeHtml(value);
+  return date.toLocaleDateString(ARGENTINA_LOCALE, {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    timeZone: ARGENTINA_TIME_ZONE,
+  });
+}
+
+function renderBroadcastSection(match) {
+  const broadcast = getBroadcastInfo(match);
+  const hasChannels = broadcast.status === "confirmed" && broadcast.channels.length > 0;
+
+  return `
+    <section class="premium-section broadcast-card" aria-label="Dónde verlo en Argentina">
+      <div class="premium-section-heading">
+        <span>📺 Dónde verlo en Argentina</span>
+        ${broadcast.updatedAt ? `<strong>${escapeHtml(formatPredictionDate(broadcast.updatedAt))}</strong>` : ""}
+      </div>
+      ${
+        hasChannels
+          ? `
+            <div class="broadcast-chips">
+              ${broadcast.channels.map((channel) => `
+                <span class="broadcast-chip">
+                  ${channel.logo ? `<img src="${escapeHtml(channel.logo)}" alt="" loading="lazy" />` : ""}
+                  <strong>${escapeHtml(channel.name)}</strong>
+                </span>
+              `).join("")}
+            </div>
+            <p class="broadcast-source">
+              Fuente:
+              ${
+                broadcast.sourceUrl
+                  ? `<a href="${escapeHtml(broadcast.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(broadcast.sourceName || "fuente oficial")}</a>`
+                  : escapeHtml(broadcast.sourceName || "fuente oficial")
+              }
+            </p>
+          `
+          : `<p class="broadcast-pending">Transmisión en Argentina pendiente de confirmación oficial.</p>`
+      }
+    </section>
+  `;
+}
+
+function renderStatisticsSection(statistics) {
+  if (!statistics?.rows?.length) return "";
+
+  return `
+    <section class="premium-section match-statistics" aria-label="Estadísticas del Partido">
+      <div class="premium-section-heading">
+        <span>Estadísticas del Partido</span>
+        <strong>${escapeHtml(translateTeam(statistics.team1))} vs ${escapeHtml(translateTeam(statistics.team2))}</strong>
+      </div>
+      <div class="stats-list">
+        ${statistics.rows.map((row) => `
+          <div class="stat-row">
+            <div class="stat-values">
+              <strong>${escapeHtml(row.team1Value)}</strong>
+              <span>${escapeHtml(row.label)}</span>
+              <strong>${escapeHtml(row.team2Value)}</strong>
+            </div>
+            <div class="stat-bars" aria-hidden="true">
+              <span class="stat-bar is-team1"><i style="width: ${row.team1Width}%"></i></span>
+              <span class="stat-bar is-team2"><i style="width: ${row.team2Width}%"></i></span>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderTimelineSection(timeline) {
+  const visibleEvents = (timeline || []).filter((event) =>
+    ["goal", "yellow", "red", "substitution", "halftime", "second-half", "fulltime", "kickoff"].includes(event.type),
+  );
+  if (!visibleEvents.length) return "";
+
+  return `
+    <section class="premium-section match-timeline" aria-label="Timeline del partido">
+      <div class="premium-section-heading">
+        <span>Timeline</span>
+        <strong>${visibleEvents.length} eventos</strong>
+      </div>
+      <ol class="timeline-list">
+        ${visibleEvents.map((event) => `
+          <li class="timeline-event is-${escapeHtml(event.type)} ${event.side ? `is-${event.side}` : "is-neutral"}">
+            <span class="timeline-minute">${escapeHtml(event.minuteLabel)}</span>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <strong>${escapeHtml(event.label)}</strong>
+              ${event.team ? `<span>${escapeHtml(translateTeam(event.team))}</span>` : ""}
+              ${event.assist ? `<small>Asistencia: ${escapeHtml(event.assist)}</small>` : ""}
+              ${event.ownGoal ? `<small>Gol en contra</small>` : ""}
+            </div>
+          </li>
+        `).join("")}
+      </ol>
+    </section>
+  `;
+}
+
+function renderPlayerOfMatchSection(playerOfMatch) {
+  if (!playerOfMatch?.name || !playerOfMatch.team) return "";
+  const hasEnoughData =
+    playerOfMatch.goals ||
+    playerOfMatch.assists ||
+    playerOfMatch.shots ||
+    playerOfMatch.rating;
+  if (!hasEnoughData) return "";
+
+  return `
+    <section class="premium-section player-of-match" aria-label="Figura del partido">
+      <div class="premium-section-heading">
+        <span>Figura del partido</span>
+        ${playerOfMatch.rating ? `<strong>${escapeHtml(playerOfMatch.rating)} rating</strong>` : ""}
+      </div>
+      <div class="player-card">
+        <div>
+          <strong>${escapeHtml(playerOfMatch.name)}</strong>
+          <span>${escapeHtml(translateTeam(playerOfMatch.team))}</span>
+        </div>
+        <dl>
+          <div><dt>Goles</dt><dd>${playerOfMatch.goals || 0}</dd></div>
+          <div><dt>Asist.</dt><dd>${playerOfMatch.assists || 0}</dd></div>
+          <div><dt>Remates</dt><dd>${playerOfMatch.shots || 0}</dd></div>
+          ${playerOfMatch.rating ? `<div><dt>Rating</dt><dd>${escapeHtml(playerOfMatch.rating)}</dd></div>` : ""}
+        </dl>
+      </div>
+    </section>
+  `;
+}
+
 function handleStadiumImageError(event) {
   const image = event.target.closest("[data-stadium-image]");
   if (!image || image.src.endsWith("/stadiums/placeholder.svg")) return;
@@ -2221,18 +2355,10 @@ function renderMatchDetailView() {
     return;
   }
 
-  const alert = getAlertForMatch(match.id);
-  const alertExpired = match.kickoff.getTime() - 30 * 60 * 1000 <= Date.now();
-  const alertStatus = alert?.status || (alertExpired ? "expired" : "none");
   const stadium = match.stadiumInfo;
   const played = match.status === "finished" || match.status === "live";
   const team1Scorers = (match.scorers || []).filter((goal) => goal.side === "team1");
   const team2Scorers = (match.scorers || []).filter((goal) => goal.side === "team2");
-  const statusLabels = {
-    scheduled: "Alerta activa",
-    fired: "Alerta enviada",
-    expired: "Alerta vencida",
-  };
 
   elements.sectionContent.innerHTML = `
     <article class="match-detail-card">
@@ -2243,6 +2369,8 @@ function renderMatchDetailView() {
           <p>${formatDate(match.kickoff)} · ${match.time} ARG</p>
         </div>
       </div>
+      ${renderPredictionCard(match)}
+      ${renderBroadcastSection(match)}
       ${played && match.result ? `
         <section class="match-result-detail" aria-label="Resultado del partido">
           <span class="match-result-status is-${match.status}">${getMatchStatusLabel(match.status)}</span>
@@ -2274,10 +2402,9 @@ function renderMatchDetailView() {
         <div><span>País</span><strong>${escapeHtml(stadium?.country || "Por confirmar")}</strong></div>
         <div><span>Capacidad</span><strong>${formatCapacity(stadium?.capacity)}</strong></div>
       </div>
-      <div class="match-detail-actions">
-        <button class="alert-button ${alertStatus === "scheduled" ? "cancel-alert-button" : ""}" type="button" data-alert-action="${alertStatus === "scheduled" ? "cancel" : "create"}" data-match-id="${match.id}" ${alertStatus !== "scheduled" && alertExpired ? "disabled" : ""}>${alertStatus === "scheduled" ? "Cancelar alerta" : getAlertButtonLabel(alertExpired)}</button>
-      </div>
-      ${alertStatus !== "none" ? `<p class="feature-status">${statusLabels[alertStatus]}</p>` : ""}
+      ${renderStatisticsSection(match.statistics)}
+      ${renderTimelineSection(match.timeline)}
+      ${renderPlayerOfMatchSection(match.playerOfMatch)}
     </article>
   `;
 
@@ -2360,361 +2487,20 @@ function formatGoalDifference(value) {
   return value > 0 ? `+${value}` : String(value);
 }
 
-function formatLeadMinutes(minutes) {
-  const normalized = normalizeAlertLeadMinutes(minutes);
-  if (normalized === 60) return "1 hora";
-  if (normalized === 120) return "2 horas";
-  return `${normalized} min`;
-}
-
-function getAlertButtonLabel(isExpired = false) {
-  if (isExpired) return "Alerta no disponible";
-  return `Alertar ${formatLeadMinutes(state.alertLeadMinutes)} antes`;
-}
-
-function normalizeAlertLeadMinutes(value) {
-  const minutes = Number(value);
-  return ALERT_LEAD_OPTIONS.includes(minutes) ? minutes : 30;
-}
-
-function renderAlertLeadOptions() {
-  elements.alertLeadSelect.innerHTML = ALERT_LEAD_OPTIONS.map(
-    (minutes) => `<option value="${minutes}">${formatLeadMinutes(minutes)}</option>`,
-  ).join("");
-}
-
-function openNotificationsModal() {
-  elements.notificationModal.hidden = false;
-  document.body.classList.add("modal-open");
-  renderNotificationPanel();
-  elements.closeNotifications.focus();
-}
-
-function closeNotificationsModal() {
-  elements.notificationModal.hidden = true;
-  document.body.classList.remove("modal-open");
-  elements.openNotifications.focus();
-}
-
-function renderNotificationPanel() {
-  const supportsNotifications = "Notification" in window;
-  const permission = supportsNotifications ? Notification.permission : "no disponible";
-  const scheduledAlerts = Object.values(state.alerts)
-    .filter((alert) => alert.status === "scheduled")
-    .sort((a, b) => Date.parse(a.alertAt) - Date.parse(b.alertAt));
-  const nextAlert = scheduledAlerts[0];
-
-  elements.enableNotifications.textContent =
-    permission === "granted" ? "Notificaciones activas" : "Activar notificaciones";
-  elements.notificationStatus.innerHTML = `
-    <div><span>Notification API</span><strong>${supportsNotifications ? "Compatible" : "No compatible"}</strong></div>
-    <div><span>Permiso actual</span><strong>${translatePermission(permission)}</strong></div>
-    <div><span>Service worker activo</span><strong>${state.serviceWorkerActive ? "Sí" : "No"}</strong></div>
-    <div><span>Alertas activas</span><strong>${scheduledAlerts.length}</strong></div>
-    <div><span>Aviso antes</span><strong>${formatLeadMinutes(state.alertLeadMinutes)}</strong></div>
-    <div class="next-alert"><span>Próxima alerta</span><strong>${
-      nextAlert ? formatAlertDate(nextAlert.alertAt) : "Sin alertas programadas"
-    }</strong></div>
-  `;
-  elements.notificationResult.textContent = state.notificationResult;
-  elements.alertLeadSelect.value = String(state.alertLeadMinutes);
-  elements.cancelAllAlerts.disabled = scheduledAlerts.length === 0;
-}
-
-function translatePermission(permission) {
-  const labels = {
-    granted: "Permitido",
-    denied: "Bloqueado",
-    default: "Sin decidir",
-    "no disponible": "No disponible",
-  };
-  return labels[permission] || permission;
-}
-
 async function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) {
-    state.notificationResult = "Este navegador no soporta service workers.";
-    renderNotificationPanel();
     return;
   }
 
   try {
-    const registration = await navigator.serviceWorker.register("/sw.js");
-    state.serviceWorkerActive = Boolean(
-      registration.active,
-    );
-    navigator.serviceWorker.addEventListener("controllerchange", () => {
-      state.serviceWorkerActive = true;
-      renderNotificationPanel();
-    });
+    await navigator.serviceWorker.register("/sw.js");
   } catch (error) {
-    state.serviceWorkerActive = false;
-    state.notificationResult = `Service worker no disponible: ${error.message}`;
+    console.warn("Service worker no disponible.", error);
   }
-
-  renderNotificationPanel();
-}
-
-async function requestNotifications() {
-  if (!("Notification" in window)) {
-    state.notificationResult = "Este navegador no soporta Notification API.";
-    renderNotificationPanel();
-    return false;
-  }
-
-  try {
-    const permission = await Notification.requestPermission();
-    state.notificationResult =
-      permission === "granted"
-        ? "Permiso de notificaciones concedido."
-        : "El navegador no permitió las notificaciones.";
-    renderNotificationPanel();
-    return permission === "granted";
-  } catch (error) {
-    state.notificationResult = `No se pudo solicitar permiso: ${error.message}`;
-    renderNotificationPanel();
-    return false;
-  }
-}
-
-async function testNotification() {
-  const allowed =
-    "Notification" in window && Notification.permission === "granted"
-      ? true
-      : await requestNotifications();
-
-  if (!allowed) return;
-
-  try {
-    await showNotification("Mundial Alertas ⚽", {
-      body: "Las notificaciones están funcionando correctamente.",
-      tag: "mundial-alertas-test",
-    });
-    state.notificationResult = "Notificación de prueba enviada.";
-  } catch (error) {
-    state.notificationResult = `No se pudo enviar la prueba: ${error.message}`;
-  }
-
-  renderNotificationPanel();
-}
-
-async function showNotification(title, options) {
-  if ("serviceWorker" in navigator) {
-    const registration = await navigator.serviceWorker.getRegistration();
-    if (registration?.active) {
-      await registration.showNotification(title, options);
-      return;
-    }
-  }
-
-  new Notification(title, options);
-}
-
-function buildAlert(match, leadMinutes = state.alertLeadMinutes) {
-  const normalizedLeadMinutes = normalizeAlertLeadMinutes(leadMinutes);
-  return {
-    alertId: `match-${match.id}-${normalizedLeadMinutes}m`,
-    matchId: match.id,
-    team1: match.team1,
-    team2: match.team2,
-    kickoff: match.kickoff.toISOString(),
-    leadMinutes: normalizedLeadMinutes,
-    alertAt: new Date(match.kickoff.getTime() - normalizedLeadMinutes * 60 * 1000).toISOString(),
-    status: "scheduled",
-  };
-}
-
-function getAlertForMatch(matchId) {
-  return Object.values(state.alerts).find((alert) => alert.matchId === matchId);
-}
-
-async function activateAlert(matchId) {
-  const match = state.matches.find((item) => item.id === matchId);
-  if (!match) return;
-
-  const alert = buildAlert(match);
-  if (Date.parse(alert.alertAt) <= Date.now()) return;
-
-  const existing = getAlertForMatch(matchId);
-  if (existing?.status === "scheduled") {
-    state.notificationResult = "Ese partido ya tiene una alerta activa.";
-    render();
-    return;
-  }
-
-  if ("Notification" in window && Notification.permission === "default") {
-    await requestNotifications();
-  }
-
-  state.alerts[alert.alertId] = alert;
-  persistAlerts();
-  state.notificationResult = `Alerta programada para ${match.team1Label} vs ${match.team2Label}.`;
-  render();
-}
-
-function cancelAlert(matchId) {
-  const alert = getAlertForMatch(matchId);
-  if (!alert || alert.status !== "scheduled") return;
-
-  delete state.alerts[alert.alertId];
-  persistAlerts();
-  state.notificationResult = "Alerta cancelada.";
-  render();
-}
-
-async function createBulkAlerts(predicate, label) {
-  if ("Notification" in window && Notification.permission === "default") {
-    await requestNotifications();
-  }
-
-  let created = 0;
-  state.matches.filter(predicate).forEach((match) => {
-    const alert = buildAlert(match);
-    const existing = getAlertForMatch(match.id);
-    if (Date.parse(alert.alertAt) <= Date.now() || existing?.status === "scheduled") return;
-    state.alerts[alert.alertId] = alert;
-    created += 1;
-  });
-
-  persistAlerts();
-  state.notificationResult = created
-    ? `${created} alertas creadas para ${label}.`
-    : `No hay nuevas alertas disponibles para ${label}.`;
-  render();
-}
-
-function cancelAllAlerts() {
-  const activeIds = Object.values(state.alerts)
-    .filter((alert) => alert.status === "scheduled")
-    .map((alert) => alert.alertId);
-
-  activeIds.forEach((alertId) => delete state.alerts[alertId]);
-  persistAlerts();
-  state.notificationResult = `${activeIds.length} alertas canceladas.`;
-  render();
-}
-
-function schedulePersistedAlerts() {
-  const now = Date.now();
-  const reconciled = {};
-
-  Object.values(state.alerts).forEach((storedAlert) => {
-    const match = state.matches.find((item) => item.id === storedAlert.matchId);
-    if (!match) return;
-
-    const leadMinutes = normalizeAlertLeadMinutes(storedAlert.leadMinutes ?? storedAlert.alertLeadMinutes ?? 30);
-    const baseAlert = buildAlert(match, leadMinutes);
-    const alert = {
-      ...baseAlert,
-      ...storedAlert,
-      alertId: storedAlert.alertId || baseAlert.alertId,
-      matchId: match.id,
-      team1: storedAlert.team1 || match.team1,
-      team2: storedAlert.team2 || match.team2,
-      kickoff: storedAlert.kickoff || baseAlert.kickoff,
-      alertAt: isValidDateValue(storedAlert.alertAt)
-        ? new Date(storedAlert.alertAt).toISOString()
-        : baseAlert.alertAt,
-      status: ["scheduled", "fired", "expired"].includes(storedAlert.status)
-        ? storedAlert.status
-        : "scheduled",
-    };
-    if (
-      !state.alertsInitialized &&
-      alert.status === "scheduled" &&
-      Date.parse(alert.alertAt) <= now
-    ) {
-      alert.status = "expired";
-    }
-    reconciled[alert.alertId] = alert;
-  });
-
-  state.alerts = reconciled;
-  state.alertsInitialized = true;
-  persistAlerts();
-  checkDueAlerts();
-}
-
-async function checkDueAlerts() {
-  const now = Date.now();
-  const dueAlerts = Object.values(state.alerts).filter(
-    (alert) => alert.status === "scheduled" && Date.parse(alert.alertAt) <= now,
-  );
-
-  for (const alert of dueAlerts) {
-    const match = state.matches.find((item) => item.id === alert.matchId);
-    if (!match) {
-      state.alerts[alert.alertId] = { ...alert, status: "expired" };
-      continue;
-    }
-
-    if ("Notification" in window && Notification.permission === "granted") {
-      try {
-        await showNotification("Mundial Alertas ⚽", {
-          body: `${match.team1Label} vs ${match.team2Label} empieza en ${formatLeadMinutes(alert.leadMinutes ?? 30)}.`,
-          tag: alert.alertId,
-          data: { matchId: match.id },
-        });
-      } catch (error) {
-        state.notificationResult = `La alerta venció, pero no pudo mostrarse: ${error.message}`;
-      }
-    }
-
-    state.alerts[alert.alertId] = { ...alert, status: "fired" };
-  }
-
-  if (dueAlerts.length) {
-    persistAlerts();
-    render();
-  }
-}
-
-function persistAlerts() {
-  writeJson(STORAGE_KEYS.alerts, state.alerts);
-}
-
-function migrateStoredAlerts(storedAlerts) {
-  if (!storedAlerts || typeof storedAlerts !== "object") return {};
-
-  return Object.entries(storedAlerts).reduce((migrated, [key, value]) => {
-    if (!value || typeof value !== "object") return migrated;
-
-    const matchId = value.matchId || key;
-    const leadMinutes = normalizeAlertLeadMinutes(value.leadMinutes ?? value.alertLeadMinutes ?? 30);
-    const alertId = value.alertId || `match-${matchId}-${leadMinutes}m`;
-    const rawAlertAt = value.alertAt;
-    const alertAt = isValidDateValue(rawAlertAt)
-      ? new Date(rawAlertAt).toISOString()
-      : new Date(0).toISOString();
-    const status = value.status || (value.notified ? "fired" : "scheduled");
-
-    migrated[alertId] = {
-      alertId,
-      matchId,
-      team1: value.team1 || "",
-      team2: value.team2 || "",
-      kickoff: value.kickoff || "",
-      leadMinutes,
-      alertAt,
-      status: ["scheduled", "fired", "expired"].includes(status)
-        ? status
-        : "scheduled",
-    };
-    return migrated;
-  }, {});
 }
 
 function isValidDateValue(value) {
   return value !== null && value !== "" && Number.isFinite(new Date(value).getTime());
-}
-
-function formatAlertDate(value) {
-  const date = new Date(value);
-  return `${date.toLocaleDateString(ARGENTINA_LOCALE, {
-    day: "2-digit",
-    month: "short",
-    timeZone: ARGENTINA_TIME_ZONE,
-  })} ${formatTimeArgentina(date)} ARG`;
 }
 
 function getStatusText(count) {

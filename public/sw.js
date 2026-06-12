@@ -10,13 +10,3 @@ self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   event.respondWith(fetch(event.request));
 });
-
-self.addEventListener("notificationclick", (event) => {
-  event.notification.close();
-  event.waitUntil(
-    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((clients) => {
-      const visibleClient = clients.find((client) => "focus" in client);
-      return visibleClient ? visibleClient.focus() : self.clients.openWindow("/");
-    }),
-  );
-});

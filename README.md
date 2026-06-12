@@ -1,6 +1,6 @@
 # Mundial Local
 
-Dashboard local de partidos del Mundial 2026 hecho con Vite. Consume la programación pública de OpenFootball desde el navegador, incluye una copia local de respaldo servida por Vite y guarda filtros/alertas en `localStorage`.
+Dashboard local de partidos del Mundial 2026 hecho con Vite. Consume la programación pública de OpenFootball desde el navegador, incluye una copia local de respaldo servida por Vite y guarda filtros en `localStorage`.
 
 No usa Docker, no usa `docker-compose`, no crea backend y no requiere Elasticsearch ni base de datos.
 
@@ -34,8 +34,7 @@ Vite mostrará una URL local, normalmente `http://localhost:5173`.
 - Caché de última consulta en `localStorage` y fallback local
 - Estados de carga y error
 - Cards mobile con hora argentina, grupo/ronda, sede y badge Importante
-- Alertas locales 30 minutos antes usando Notification API
-- Persistencia en `localStorage` de equipos importantes, alertas y filtro Solo importantes
+- Persistencia en `localStorage` de equipos importantes, tema y filtro Solo importantes
 - Convocados 2026 desde `src/data/squads-2026-app.json`, enriquecidos con ESPN y con BALLDONTLIE opcional
 
 ## Uso local desde el celular
@@ -77,5 +76,5 @@ Vite mostrará una URL local, normalmente `http://localhost:5173`.
    http://192.168.1.50:5173
    ```
 
-Las notificaciones locales dependen del navegador. Funcionan mejor con la app abierta o instalada como PWA.
-# mundial-alertas
+La app puede instalarse como PWA desde navegadores compatibles.
+# mundial-2026
