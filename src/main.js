@@ -899,7 +899,10 @@ function renderMatchCard(match) {
   const result = match.result;
   const phaseLabel = match.groupLabel || "Fase eliminatoria";
   const meta = [phaseLabel, match.roundLabel].filter(Boolean).join(" · ");
-  const isLiveMatch = isMatchLive(match);
+  const statusBadge =
+    match.status === "live" || match.status === "finished"
+      ? `<span class="match-card-status is-${match.status}">${getMatchStatusLabel(match.status)}</span>`
+      : "";
 
   card.innerHTML = `
     <div class="match-card-header">
@@ -909,9 +912,9 @@ function renderMatchCard(match) {
       </div>
       <div class="card-badges">
         ${match.important ? `<span class="badge">Importante</span>` : ""}
+        ${statusBadge}
       </div>
     </div>
-    ${isLiveMatch ? `<span class="live-badge">En vivo</span>` : ""}
     ${renderMatchTeamsRow(match.team1, match.team2, result ? `${result.team1Goals} - ${result.team2Goals}` : "vs")}
     <div class="match-info">
       <span class="match-time">${match.time} ARG</span>
