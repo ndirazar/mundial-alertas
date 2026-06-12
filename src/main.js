@@ -553,7 +553,7 @@ elements.dateFilter.addEventListener("change", (event) => {
   render();
 });
 elements.todayButton.addEventListener("click", () => {
-  state.selectedDate = toArgentinaDateInputValue(new Date());
+  state.selectedDate = todayArgentinaKey();
   elements.dateFilter.value = state.selectedDate;
   render();
 });
@@ -624,7 +624,7 @@ async function loadFixture() {
     populateTeamSelector();
 
     if (!state.selectedDate && state.matches.length > 0) {
-      state.selectedDate = getNextMatchDate();
+      state.selectedDate = todayArgentinaKey();
     }
 
     state.lastUpdated = formatTimeArgentina(new Date());
@@ -1165,7 +1165,7 @@ function isNamedTeam(team) {
 function getFilteredMatches() {
   return state.matches.filter((match) => {
     const sameDate =
-      state.selectedTeam || !state.selectedDate || match.date === state.selectedDate;
+      state.selectedTeam || !state.selectedDate || matchArgentinaDateKey(match) === state.selectedDate;
     const important = !state.importantOnly || match.important;
     const selectedTeam =
       !state.selectedTeam ||
@@ -2509,13 +2509,10 @@ function getStatusText(count) {
 }
 
 function getNextMatchDate() {
-  const now = Date.now();
-  const currentDate = state.selectedDate;
-  const nextMatch = state.matches.find((match) =>
-    currentDate ? match.date > currentDate : match.kickoff.getTime() >= now,
-  );
+  const currentDate = state.selectedDate || todayArgentinaKey();
+  const nextMatch = state.matches.find((match) => matchArgentinaDateKey(match) > currentDate);
 
-  return nextMatch?.date || currentDate || state.matches.at(-1)?.date || "";
+  return nextMatch ? matchArgentinaDateKey(nextMatch) : currentDate;
 }
 
 function formatDate(date) {
@@ -2525,6 +2522,29 @@ function formatDate(date) {
     month: "short",
     timeZone: ARGENTINA_TIME_ZONE,
   });
+}
+
+function getArgentinaDateKey(date) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    timeZone: ARGENTINA_TIME_ZONE,
+  }).formatToParts(date);
+  const year = parts.find((part) => part.type === "year")?.value;
+  const month = parts.find((part) => part.type === "month")?.value;
+  const day = parts.find((part) => part.type === "day")?.value;
+  return `${year}-${month}-${day}`;
+}
+
+function todayArgentinaKey() {
+  return getArgentinaDateKey(new Date());
+}
+
+function matchArgentinaDateKey(match) {
+  if (match?.kickoff) return getArgentinaDateKey(match.kickoff);
+  if (match?.date) return match.date;
+  return "";
 }
 
 function formatTimeArgentina(date) {
@@ -2540,16 +2560,7 @@ function formatTimeArgentina(date) {
 }
 
 function toArgentinaDateInputValue(date) {
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    timeZone: ARGENTINA_TIME_ZONE,
-  }).formatToParts(date);
-  const year = parts.find((part) => part.type === "year").value;
-  const month = parts.find((part) => part.type === "month").value;
-  const day = parts.find((part) => part.type === "day").value;
-  return `${year}-${month}-${day}`;
+  return getArgentinaDateKey(date);
 }
 
 function readJson(key, fallback) {
