@@ -46,6 +46,7 @@ const STORAGE_KEYS = {
   alertLeadMinutes: "mundial.alertLeadMinutes",
   resultsCache: "mundial.resultsCache",
   squadCache: "mundial.squadCache",
+  pwaInstalled: "mundial.pwaInstalled",
 };
 
 const ALERT_LEAD_OPTIONS = [5, 15, 30, 60, 120];
@@ -353,6 +354,7 @@ const state = {
   resultsRequestPromise: null,
   resultsRefreshTimer: null,
   nextArgentinaCountdownTimer: null,
+  toastTimer: null,
   notificationResult: "",
   serviceWorkerActive: false,
   alertsInitialized: false,
@@ -417,8 +419,9 @@ app.innerHTML = `
 
     <section class="summary" id="summary"></section>
     <section class="matches" id="matches" aria-label="Partidos"></section>
-    <footer class="app-footer">App. desarrollada por Nicolás Dirazar</footer>
+    <footer class="app-footer">By Nicolás Dirazar • Copyright © 2026</footer>
   </section>
+  <div class="app-toast" id="app-toast" hidden role="status" aria-live="polite"></div>
 
   <div class="section-modal" id="section-modal" hidden>
     <div class="notification-modal-backdrop" data-close-section></div>
@@ -493,6 +496,7 @@ const elements = {
   squadContent: document.querySelector("#squad-content"),
   openStandings: document.querySelector("#open-standings"),
   installApp: document.querySelector("#install-app"),
+  appToast: document.querySelector("#app-toast"),
   nextArgentinaCard: document.querySelector("#next-argentina-card"),
   sectionModal: document.querySelector("#section-modal"),
   sectionTitle: document.querySelector("#section-title"),
@@ -627,7 +631,10 @@ window.addEventListener("beforeinstallprompt", (event) => {
 
 window.addEventListener("appinstalled", () => {
   state.deferredInstallPrompt = null;
+  writeJson(STORAGE_KEYS.pwaInstalled, true);
+  setInstallButtonIdle();
   updateInstallButtonVisibility();
+  showToast("App instalada ✅ Abrila desde tu pantalla de inicio");
 });
 
 updateInstallButtonVisibility();
@@ -1186,25 +1193,63 @@ function renderMatchTeamsRow(homeTeam, awayTeam, centerText = "vs") {
 }
 
 function isAppInstalled() {
-  return (
+  const standalone =
     window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone === true
-  );
+    window.navigator.standalone === true;
+  const persisted = readBoolean(STORAGE_KEYS.pwaInstalled, false);
+
+  if (standalone && !persisted) {
+    writeJson(STORAGE_KEYS.pwaInstalled, true);
+  }
+
+  return standalone || persisted;
+}
+
+function setInstallButtonBusy(isBusy) {
+  if (!elements.installApp) return;
+  elements.installApp.disabled = isBusy;
+  elements.installApp.textContent = isBusy ? "Instalando..." : "Instalar app";
+}
+
+function setInstallButtonIdle() {
+  setInstallButtonBusy(false);
 }
 
 function updateInstallButtonVisibility() {
   const installable = Boolean(state.deferredInstallPrompt);
   const installed = isAppInstalled();
   elements.installApp.hidden = !installable || installed;
+  if (!elements.installApp.hidden) setInstallButtonIdle();
 }
 
-function promptAppInstall() {
+async function promptAppInstall() {
   if (!state.deferredInstallPrompt) return;
-  state.deferredInstallPrompt.prompt();
-  state.deferredInstallPrompt.userChoice.finally(() => {
+
+  setInstallButtonBusy(true);
+
+  try {
+    state.deferredInstallPrompt.prompt();
+    const choice = await state.deferredInstallPrompt.userChoice;
     state.deferredInstallPrompt = null;
-    updateInstallButtonVisibility();
-  });
+    if (choice?.outcome === "accepted") return;
+  } catch (error) {
+    state.deferredInstallPrompt = null;
+  } finally {
+    if (!isAppInstalled()) {
+      setInstallButtonIdle();
+      updateInstallButtonVisibility();
+    }
+  }
+}
+
+function showToast(message) {
+  if (!elements.appToast) return;
+  elements.appToast.textContent = message;
+  elements.appToast.hidden = false;
+  window.clearTimeout(state.toastTimer);
+  state.toastTimer = window.setTimeout(() => {
+    if (elements.appToast) elements.appToast.hidden = true;
+  }, 3200);
 }
 
 function populateTeamSelector() {
