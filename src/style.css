@@ -101,6 +101,8 @@ h1 {
 }
 
 .install-button {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -114,6 +116,13 @@ h1 {
   font-size: 0.82rem;
   font-weight: 800;
   line-height: 1;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.install-button[hidden] {
+  display: none;
 }
 
 .install-button:disabled {
