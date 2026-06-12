@@ -902,13 +902,14 @@ body.modal-open {
 }
 
 .app-footer {
-  margin: 20px 0 14px;
-  padding: 0 8px;
-  color: #667085;
-  font-size: 12.5px;
-  font-weight: 500;
+  margin: 22px 0 16px;
+  padding: 0 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.4;
   text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
 
@@ -1885,9 +1886,9 @@ select {
   }
 
   .app-footer {
-    margin: 18px 0 12px;
-    padding: 0 8px;
-    font-size: 12px;
+    margin: 18px 0 14px;
+    padding: 0 10px;
+    font-size: 13px;
   }
 }
 
