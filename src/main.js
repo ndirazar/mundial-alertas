@@ -967,11 +967,7 @@ function renderMatchCard(match) {
         }
       </div>
     </div>
-    <div class="teams${result ? " has-result" : ""}">
-      <span>${renderTeamLabel(match.team1)}</span>
-      <strong>${result ? `${result.team1Goals} - ${result.team2Goals}` : "vs"}</strong>
-      <span>${renderTeamLabel(match.team2)}</span>
-    </div>
+    ${renderMatchTeamsRow(match.team1, match.team2, result ? `${result.team1Goals} - ${result.team2Goals}` : "vs")}
     <div class="match-info">
       <span class="match-time">${match.time} ARG</span>
       <span>${escapeHtml(meta)}</span>
@@ -1028,8 +1024,6 @@ function renderNextArgentinaCard() {
   const alertExpired = match.kickoff.getTime() - 30 * 60 * 1000 <= Date.now();
   const alertStatus = alert?.status || (alertExpired ? "expired" : "none");
   const rivalTeam = match.team1 === "Argentina" ? match.team2 : match.team1;
-  const rivalLabel = renderTeamLabel(rivalTeam);
-  const argentinaLabel = renderTeamLabel("Argentina");
   const statusLabels = {
     scheduled: "Alerta activa",
     fired: "Alerta enviada",
@@ -1041,7 +1035,7 @@ function renderNextArgentinaCard() {
       <div class="feature-card-top">
         <div>
           <p class="feature-kicker">Próximo partido de Argentina</p>
-          <h2>${argentinaLabel} vs ${rivalLabel}</h2>
+          ${renderMatchTeamsRow("Argentina", rivalTeam, "vs")}
         </div>
         <span class="feature-pill">${escapeHtml(match.groupLabel || "Fase eliminatoria")}</span>
       </div>
@@ -1118,6 +1112,31 @@ function renderTeamLabel(team) {
   return emoji
     ? `<span class="team-emoji" aria-hidden="true">${emoji}</span><span class="team-name">${label}</span>`
     : `<span class="team-name">${label}</span>`;
+}
+
+function renderMatchTeamParts(team) {
+  const emoji = TEAM_EMOJIS[team] || "";
+  const label = escapeHtml(translateTeam(team));
+  return `<span class="flag" aria-hidden="true">${emoji}</span><span class="match-team-name name">${label}</span>`;
+}
+
+function renderMatchTeamsRow(homeTeam, awayTeam, centerText = "vs") {
+  const isScore = /\d+\s*-\s*\d+/.test(centerText);
+  const centerClass = isScore ? "match-score" : "match-vs";
+
+  return `
+    <div class="match-score-row">
+      <div class="match-team match-team-home">
+        ${renderMatchTeamParts(homeTeam)}
+      </div>
+
+      <span class="${centerClass}">${escapeHtml(centerText)}</span>
+
+      <div class="match-team match-team-away">
+        ${renderMatchTeamParts(awayTeam)}
+      </div>
+    </div>
+  `;
 }
 
 function promptAppInstall() {
