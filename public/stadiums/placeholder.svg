@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Estadio">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0b4f8a"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="32" fill="url(#bg)"/>
+  <ellipse cx="400" cy="370" rx="280" ry="50" fill="#06263f" opacity="0.35"/>
+  <path d="M114 286h572c18 0 32 14 32 32v26H82v-26c0-18 14-32 32-32z" fill="#ffffff" fill-opacity="0.94"/>
+  <path d="M180 286h440l-34-112H214z" fill="#dbeafe"/>
+  <path d="M214 174h372l-26-76H240z" fill="#ffffff" fill-opacity="0.78"/>
+  <path d="M240 98h320l-18-42H258z" fill="#ffffff" fill-opacity="0.56"/>
+  <rect x="94" y="332" width="612" height="34" rx="17" fill="#ffffff" fill-opacity="0.18"/>
+  <circle cx="400" cy="210" r="38" fill="#ffffff"/>
+  <circle cx="400" cy="210" r="15" fill="#0f766e"/>
+  <path d="M400 156l28 20-10 34h-36l-10-34z" fill="#0f766e" opacity="0.9"/>
+  <rect width="800" height="450" rx="32" fill="url(#glow)"/>
+</svg>
