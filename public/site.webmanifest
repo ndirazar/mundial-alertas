@@ -1,6 +1,7 @@
 {
-  "name": "Mundial Alertas",
-  "short_name": "Mundial",
+  "name": "Mundial Alertas 2026",
+  "short_name": "Mundial 2026",
+  "description": "Fixture, resultados, tabla, convocados, estadios y alertas del Mundial 2026.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
