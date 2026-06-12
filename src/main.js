@@ -360,7 +360,9 @@ const state = {
   alertsInitialized: false,
   deferredInstallPrompt: null,
   installButtonFallbackVisible: false,
+  installAcceptedPending: false,
   installCompletionNotified: false,
+  installCompletionTimer: null,
   lastInstallActivationAt: 0,
 };
 
@@ -552,8 +554,6 @@ elements.closeNotifications.addEventListener("click", closeNotificationsModal);
 elements.notificationModal.addEventListener("click", (event) => {
   if (event.target.hasAttribute("data-close-notifications")) closeNotificationsModal();
 });
-elements.installApp.addEventListener("pointerup", handleInstallButtonActivation);
-elements.installApp.addEventListener("touchend", handleInstallButtonActivation, { passive: false });
 elements.installApp.addEventListener("click", handleInstallButtonActivation);
 elements.alertLeadSelect.addEventListener("change", (event) => {
   state.alertLeadMinutes = normalizeAlertLeadMinutes(event.target.value);
@@ -1237,6 +1237,9 @@ function getInstallFallbackMessage() {
 function markAppInstalled({ notify = false } = {}) {
   state.deferredInstallPrompt = null;
   state.installButtonFallbackVisible = false;
+  state.installAcceptedPending = false;
+  window.clearTimeout(state.installCompletionTimer);
+  state.installCompletionTimer = null;
   writeJson(STORAGE_KEYS.pwaInstalled, true);
   setInstallButtonIdle();
   updateInstallButtonVisibility();
@@ -1265,19 +1268,15 @@ function updateInstallButtonVisibility() {
   const installable = Boolean(state.deferredInstallPrompt);
   const fallbackAvailable = state.installButtonFallbackVisible || isMobileDevice();
   elements.installApp.hidden = installed || (!installable && !fallbackAvailable);
-  if (!elements.installApp.hidden) setInstallButtonIdle();
+  if (!elements.installApp.hidden && !state.installAcceptedPending) setInstallButtonIdle();
 }
 
 function handleInstallButtonActivation(event) {
   const now = Date.now();
-  const isDuplicateClick = event.type === "click" && now - state.lastInstallActivationAt < 700;
-  const isDuplicateTouch = event.type === "touchend" && now - state.lastInstallActivationAt < 700;
 
-  if (isDuplicateClick || isDuplicateTouch) return;
+  if (now - state.lastInstallActivationAt < 700) return;
 
   state.lastInstallActivationAt = now;
-  event.preventDefault();
-  event.stopPropagation();
   promptAppInstall();
 }
 
@@ -1302,17 +1301,23 @@ async function promptAppInstall() {
     const choice = await state.deferredInstallPrompt.userChoice;
     state.deferredInstallPrompt = null;
     if (choice?.outcome === "accepted") {
-      markAppInstalled({ notify: true });
+      state.installAcceptedPending = true;
+      setInstallButtonBusy(true);
+      showToast("Finalizando instalación...");
+      state.installCompletionTimer = window.setTimeout(() => {
+        markAppInstalled({ notify: true });
+      }, 8000);
       return;
     }
 
     state.installButtonFallbackVisible = true;
   } catch (error) {
     state.deferredInstallPrompt = null;
+    state.installAcceptedPending = false;
     state.installButtonFallbackVisible = true;
     showToast(getInstallFallbackMessage());
   } finally {
-    if (!isAppInstalled()) {
+    if (!state.installAcceptedPending && !isAppInstalled()) {
       setInstallButtonIdle();
       updateInstallButtonVisibility();
     }
