@@ -14,7 +14,6 @@ No usa Docker, no usa `docker-compose`, no crea backend y no requiere Elasticsea
 ```bash
 npm install
 cp .env.example .env
-# Completar VITE_BALLDONTLIE_API_KEY en .env
 npm run dev -- --host 0.0.0.0
 ```
 
@@ -28,14 +27,15 @@ Vite mostrará una URL local, normalmente `http://localhost:5173`.
 - Selector de fecha, botón Hoy y botón Próximo
 - Filtro Solo importantes
 - Buscador por equipo
-- Resultados consultados al abrir desde la API pública de ESPN
+- Resultados y minutos en vivo actualizados automáticamente desde la API pública de ESPN
 - Estados Programado, En vivo y Finalizado
 - Tabla de posiciones recalculada automáticamente con resultados finalizados
 - Caché de última consulta en `localStorage` y fallback local
 - Estados de carga y error
 - Cards mobile con hora argentina, grupo/ronda, sede y badge Importante
-- Persistencia en `localStorage` de equipos importantes, tema y filtro Solo importantes
+- Persistencia en `localStorage` de equipos importantes, filtro Solo importantes y estado de instalación PWA
 - Convocados 2026 desde `src/data/squads-2026-app.json`, enriquecidos con ESPN y con BALLDONTLIE opcional
+- Predicción local 1X2 acotada, basada en ranking FIFA, forma previa, fase y localía real de los países anfitriones
 
 ## Uso local desde el celular
 
@@ -78,3 +78,7 @@ Vite mostrará una URL local, normalmente `http://localhost:5173`.
 
 La app puede instalarse como PWA desde navegadores compatibles.
 # mundial-2026
+
+## Validación antes de producción
+
+`npm test` valida el modelo de predicción y los 104 partidos del fixture. `npm run build` genera el bundle de producción.

@@ -21,7 +21,7 @@ const BALLDONTLIE_API_KEY = import.meta.env.VITE_BALLDONTLIE_API_KEY?.trim();
 const SQUAD_SEASON = 2026;
 const SQUAD_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 const RESULTS_REFRESH_INTERVAL_MS = 60 * 1000;
-const RESULTS_REQUEST_TTL_MS = 2 * 60 * 1000;
+const RESULTS_REQUEST_TTL_MS = 50 * 1000;
 const ARGENTINA_TIME_ZONE = "America/Argentina/Buenos_Aires";
 const ARGENTINA_LOCALE = "es-AR";
 
@@ -488,10 +488,7 @@ const elements = {
 };
 
 elements.openGroups.addEventListener("click", () => openSectionModal("groups"));
-elements.openTeams.addEventListener("pointerup", (event) => {
-  event.preventDefault();
-  openTeamsModal();
-});
+elements.openTeams.addEventListener("click", openTeamsModal);
 elements.openResults.addEventListener("click", () => openSectionModal("results"));
 elements.openStandings.addEventListener("click", () => openSectionModal("standings"));
 elements.closeSection.addEventListener("click", closeSectionModal);
@@ -546,6 +543,8 @@ elements.clearTeam.addEventListener("click", () => {
 });
 elements.matches.addEventListener("click", handleMatchCardClick);
 elements.matches.addEventListener("keydown", handleMatchCardKeydown);
+elements.sectionContent.addEventListener("click", handleResultRowClick);
+elements.sectionContent.addEventListener("keydown", handleResultRowKeydown);
 elements.sectionContent.addEventListener("error", handleStadiumImageError, true);
 elements.teamsContent.addEventListener("click", handleSquadSelectionClick);
 
@@ -567,10 +566,12 @@ window.addEventListener("appinstalled", () => {
 const standaloneModeQuery = window.matchMedia("(display-mode: standalone)");
 standaloneModeQuery.addEventListener?.("change", updateInstallButtonVisibility);
 window.addEventListener("pageshow", updateInstallButtonVisibility);
+document.addEventListener("visibilitychange", updateInstallButtonVisibility);
 updateInstallButtonVisibility();
 registerServiceWorker();
 loadFixture();
 startArgentinaCountdown();
+startResultsRefresh();
 
 async function loadFixture() {
   state.loading = true;
@@ -672,6 +673,7 @@ function normalizeMatch(match, index) {
     important: isImportantMatch(team1, team2, round, group),
     result,
     status: extractFixtureStatus(match, result, kickoff),
+    minute: normalizeMatchMinute(match.minute || match.clock || match.score?.clock),
     scorers: [],
     statistics: null,
     timeline: [],
@@ -729,7 +731,7 @@ function extractFixtureStatus(match, result, kickoff) {
   if (now >= kickoffTime && now < kickoffTime + 3 * 60 * 60 * 1000) {
     return "live";
   }
-  return "scheduled";
+  return now >= kickoffTime + 3 * 60 * 60 * 1000 ? "finished" : "scheduled";
 }
 
 function parseKickoff(date, time) {
@@ -901,7 +903,7 @@ function renderMatchCard(match) {
   const meta = [phaseLabel, match.roundLabel].filter(Boolean).join(" · ");
   const statusBadge =
     match.status === "live" || match.status === "finished"
-      ? `<span class="match-card-status is-${match.status}">${getMatchStatusLabel(match.status)}</span>`
+      ? `<span class="match-card-status is-${match.status}">${getMatchStatusDisplay(match)}</span>`
       : "";
 
   card.innerHTML = `
@@ -921,6 +923,7 @@ function renderMatchCard(match) {
       <span>${escapeHtml(meta)}</span>
       ${match.stadiumLabel ? `<span class="match-city">${escapeHtml(match.stadiumLabel)}</span>` : ""}
     </div>
+    <span class="card-detail-hint">Tocá para ver detalle</span>
   `;
 
   return card;
@@ -938,6 +941,20 @@ function handleMatchCardKeydown(event) {
   if (!card?.dataset.matchId) return;
   event.preventDefault();
   openSectionModal("match-detail", card.dataset.matchId);
+}
+
+function handleResultRowClick(event) {
+  const row = event.target.closest(".result-row[data-match-id]");
+  if (!row) return;
+  openSectionModal("match-detail", row.dataset.matchId);
+}
+
+function handleResultRowKeydown(event) {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  const row = event.target.closest(".result-row[data-match-id]");
+  if (!row) return;
+  event.preventDefault();
+  openSectionModal("match-detail", row.dataset.matchId);
 }
 
 function renderNextArgentinaCard() {
@@ -1097,18 +1114,20 @@ function isAppInstalled() {
     window.navigator.standalone === true;
   const persisted =
     readBoolean(STORAGE_KEYS.pwaInstalled, false) ||
-    localStorage.getItem("pwa-installed") === "true";
+    readBoolean("pwa-installed", false);
 
   if (standalone && !persisted) {
-    writeJson(STORAGE_KEYS.pwaInstalled, true);
-    localStorage.setItem("pwa-installed", "true");
+    persistAppInstalled();
   }
 
   return standalone || persisted;
 }
 
 function isIosDevice() {
-  return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+  return (
+    /iphone|ipad|ipod/i.test(window.navigator.userAgent) ||
+    (window.navigator.platform === "MacIntel" && window.navigator.maxTouchPoints > 1)
+  );
 }
 
 function isMobileDevice() {
@@ -1155,8 +1174,7 @@ function completeAppInstall() {
   state.installButtonFallbackVisible = false;
   window.clearTimeout(state.installCompletionTimer);
   state.installCompletionTimer = null;
-  writeJson(STORAGE_KEYS.pwaInstalled, true);
-  localStorage.setItem("pwa-installed", "true");
+  persistAppInstalled();
   setInstalling(false);
   updateInstallButtonVisibility();
 }
@@ -1199,10 +1217,7 @@ async function promptAppInstall() {
     const choice = await state.deferredInstallPrompt.userChoice;
     state.deferredInstallPrompt = null;
     if (choice?.outcome === "accepted") {
-      setInstalling(true, "Finalizando instalación...");
-      state.installCompletionTimer = window.setTimeout(() => {
-        markAppInstalled({ notify: true });
-      }, 8000);
+      markAppInstalled({ notify: true });
       return;
     }
 
@@ -1225,14 +1240,19 @@ async function promptAppInstall() {
   }
 }
 
-function showToast(message) {
+function showToast(message, duration = 3200) {
   if (!elements.appToast) return;
   elements.appToast.textContent = message;
   elements.appToast.hidden = false;
   window.clearTimeout(state.toastTimer);
   state.toastTimer = window.setTimeout(() => {
     if (elements.appToast) elements.appToast.hidden = true;
-  }, 3200);
+  }, duration);
+}
+
+function persistAppInstalled() {
+  writeJson(STORAGE_KEYS.pwaInstalled, true);
+  writeJson("pwa-installed", true);
 }
 
 function populateTeamSelector() {
@@ -1305,7 +1325,6 @@ function openSectionModal(view, item = "") {
 }
 
 function closeSectionModal() {
-  stopResultsRefresh();
   elements.sectionModal.hidden = true;
   document.body.classList.remove("modal-open");
   delete elements.sectionModal.dataset.item;
@@ -1435,7 +1454,7 @@ function renderResultsView(container = elements.sectionContent) {
           ? visibleMatches
               .map(
                 (match) => `
-                  <article class="result-row">
+                  <article class="result-row has-status" data-match-id="${escapeHtml(match.id)}" role="button" tabindex="0" aria-label="Ver detalle de ${escapeHtml(translateTeam(match.team1))} vs ${escapeHtml(translateTeam(match.team2))}">
                     <div class="result-meta">
                       <span>${formatDate(match.kickoff)} · ${match.time} ARG</span>
                       <span>${escapeHtml([match.groupLabel || "Fase eliminatoria", match.roundLabel].filter(Boolean).join(" · "))}</span>
@@ -1445,7 +1464,8 @@ function renderResultsView(container = elements.sectionContent) {
                       <b>${match.result ? `${match.result.team1Goals} - ${match.result.team2Goals}` : "vs"}</b>
                       <strong>${renderTeamLabel(match.team2)}</strong>
                     </div>
-                    <span class="match-status is-${match.status}">${getMatchStatusLabel(match.status)}</span>
+                    <span class="match-status is-${match.status}">${getMatchStatusDisplay(match)}</span>
+                    <span class="result-detail-hint">Tocá para ver detalle</span>
                   </article>
                 `,
               )
@@ -1587,6 +1607,13 @@ function mergeEspnResults(events) {
         minute: detail.clock?.displayValue || "",
         ownGoal: Boolean(detail.ownGoal),
       }));
+    const venue = competition.venue?.fullName || "";
+    const attendance = Number(competition.attendance) || null;
+    const minute = normalizeMatchMinute(
+      competition.status?.displayClock ||
+        event.status?.displayClock ||
+        competition.status?.type?.shortDetail,
+    );
 
     updates.set(
       getResultMatchKey(home.team.displayName, away.team.displayName),
@@ -1596,6 +1623,9 @@ function mergeEspnResults(events) {
         awayTeam: away.team.displayName,
         homeScore: hasScore ? homeScore : null,
         awayScore: hasScore ? awayScore : null,
+        minute,
+        venue,
+        attendance,
         scorers,
         statistics: insights.statistics,
         timeline: insights.timeline,
@@ -1648,7 +1678,10 @@ function mergeEspnResults(events) {
     return {
       ...match,
       status: update.status,
+      minute: update.status === "live" ? update.minute : "",
       result,
+      attendance: update.attendance,
+      stadiumLabel: update.venue || match.stadiumLabel,
       scorers,
       statistics,
       timeline,
@@ -1691,23 +1724,15 @@ function normalizeResultTeam(team) {
 }
 
 function renderResultsIfOpen() {
-  if (
-    !elements.sectionModal.hidden &&
-    elements.sectionModal.dataset.view === "results"
-  ) {
-    renderResultsView();
-  }
+  if (elements.sectionModal.hidden) return;
+  if (elements.sectionModal.dataset.view === "results") renderResultsView();
+  if (elements.sectionModal.dataset.view === "match-detail") renderMatchDetailView();
 }
 
 function startResultsRefresh() {
   stopResultsRefresh();
   state.resultsRefreshTimer = window.setInterval(() => {
-    if (
-      !elements.sectionModal.hidden &&
-      elements.sectionModal.dataset.view === "results"
-    ) {
-      loadResults();
-    }
+    loadResults();
   }, RESULTS_REFRESH_INTERVAL_MS);
 }
 
@@ -1723,6 +1748,19 @@ function getMatchStatusLabel(status) {
     live: "En vivo",
     finished: "Finalizado",
   }[status] || "Programado";
+}
+
+function normalizeMatchMinute(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  const match = text.match(/(\d{1,3})(?:\s*\+\s*(\d{1,2}))?/);
+  if (!match) return "";
+  return `${match[1]}${match[2] ? `+${match[2]}` : ""}'`;
+}
+
+function getMatchStatusDisplay(match) {
+  if (match?.status === "live") return `🔴 ${match.minute || "En vivo"}`;
+  return getMatchStatusLabel(match?.status);
 }
 
 function renderStandingsView(container = elements.sectionContent) {
@@ -1811,21 +1849,19 @@ async function openSquadModal(selectedTeam) {
   });
 
   try {
-    if (!BALLDONTLIE_API_KEY) {
-      throw new Error("Falta VITE_BALLDONTLIE_API_KEY");
+    if (BALLDONTLIE_API_KEY) {
+      const [ballDontLieSquad, espnSquad] = await Promise.all([
+        fetchBallDontLieSquad(teamName),
+        espnSquadPromise,
+      ]);
+      const supplementalSquad = localSquad
+        ? enrichSquad(localSquad, espnSquad)
+        : espnSquad || legacyLocalSquad;
+      const squad = enrichSquad(ballDontLieSquad, supplementalSquad);
+      writeCachedSquad(teamName, squad);
+      setSelectedSquad(teamName, squad);
+      return;
     }
-
-    const [ballDontLieSquad, espnSquad] = await Promise.all([
-      fetchBallDontLieSquad(teamName),
-      espnSquadPromise,
-    ]);
-    const supplementalSquad = localSquad
-      ? enrichSquad(localSquad, espnSquad)
-      : espnSquad || legacyLocalSquad;
-    const squad = enrichSquad(ballDontLieSquad, supplementalSquad);
-    writeCachedSquad(teamName, squad);
-    setSelectedSquad(teamName, squad);
-    return;
   } catch (error) {
     console.warn(`No se pudieron cargar convocados BALLDONTLIE de ${teamName}.`, error);
   }
@@ -1845,6 +1881,17 @@ function setSelectedSquad(teamName, squad) {
   renderSquadView();
 }
 
+async function fetchEspnSquad(teamName) {
+  const apiTeamId = TEAM_ESPN_IDS[teamName];
+  if (!apiTeamId) await loadTeamDirectory();
+
+  const fallbackApiTeam = state.teamDirectory.get(normalizeResultTeam(teamName));
+  const rosterTeamId = apiTeamId || fallbackApiTeam?.id;
+  if (!rosterTeamId) return null;
+
+  const data = await fetchJson(`${ROSTER_URL}/${rosterTeamId}/roster`, 7000);
+  return normalizeSquad(data);
+}
 async function fetchBallDontLieSquad(teamName) {
   const team = await findBallDontLieTeam(teamName);
   if (!team?.id) throw new Error("Selección no encontrada en BALLDONTLIE");
@@ -1893,18 +1940,6 @@ function fetchBallDontLieJson(path) {
       Authorization: BALLDONTLIE_API_KEY,
     },
   });
-}
-
-async function fetchEspnSquad(teamName) {
-  const apiTeamId = TEAM_ESPN_IDS[teamName];
-  if (!apiTeamId) await loadTeamDirectory();
-
-  const fallbackApiTeam = state.teamDirectory.get(normalizeResultTeam(teamName));
-  const rosterTeamId = apiTeamId || fallbackApiTeam?.id;
-  if (!rosterTeamId) return null;
-
-  const data = await fetchJson(`${ROSTER_URL}/${rosterTeamId}/roster`, 7000);
-  return normalizeSquad(data);
 }
 
 function closeSquadModal() {
@@ -1973,7 +2008,6 @@ function normalizeSquad(data) {
     groups,
   };
 }
-
 function normalizeBallDontLieSquad(roster, players) {
   const playersById = new Map(players.map((player) => [String(player.id), player]));
   const groups = createSquadGroups();
@@ -2161,17 +2195,17 @@ function renderPredictionCard(match) {
   if (!prediction) return "";
 
   const entries = [
-    { label: translateTeam(match.team1), value: prediction.homeWin },
-    { label: "Empate", value: prediction.draw },
-    { label: translateTeam(match.team2), value: prediction.awayWin },
+    { label: `${translateTeam(match.team1)} (1)`, value: prediction.homeWin },
+    { label: "Empate (X)", value: prediction.draw },
+    { label: `${translateTeam(match.team2)} (2)`, value: prediction.awayWin },
   ];
   const confidence = getPredictionConfidenceLabel(prediction.confidence);
 
   return `
-    <section class="premium-section prediction-card" aria-label="Predicción IA">
+    <section class="premium-section prediction-card" aria-label="Predicción estadística">
       <div class="premium-section-heading">
-        <span>🤖 Predicción IA</span>
-        <strong>${escapeHtml(prediction.predictedScore.label)}</strong>
+        <span>Predicción estadística</span>
+        <strong>Probabilidades 1X2</strong>
       </div>
       <div class="prediction-bars">
         ${entries.map((entry) => `
@@ -2191,8 +2225,8 @@ function renderPredictionCard(match) {
         <strong>Confianza ${escapeHtml(confidence.label)}</strong>
       </div>
       <div class="prediction-reasons">
-        <span>Fuente: ${prediction.source === "api" ? "API externa" : "modelo local"}</span>
-        <span>Actualizado: ${formatPredictionDate(prediction.updatedAt)}</span>
+        ${prediction.factors.map((factor) => `<span>${escapeHtml(factor)}</span>`).join("")}
+        <span>Modelo local · ${formatPredictionDate(prediction.updatedAt)}</span>
       </div>
       <p class="prediction-disclaimer">${escapeHtml(prediction.explanation)}</p>
     </section>
@@ -2362,6 +2396,11 @@ function renderMatchDetailView() {
   const played = match.status === "finished" || match.status === "live";
   const team1Scorers = (match.scorers || []).filter((goal) => goal.side === "team1");
   const team2Scorers = (match.scorers || []).filter((goal) => goal.side === "team2");
+  const hasDetailedEvents =
+    team1Scorers.length ||
+    team2Scorers.length ||
+    match.timeline?.length ||
+    match.statistics?.rows?.length;
 
   elements.sectionContent.innerHTML = `
     <article class="match-detail-card">
@@ -2376,7 +2415,7 @@ function renderMatchDetailView() {
       ${renderBroadcastSection(match)}
       ${played && match.result ? `
         <section class="match-result-detail" aria-label="Resultado del partido">
-          <span class="match-result-status is-${match.status}">${getMatchStatusLabel(match.status)}</span>
+          <span class="match-result-status is-${match.status}">${getMatchStatusDisplay(match)}</span>
           <div class="match-result-scoreboard">
             <strong>${renderTeamLabel(match.team1)}</strong>
             <b>${match.result.team1Goals} - ${match.result.team2Goals}</b>
@@ -2404,10 +2443,14 @@ function renderMatchDetailView() {
         <div><span>Estadio</span><strong>${escapeHtml(stadium?.name || match.stadiumLabel || "Por confirmar")}</strong></div>
         <div><span>País</span><strong>${escapeHtml(stadium?.country || "Por confirmar")}</strong></div>
         <div><span>Capacidad</span><strong>${formatCapacity(stadium?.capacity)}</strong></div>
+        <div><span>Grupo / fase</span><strong>${escapeHtml(match.groupLabel || match.roundLabel || "Por confirmar")}</strong></div>
+        <div><span>Fecha</span><strong>${formatDate(match.kickoff)} · ${match.time} ARG</strong></div>
+        ${match.attendance ? `<div><span>Asistencia</span><strong>${Number(match.attendance).toLocaleString(ARGENTINA_LOCALE)}</strong></div>` : ""}
       </div>
       ${renderStatisticsSection(match.statistics)}
       ${renderTimelineSection(match.timeline)}
       ${renderPlayerOfMatchSection(match.playerOfMatch)}
+      ${played && !hasDetailedEvents ? `<p class="match-detail-unavailable">Detalle no disponible</p>` : ""}
     </article>
   `;
 
@@ -2568,7 +2611,7 @@ function isMatchLive(match, now = Date.now()) {
   if (!match?.kickoff) return false;
   if (match.status === "finished") return false;
   if (match.status === "live") return true;
-  return now >= match.kickoff.getTime();
+  return now >= match.kickoff.getTime() && now < match.kickoff.getTime() + 3 * 60 * 60 * 1000;
 }
 
 function getArgentinaCountdownLabel(match, now = Date.now()) {
@@ -2619,13 +2662,22 @@ function readJson(key, fallback) {
 }
 
 function writeJson(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    return false;
+  }
+  return true;
 }
 
 function readBoolean(key, fallback) {
-  const value = localStorage.getItem(key);
-  if (value === null) return fallback;
-  return value === "true";
+  try {
+    const value = localStorage.getItem(key);
+    if (value === null) return fallback;
+    return value === "true";
+  } catch {
+    return fallback;
+  }
 }
 
 function escapeHtml(value) {
